@@ -17,15 +17,13 @@ if __name__ == "__main__":
     settings.M_Avatar_Target.generate_targets()
     print("生成事件：\n")
     #回调链
-    # # lambda_TargetWeigh_callback = lambda: M_Avatar_Target.APlan_TargetWeigh(M_Avatar_Event.exposed_events)
+    # lambda_TargetWeigh_callback = lambda: M_Avatar_Target.APlan_TargetWeigh(M_Avatar_Event.exposed_events)
     # M_Avatar_Event.generate_event(callback = lambda_TargetWeigh_callback)
     def generate_event_callback():
         settings.M_Avatar_Target.APlan_TargetWeigh(settings.M_Avatar_Event.exposed_events,callback=generate_plan_callback)
     def generate_plan_callback():
         settings.M_Avatar_Target.APlan_SpecifyPlan(settings.M_Avatar_Target.target, settings.M_Avatar_Target.weights)
     settings.M_Avatar_Event.generate_event(callback=generate_event_callback)
-
-    #Prompt_Writer
     
 
     #被动回复,长期监听
