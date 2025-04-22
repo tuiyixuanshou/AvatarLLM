@@ -1,11 +1,9 @@
-import LLM_Manager
 import json
 import settings
-from tools import load_prompt,ListString
+from tools import load_prompt,save_to_file,ListString
 from dataclasses import dataclass
 from typing import List, Dict, Callable, Optional
-import prompt_Writer
-import KlingAPI
+from datetime import datetime
 
 @dataclass
 class AvatarResObject:
@@ -17,7 +15,6 @@ class AvatarResObject:
         # 手动解析字段
         user_choice = data.get('user_choice', [])
         return cls(respond_type=data.get('respond_type', ''),respond=data.get('respond', ''),user_choice=user_choice)
-
 
 def Avatar_Proactive(callback:Optional[Callable] = None):
     cur_targetweigh = [settings.M_Avatar_Target.weights[settings.MONTH_INDEX-1]]
@@ -39,7 +36,7 @@ def Avatar_Proactive(callback:Optional[Callable] = None):
         try:
             response_data = json.loads(response)
             Avatar_response = [AvatarResObject.from_dict(item) for item in response_data]
-            avatar_string = display_Avatar_response(Avatar_response)
+            avatar_string = display_Avatar_response(Avatar_response,output_file="Avatar_Story.txt")
             print(f"事件生成已完毕")
             if callback:callback(avatar_string)
         except Exception as e:
@@ -47,7 +44,7 @@ def Avatar_Proactive(callback:Optional[Callable] = None):
     
     settings.passive_dial_manager.user_input_send(prompt,callback=Avatar_Proactive_callback)
 
-def display_Avatar_response(Avatar_response: List[AvatarResObject], output_format: str = "string") -> Optional[str]:
+def display_Avatar_response(Avatar_response: List[AvatarResObject], output_format: str = "string",output_file:Optional[str]=None) -> Optional[str]:
     """
     显示 Avatar 的响应内容。
     :param Avatar_response: AvatarResObject 的列表，包含响应内容和用户选择。
@@ -55,21 +52,33 @@ def display_Avatar_response(Avatar_response: List[AvatarResObject], output_forma
     :return: 如果 output_format 是 "string"，返回格式化的字符串；否则返回 None。
     """
     output = []
+    content = ""
     for response in Avatar_response:
         # 添加响应类型和内容
         output.append(f"响应类型: {response.respond_type}")
         output.append(f"内容: {response.respond}")
-        
+        content += f"响应类型: {response.respond_type}\n"
+        content += f"内容: {response.respond}\n"
         # 如果有用户选择，添加用户选择的选项
         if response.user_choice:
             output.append("用户选择选项：")
+            content += f"用户选择选项：\n"
             for choice in response.user_choice:
                 for key, value in choice.items():
                     output.append(f"  {key}: {value}")
+                    content += f"  {key}: {value}\n"
         
         # 添加分隔线
         output.append("-" * 30)
-    
+        content += "-" * 30 +"\n"
+    if output_file:
+        now = datetime.now()
+        formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        timeRecord = f"\nAvatar模拟回应 创建时间:{formatted_time}\n"
+        save_to_file(output_file,timeRecord,"a")
+        save_to_file(output_file,content,"a")
+
+
     # 根据输出格式返回结果
     formatted_output = "\n".join(output)
     if output_format == "console":

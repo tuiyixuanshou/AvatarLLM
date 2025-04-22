@@ -5,6 +5,8 @@ import time
 import jwt
 import settings
 from threading import Thread
+from tools import load_prompt,save_to_file
+import Image_Generation
 
 ak = settings.AK
 sk = settings.SK
@@ -17,8 +19,9 @@ def Kling_API_Image(image_prompt):
 def _async_Kling_Image_Generation(image_prompt,callback=None):
     try:
         response = _Kling_Image_Generation(image_prompt)
-        print("Kling_Image responde:\n"+ response)
-        if response["code"] == 200:
+        print("Kling_Image responde:\n", {response["code"]})
+        print(response)
+        if response["code"] == 0:
             task_ID = response["data"]["task_id"]
             error = None
         else:
@@ -28,7 +31,7 @@ def _async_Kling_Image_Generation(image_prompt,callback=None):
         response = None
         task_ID = "0"
         error = str(e)
-        print(error)
+        print("error:",error)
     finally:
         print("task ID:",task_ID)
             
@@ -45,11 +48,14 @@ def _Kling_Image_Generation(image_prompt):
     "Authorization": f"Bearer {api_token}",  # 替换为你的实际 Token
     "Content-Type": "application/json"
     }
-
+    ImageBase64 = load_prompt("avatar.txt")
     data = {
     "model_name":"kling-v1-5",              
     "prompt":image_prompt,
     "negative_prompt" :"模糊不清，抽象，恐怖谷，恐怖",
+    "image":ImageBase64,
+    "image_reference":"subject",
+    "image_fidelity":0.9,
     "n":1,
     "aspect_ratio":"9:16"
     }
@@ -89,6 +95,14 @@ def _auto_check_task_status(task_id, callback=None):
 def handle_image_url(image_url):
     if image_url:
         print(f"Generated Image URL: {image_url}")
+        save_to_file("Avatar_Story.txt",image_url,"a")
+        if settings.WEEK_INDEX<=4:
+            settings.WEEK_INDEX = settings.WEEK_INDEX+1
+            #Avatar_Driven_Respond.Avatar_Proactive(prompt_Writer.Image_Prompt_Writer)
+            Image_Generation.Avatar_Proactive_Image()
+        else:
+            print("结束生成")
+
     else:
         print("图片查询时遇到问题！")
 
@@ -105,4 +119,17 @@ def encode_jwt_token(ak, sk):
     
     token = jwt.encode(payload, sk, headers=headers)
     return token
+
+
+# if __name__ == "__main__":
+#     Kling_API_Image("""scene": "University Study Lounge with Whiteboard at Dusk","elements": {
+#     "protagonist_pose": "leaning over desk with flowcharts spread out",
+#     "background_details": [
+#       "sunset light through bay windows",
+#       "whiteboard covered with binary tree diagrams",
+#       "algorithm textbook open to chapter 7",
+#       "multiple colored pens arranged beside notebooks",
+#       "laptop showing LeetCode competition countdown timer",")"half-finished bubble tea with condensation drops",
+#     "protagonist_pose": "leaning over desk with flowcharts spread out""")
+    
 

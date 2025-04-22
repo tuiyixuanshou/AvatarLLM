@@ -5,8 +5,8 @@ API_KEY = "sk-cjktrxbohzgcvvcgkeppefasertnysxdmerrowgadqkciews"
 BASE_URL = "https://api.siliconflow.cn/v1/chat/completions"
 
 """Kling密钥"""
-AK = "f5c4e53b02ed4d6d905d8875cc841240" # 填写access key
-SK = "3f2c670a6592497e9f4982021d115ae7" # 填写secret key
+AK = "a1c18c976250400eb24be49862452cf9" # 填写access key
+SK = "a800fabfc6fd4094a82e6f384915396e" # 填写secret key
 KLING_URL = "https://api.klingai.com"
 KLING_IMAGE_URL= "https://api.klingai.com/v1/images/generations"
 
@@ -14,7 +14,7 @@ MONTH_INDEX = 1
 WEEK_INDEX = 1
 
 MODEL_NAME = "deepseek-ai/DeepSeek-R1"
-SYSTEM_PROMPT = load_prompt("System_Prompt")
+SYSTEM_PROMPT = load_prompt("System_Prompt.json")
 
 """Plan_manager Event_manager passive_dial_manager分别对应三个Agent，拥有独立上下文"""
 passive_dial_manager = LLM_Manager.LLM_Manager(BASE_URL,API_KEY,MODEL_NAME,SYSTEM_PROMPT)

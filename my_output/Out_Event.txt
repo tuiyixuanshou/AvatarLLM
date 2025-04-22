@@ -1,0 +1,372 @@
+
+l外部安排事件创建时间:2025-04-22 12:23:01
+month_index: 1
+week_index: 1
+Event: 高等数学期中考公告（覆盖微积分与线性代数），具体日期待定
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 游戏引擎编程课突发教学设备故障，课程推迟至服务器恢复
+Expose: false
+------------------------------
+month_index: 2
+week_index: 2
+Event: 山东省高中校友聚会通知（含中传VR专业学长就业宣讲）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 市团委发起数字艺术防诈公益海报竞赛，截稿日期四周后
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 游戏设计期中答辩与Unity场景开发实战测试撞期
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 三间房西街VR体验馆设备迭代，凭学生证可享压力测试津贴
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-22 14:10:19
+month_index: 1
+week_index: 1
+Event: 学院通知数字绘画专业课期中考试（占比30%）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 动画社团组织Unity引擎培训工作坊（限额报名）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 室友在共享洗衣机误拿贴身衣物引发矛盾
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 中国游戏开发者大会开放学生票申请（需提交作品集）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 概率论与数理统计期末闭卷考试（全年级统考）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 三间房地铁站临时管控导致通勤延误
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 14:16:35
+month_index: 1
+week_index: 1
+Event: 学校发布期中考试安排（高数/数据结构科目），公布考试时间及考场分配
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 学院通知游戏设计实践课分组截止日延期一周
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 图书馆服务器故障导致线上预约系统瘫痪（持续1天）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 班主任通知暑期游戏公司实习推荐名额开放申请
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 朝阳区突发暴雨导致专业课教室漏水（临时更换教室）
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 16:35:44
+month_index: 1
+week_index: 1
+Event: 学校发布通知，学期中游戏程序设计课程期末考试提前至第12周，需调整复习计划
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 好友发起周末桌游聚会邀请，需协调时间
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 北京市朝阳区举办大学生数字艺术节开放日，可凭学生证免费参加
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 宿舍楼突发水管爆裂维修，需暂住备用宿舍3天
+Expose: false
+------------------------------
+month_index: 3
+week_index: 10
+Event: 专业课小组项目成员因意见分歧发生争执，需协调分工矛盾
+Expose: false
+------------------------------
+month_index: 3
+week_index: 12
+Event: 期末周游戏引擎实践课考试+数字媒体技术闭卷笔试同步进行
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-22 16:44:30
+month_index: 1
+week_index: 1
+Event: 学院发布期中考试日程安排（编程基础与数据结构），考试时间定于第三周周四
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 同寝室友因卫生值日问题引发争吵，需要进行调解
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 暑期游戏公司实习申请通道开放，截止日期为第二个月第四周
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 朝阳区举办高校电竞嘉年华，报名需提供团队资质证明
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 教学楼自习区电路故障维修，部分区域停电两天
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 数字媒体艺术系期末大作业提交截止（Unity引擎开发实验项目）
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-22 17:57:32
+month_index: 1
+week_index: 1
+Event: 学校通知春季学期数学期中考试具体时间
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 室友突发急性肠胃炎需住院三天，请求陪同办理手续
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 市图书馆举办数字艺术创作讲座，提前开放预约通道
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 学生会突然通知组织游戏设计workshop，要求全员参与
+Expose: false
+------------------------------
+month_index: 3
+week_index: 2
+Event: 期末课程设计评审日期正式公布
+Expose: true
+------------------------------
+month_index: 3
+week_index: 4
+Event: 暴雨导致地铁故障，通勤途中滞留两小时
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 18:55:15
+month_index: 1
+week_index: 1
+Event: 学生会通知将在第三周举办春季电竞比赛报名（王者荣耀与永劫无间）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 1
+week_index: 3
+Event: 线性代数期中考试通知（开卷形式，允许携带A4纸手写笔记）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 游戏引擎基础课小组作业随机抽签分组，与三名陌生同班同学组队
+Expose: false
+------------------------------
+month_index: 2
+week_index: 5
+Event: 校园网突发故障导致游戏建模作业延迟提交，技术部发布48小时紧急维修通告
+Expose: false
+------------------------------
+month_index: 2
+week_index: 6
+Event: 动画学院举办72小时游戏开发马拉松，优胜者可获Unity官方认证证书
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 北京市大学生电竞联赛开启城市选拔赛，中国传媒大学电竞社获直通名额
+Expose: true
+------------------------------
+month_index: 2
+week_index: 8
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 9
+Event: 游戏数值策划课突击随堂测试（闭卷考试，占比总评15%）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 10
+Event: 寝室楼突发水管爆裂导致游戏手绘板进水损坏
+Expose: false
+------------------------------
+month_index: 3
+week_index: 11
+Event: 全国大学生游戏设计作品展征集通知（截止日期在第14周）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 12
+Event: STEAM夏促开启当日校园局域网下载速度骤降80%
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 18:59:18
+month_index: 1
+week_index: 1
+Event: 学院公布期中考试时间（游戏引擎原理与设计）、考试范围及补课安排，要求全员参加
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 图书馆系统升级维护，需通过预约分时段入馆自习
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 北京市互联网+大学生创新创业大赛校内选拔启动，报名DDL为第5周
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 朝阳区临时封控三天，网课期间校园外送受限，超市物资遭抢购
+Expose: false
+------------------------------
+month_index: 3
+week_index: 7
+Event: 校电竞社社长突发生病住院，社团争霸赛事筹备会议被迫取消
+Expose: false
+------------------------------
+month_index: 3
+week_index: 9
+Event: 核心课程《虚拟现实技术》停课两周，原教学进度调整至线上自学
+Expose: true
+------------------------------
+month_index: 3
+week_index: 11
+Event: 地铁双桥站临时管控，通勤学生需绕行传媒大学站返校
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 19:13:55
+month_index: 1
+week_index: 1
+Event: 校团委通知数字媒体领域企业开放日活动，需线下参观报名
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 同寝室友因考研复习占用共享书桌时间产生争执
+Expose: false
+------------------------------
+month_index: 2
+week_index: 2
+Event: 计算机图形学中期考试时间正式发布
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 朝阳区文创中心举办独立游戏开发者沙龙
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 动画学院实验室突发设备故障导致项目进度延迟
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 19:34:38
+month_index: 1
+week_index: 1
+Event: 学校发布《三维动画设计》期中考通知（4月21日）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 学生会邀请担任动漫社招新摊位美术指导
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 地铁四惠东站突发信号故障导致早课迟到
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 798艺术区举办青年数字艺术展征稿
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 邻床室友擅自使用其数位屏导致压感失灵
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-22 19:38:58
+month_index: 1
+week_index: 1
+Event: 学校通知春季动画短片创作大赛报名截止（4月7日），要求以小组形式提交剧本初稿，获奖作品获得省级奖项推荐资格
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 期中考试周，《运动规律》和《三维角色设计》课程安排闭卷笔试及上机操作测试
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 北京当代艺术馆举办「青年影像艺术展」，系主任在专业群推荐学生自愿参观，凭学生证可免票入场
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 舍友因熬夜赶作业突发肠胃炎住院，需临时调整团队项目分工
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 通州音乐节开放志愿者招募，协调岗日结工资180元并提供演出通行证
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 校门外共享单车大面积故障导致早课迟到潮，运维部门宣布三天内完成检修
+Expose: false
+------------------------------

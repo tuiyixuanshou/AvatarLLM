@@ -3,7 +3,7 @@ import settings
 import json
 import Avatar_Driven_module
 import Avatar_Driven_Respond
-import prompt_Writer
+import Image_Generation
 
 if __name__ == "__main__":
 
@@ -34,6 +34,6 @@ if __name__ == "__main__":
                 break
             else:
                 if(user_input.lower() == "test"):
-                    Avatar_Driven_Respond.Avatar_Proactive(prompt_Writer.Image_Prompt_Writer)
+                    Image_Generation.Avatar_Proactive_Image()
                 else:
                     response = settings.passive_dial_manager.user_input_send(user_input,_Passive_Dial_Callback)

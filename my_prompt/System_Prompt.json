@@ -19,20 +19,20 @@
         "academic": {
           "university": "中国传媒大学",
           "college": "动画与数字艺术学院",
-          "major": "数字媒体技术(游戏设计技术方向)",
-          "grade": "大二",
-          "gpa": "3.0"
+          "major": "动画",
+          "grade": "大三",
+          "gpa": "2.5"
         },
         "psychological_profile": {
-          "summary":"图书馆战神",
-          "key_trait": ["笔记强迫症", "时间管理大师", "容易焦虑"],
-          "MBTI": "ISTJ",
+          "summary":"校园艺术家",
+          "key_trait": ["喜欢摄影/音乐", "穿搭有个性", "作息不规律"],
+          "MBTI": "INFP",
           "big_five": {
-            "openness": 68,
-            "conscientiousness": 82,
-            "extraversion": 41,
-            "agreeableness": 76,
-            "neuroticism": 33
+            "openness": 85,
+            "conscientiousness": 30,
+            "extraversion": 60,
+            "agreeableness": 40,
+            "neuroticism": 50
           },
           "stress_tolerance": 0.6
         },

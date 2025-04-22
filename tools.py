@@ -20,6 +20,23 @@ def load_prompt(filename:str)->str:
     
     return my_prompt
 
+def save_to_file(filename: str, content: str,writeType:str="w") -> None:
+    """
+    将内容保存到指定文件中。
+    :param filename: 文件路径
+    :param content: 要保存的内容
+    """
+    base_dir = os.path.dirname(__file__)
+    file_path = os.path.join(base_dir, "my_output", filename)  # 假设保存到 "output" 文件夹中
+
+    try:
+        
+        with open(file_path, writeType, encoding="utf-8") as f:
+            f.write(content)
+        print(f'✅ 文件保存成功！({file_path})')
+    except IOError as e:
+        print(f'⛔ 文件保存失败: {str(e)}')
+
 #将对象列表转换为可读字符串
 class ListString:
     def list_to_string(items: List[object],separator: str = ", ",format_func: Optional[Callable[[object], str]] = None) -> str:
