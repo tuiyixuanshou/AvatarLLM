@@ -10,6 +10,11 @@ SK = "1c85901908b9472b924c0d4ffc7e75db" # 填写secret key
 KLING_URL = "https://api.klingai.com"
 KLING_IMAGE_URL= "https://api.klingai.com/v1/images/generations"
 
+"""端脑云网址"""
+Cephalon_Creat_Task = "https://wp05.unicorn.org.cn:17206/api/prompt"
+Cephalon_Check_Task = "https://wp05.unicorn.org.cn:17206/history/"
+
+
 MONTH_INDEX = 1
 WEEK_INDEX = 1
 
