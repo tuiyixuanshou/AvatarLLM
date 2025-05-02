@@ -4,6 +4,7 @@ from tools import load_prompt,save_to_file,ListString
 from dataclasses import dataclass
 from typing import List, Dict, Callable, Optional
 from datetime import datetime
+import prompt_Writer
 
 @dataclass
 class AvatarResObject:
@@ -20,12 +21,11 @@ def Avatar_Proactive(callback:Optional[Callable] = None):
     cur_targetweigh = [settings.M_Avatar_Target.weights[settings.MONTH_INDEX-1]]
     prompt1 = load_prompt("ARes")
     prompt2 = f"""
-请先回忆中，在这段时间中，你的核心目标选择为：{ListString.list_to_string(settings.M_Avatar_Target.target)}
-每个月，不同的核心目标都会有不同的权重分布，总和为1。
-本月中，四种核心目标的权重分布为：{ListString.list_to_string(cur_targetweigh)}
+在这段时间中，核心目标选择：{ListString.list_to_string(settings.M_Avatar_Target.target)}
+本月四种核心目标的权重分布：{ListString.list_to_string(cur_targetweigh)}
 现在进入了第{settings.MONTH_INDEX}个月的第{settings.WEEK_INDEX}个星期，
-周计划有：{ListString.list_to_string(settings.M_Avatar_Target.weekplans[(settings.MONTH_INDEX-1)*4+settings.WEEK_INDEX-1].week_event)}
-此外，本周的事件为：{settings.M_Avatar_Event.events[(settings.MONTH_INDEX - 1) * 4 + settings.MONTH_INDEX - 1].Event}"""
+周计划：{ListString.list_to_string(settings.M_Avatar_Target.weekplans[(settings.MONTH_INDEX-1)*4+settings.WEEK_INDEX-1].week_event)}
+事件：{settings.M_Avatar_Event.events[(settings.MONTH_INDEX - 1) * 4 + settings.MONTH_INDEX - 1].Event}"""
     prompt = prompt1+prompt2
     
     def Avatar_Proactive_callback(response:str,error:str):
@@ -40,7 +40,8 @@ def Avatar_Proactive(callback:Optional[Callable] = None):
             print(f"事件生成已完毕")
             if callback:callback(avatar_string)
         except Exception as e:
-            print(f"callback解析事件数据失败：{str(e)}")
+            print(f"callback解析事件数据失败：{str(e)}\n再次生成：")
+            Avatar_Proactive(prompt_Writer.Image_Prompt_Writer)
     
     settings.passive_dial_manager.user_input_send(prompt,callback=Avatar_Proactive_callback)
 

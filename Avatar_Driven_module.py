@@ -15,18 +15,18 @@ class EventObject:
 
 @dataclass
 class TargetObject:
-    学业成就导向: str
-    职业准备导向: str
-    个人成长导向: str
-    社交关系导向: str
+    学业成就: str
+    职业准备: str
+    个人成长: str
+    社交关系: str
 
 @dataclass
 class TargetWeightObject:
     month_index: int
-    学业成就权重: float
-    职业准备权重: float
-    个人成长权重: float
-    社交关系权重: float
+    学业成就: float
+    职业准备: float
+    个人成长: float
+    社交关系: float
 
 @dataclass
 class WeekPlan:
@@ -64,7 +64,12 @@ class Avatar_Events:
                 print(f"事件生成已完毕")
                 if callback:callback()
             except Exception as e:
-                print(f"callback解析事件数据失败：{str(e)}")
+                print(f"callback解析事件数据失败：{str(e)}\n再次生成：")
+                def generate_event_callback():
+                    settings.M_Avatar_Target.APlan_TargetWeigh(settings.M_Avatar_Event.exposed_events,callback=generate_plan_callback)
+                def generate_plan_callback():
+                    settings.M_Avatar_Target.APlan_SpecifyPlan(settings.M_Avatar_Target.target, settings.M_Avatar_Target.weights)
+                settings.M_Avatar_Event.generate_event(callback=generate_event_callback)
         
         self.llm.user_input_send(prompt,callback=generate_event_callback)
 
@@ -116,7 +121,8 @@ class Avatar_Self:
                 print(f"事件生成已完毕")
                 self.display_targets(output_file="Avatar_Target.txt")
             except Exception as e:
-                print(f"callback解析事件数据失败：{str(e)}")
+                print(f"callback解析事件数据失败：{str(e)}\n再次生成：")
+                settings.M_Avatar_Target.generate_targets()
         
         self.llm.user_input_send(prompt,callback=generate_targets_callback)
     
@@ -128,15 +134,15 @@ class Avatar_Self:
         
         content = ""
         for index, target in enumerate(self.target, start=1):
-            print(f"个人成长导向: {target.个人成长导向}")
-            print(f"学业成就导向: {target.学业成就导向}")
-            print(f"社交关系导向: {target.社交关系导向}")
-            print(f"职业准备导向: {target.职业准备导向}")
+            print(f"个人成长: {target.个人成长}")
+            print(f"学业成就: {target.学业成就}")
+            print(f"社交关系: {target.社交关系}")
+            print(f"职业准备: {target.职业准备}")
             print("-" * 30) 
-            content += f"个人成长导向: {target.个人成长导向}\n"
-            content += f"学业成就导向: {target.学业成就导向}\n"
-            content += f"社交关系导向: {target.社交关系导向}\n"
-            content += f"职业准备导向: {target.职业准备导向}\n"
+            content += f"个人成长: {target.个人成长}\n"
+            content += f"学业成就: {target.学业成就}\n"
+            content += f"社交关系: {target.社交关系}\n"
+            content += f"职业准备: {target.职业准备}\n"
             content += "-" * 30 + "\n"
         
         if output_file:
@@ -161,7 +167,10 @@ class Avatar_Self:
                 print(f"事件生成已完毕")
                 self.display_targetsweigh(output_file="Avatar_Target.txt")
             except Exception as e:
-                print(f"callback解析事件数据失败：{str(e)}")
+                print(f"callback解析事件数据失败：{str(e)}\n再次生成")
+                settings.M_Avatar_Target.APlan_TargetWeigh(settings.M_Avatar_Event.exposed_events,callback=generate_plan_callback)
+                def generate_plan_callback():
+                    settings.M_Avatar_Target.APlan_SpecifyPlan(settings.M_Avatar_Target.target, settings.M_Avatar_Target.weights)
         
         self.llm.user_input_send(prompt,callback=APlan_TargetWeigh_callback)
 
@@ -174,16 +183,16 @@ class Avatar_Self:
         content = ""
         for index, weight in enumerate(self.weights, start=1):
             print(f"month_index: {weight.month_index}")
-            print(f"个人成长权重: {weight.个人成长权重}")
-            print(f"学业成就权重: {weight.学业成就权重}")
-            print(f"社交关系权重: {weight.社交关系权重}")
-            print(f"职业准备权重: {weight.职业准备权重}")
+            print(f"个人成长: {weight.个人成长}")
+            print(f"学业成就: {weight.学业成就}")
+            print(f"社交关系: {weight.社交关系}")
+            print(f"职业准备: {weight.职业准备}")
             print("-" * 30) 
             content += f"month_index: {weight.month_index}\n"
-            content += f"个人成长权重: {weight.个人成长权重}\n"
-            content += f"学业成就权重: {weight.学业成就权重}\n"
-            content += f"社交关系权重: {weight.社交关系权重}\n"
-            content += f"职业准备权重: {weight.职业准备权重}\n"
+            content += f"个人成长: {weight.个人成长}\n"
+            content += f"学业成就: {weight.学业成就}\n"
+            content += f"社交关系: {weight.社交关系}\n"
+            content += f"职业准备: {weight.职业准备}\n"
             content += "-" * 30 + "\n"
 
         if output_file:
@@ -196,9 +205,9 @@ class Avatar_Self:
     
     def APlan_SpecifyPlan(self,targets:List[TargetObject],targetweighs:List[TargetWeightObject],callback: Optional[Callable] = None):
         cur_targetweigh = [targetweighs[settings.MONTH_INDEX-1]]
-        prompt1 = f"""现在你扮演的大学生进入了第1个月。回忆一下，总核心目标为:{ListString.list_to_string(targets)},
+        prompt1 = f"""时间进入以真实世界时间为起点的第1个月。总核心目标为:{ListString.list_to_string(targets)},
 本月的核心目标的权重分配为:{ListString.list_to_string(cur_targetweigh)}.
-你需要在事件池中，每周选择本周的事件安排.事件池：{load_prompt("Event_Pool")}."""
+在事件池中，每周选择本周的事件安排.事件池：{load_prompt("Event_Pool")}."""
         prompt2 = load_prompt("APlan_SpecifyPlan")
         prompt = prompt1+prompt2
         print(prompt)
@@ -214,7 +223,8 @@ class Avatar_Self:
                 print(f"事件生成已完毕")
                 self.display_weekplan(output_file="Avatar_Target.txt")
             except Exception as e:
-                print(f"callback解析事件数据失败：{str(e)}")
+                print(f"callback解析事件数据失败：{str(e)}\n再次生成")
+                settings.M_Avatar_Target.APlan_SpecifyPlan(settings.M_Avatar_Target.target, settings.M_Avatar_Target.weights)
 
         self.llm.user_input_send(prompt,callback=APlan_SpecifyPlan_callback)
 
@@ -239,7 +249,7 @@ class Avatar_Self:
                 content += f"    驱动类型: {event['driven_type']}\n"
                 content += f"    具体事件: {event['specify_event']}\n"
                 content += "-" * 30 + "\n"
-        content+="Avatar行为树生成完毕！输入“test”进行前四周故事生成和单帧图片\n"
+        print("Avatar行为树生成完毕！输入“test”进行前四周故事生成和单帧图片\n")
         if output_file:
             now = datetime.now()
             formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")

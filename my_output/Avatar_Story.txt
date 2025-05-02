@@ -69,3 +69,259 @@ Avatar模拟回应 创建时间:2025-04-22 19:40:54
   choice2: 无
 ------------------------------
 https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAAA3JmA-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-22 19:53:50
+响应类型: share
+内容: 这周简直忙炸！白天得跟着大流去实验室改比赛剧本分镜，凌晨三点还收到社团群里方案修改建议，咖啡当水喝。你的作息调过来了吗？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAA9snw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-22 19:55:12
+响应类型: share
+内容: 这周边改剧本边肝插画账号视觉设计，凌晨还被健身环强制拖起来蹦跳半小时，现在对着咖啡杯能睡过去…你平常赶DDL有啥提神秘籍？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjh53mgHRVEAAAAAAA3jMA-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-22 19:56:23
+响应类型: quest
+内容: 救命啊！在798搞外拍跟毕业生写真实战撞车了，又要肝比赛剧本。你觉得该连夜赶工把写真单子肝完，还是优先调试社团招募系统？（社恐落泪）
+用户选择选项：
+  choice1: 通宵拍写真积累作品集
+  choice2: 先确保社团活动顺利开展
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAAA6Vmw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-22 19:57:36
+响应类型: share
+内容: 终于熬到分镜终稿被导师表扬了！刚在ins投了作品集预告就被校友群转疯，但GPA作业还没动…你试过用咖啡泡面提神么？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+
+Avatar模拟回应 创建时间:2025-04-23 22:02:36
+响应类型: quest
+内容: 这周期中评议会要交分镜稿，我本来打算全天泡实验室做AnimateCC动画。不过创客空间周三有跨校技术沙龙，要不要先去Blender演示场偷师点三维技法？
+用户选择选项：
+  choice1: 先搞分镜稿，评议会更重要
+  choice2: 去沙龙交流，技术灵感两手抓
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjik3mgHQUcAAAAAAFrowg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-23 22:03:28
+响应类型: quest
+内容: 这周要闭关改《像素乡愁》的赛博场景渲染，但B站UP主的MG动画单子还没画完。是先肝中期评议会作品，还是熬夜接单赚外快？
+用户选择选项：
+  choice1: 专注改作品冲评议
+  choice2: 先接商单保进度款
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAFrhfw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-23 22:04:09
+响应类型: quest
+内容: 这周好不容易开始昼夜节律计划，每天早上五点半就得爬起来录城市声景。结果舞台搭建那边要调试全息投影机，要不要请假去支援社团？
+用户选择选项：
+  choice1: 继续坚持晨型企划
+  choice2: 先帮展演调试设备
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikY2gHPbcAAAAAAFu6fQ-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-23 22:05:02
+响应类型: quest
+内容: 这周要拍「废墟美学」Vlog做作品集，但动画学院工作坊要和舞美系合作改造美术馆。是先搞职业素材积累，还是专注跨校workshop？
+用户选择选项：
+  choice1: 优先Vlog创作丰富作品集
+  choice2: 主攻艺术共创积累人脉
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAAFrXCQ-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-23 23:58:00
+响应类型: share
+内容: 这周在VR实验室爆肝修改动画分镜第五版，凌晨还在暗房冲洗北京摄影大赛的胶卷！今天老师突然说要期中考试，分镜课的笔记借你抄？【抱着相机瘫在暗房地板发消息】
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAGDizw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-23 23:58:58
+响应类型: quest
+内容: 这周被三维动画中期评审追着跑，连续三天都在改角色绑定和灯光，半夜溜进废弃锅炉房拍延时还被保安追！老师又说下周要考分镜设计，下周是先通宵复习还是肝摄影集素材啊？📷💔
+用户选择选项：
+  choice1: 通宵背分镜笔记
+  choice2: 先整理摄影底片
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAGGxOA-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-23 23:59:43
+响应类型: quest
+内容: 刚办完五道口天台音画派对，现在要剪废墟摄影vlog！老师突然通知下周要期中考试，你说我是通宵肝分镜笔记还是先冲抖音运营课程啊？🎬🔦
+用户选择选项：
+  choice1: 熬夜复习分镜课
+  choice2: 突击抖音课程
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAGG7gw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 00:00:27
+响应类型: share
+内容: 刚熬完动画原理期中考就冲进VR实验室做空间叙事实验！强制调整作息连睡三天，现在看见太阳都像渲染灯光💤🌞 你的分镜作业肝完了吗？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAAGDjWg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 00:14:11
+响应类型: quest
+内容: 这周开始准备双周考的传播学复习框架，但凌晨在南操练长曝光时遇见了很棒的涂鸦墙。想分两天深入拍摄，不过下周要考期中考了，要压缩艺术时间吗？
+用户选择选项：
+  choice1: 通宵拍完灵感迸发的画面
+  choice2: 每天固定2小时练习兼顾复习
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikY2gHPbcAAAAAAGKMaw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 00:15:11
+响应类型: share
+内容: 刚策划完高校剧本杀破冰活动，和央美的小伙伴们定了暗黑童话主题！不过下周要代运营市媒微博排班表，正在构思怎么把新闻理论融入推文~
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikY2gHPbcAAAAAAGKbAQ-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 00:16:07
+响应类型: quest
+内容: 这周在中关村拍企业访谈拍到超棒镜头，但回来发现剪辑进度被耽误了～要用周末追剪辑进度，还是熬夜搞定后去三间房拍城市夜景？
+用户选择选项：
+  choice1: 爆肝48小时两不误
+  choice2: 保剪辑质量舍弃外拍
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAAGG3TQ-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 00:16:52
+响应类型: quest
+内容: 熬了两个大夜终于把纪录片脚本改到第三版，现在生物钟完全变成夜行动物啦！是趁着灵感多改一版分镜，还是先恢复作息备战期末？
+用户选择选项：
+  choice1: 再通宵打磨艺术细节
+  choice2: 喝枸杞茶回归正常作息
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAGHhOg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 01:01:17
+响应类型: share
+内容: 这周在三间房街拍时遇到超酷的涂鸦墙！蹲点两小时终于等到光影最美的瞬间，成片有赛博朋克混搭老北京的味道～要放进《Z世代观察》专栏开头吗？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+响应类型: quest
+内容: 采风考核在月底突然公布，原本去798策展工作坊的时间刚好冲突。是要重新调整摄影集选题优先保学分，还是按原计划深耕艺术表达呢？
+用户选择选项：
+  choice1: 调整计划确保考核
+  choice2: 维持原艺术创作节奏
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikY2gHPbcAAAAAAGT9bg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 01:02:09
+响应类型: quest
+内容: 突然收到北电编剧同学提议把播客主题定为‘废墟美学’，但798工作坊正好有策展案例拆解课，得翘掉创作会才能去。要选择深化合作还是优先个人成长呀？
+用户选择选项：
+  choice1: 参加策展工作坊
+  choice2: 主持创作联盟会议
+------------------------------
+响应类型: share
+内容: 在波普艺术课上发现三间房的废弃工厂超适合当展场！随手拍的锈铁管和荧光喷漆意外成了工作坊最佳作业～
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAGQ5uA-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 01:03:14
+响应类型: quest
+内容: 杂志编辑想让夜经济摄影集加入短视频花絮，但五道口数据库还差3个街区数据没整合。是熬夜剪辑视频争取专栏机会，还是先完善学术项目呢？
+用户选择选项：
+  choice1: 优先制作短视频花絮
+  choice2: 完成数据库可视化
+------------------------------
+响应类型: share
+内容: 在麦当劳通宵时拍到凌晨四点的代驾骑士，照片被杂志编辑夸'有彼得·林德伯格的味道'！决定放进采风考核作品集里啦～
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAAGQlRw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-04-24 01:04:16
+响应类型: quest
+内容: 考核用的胡同声景PPT还缺老匠人访谈片段，但戈达尔回顾展最后一场就在今晚。该留在剪辑室打磨作业，还是去捕捉影像大师的灵感呢？
+用户选择选项：
+  choice1: 完善考核演示文稿
+  choice2: 观摩新浪潮电影展
+------------------------------
+响应类型: share
+内容: 凌晨在胡同偶遇磨剪子老伯！收音时他和电动滑板的音轨意外形成超赞的实验音乐，绝对会成为考核作品的记忆点～
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl58rmgHRLsAAAAAAGObQg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 20:12:20
+响应类型: share
+内容: 这周在整理传播学案例库时，拍到两组超棒的地铁光影！一张是清晨逆光中穿校服的女孩，另一张是夜幕下的吉他手剪影。纠结哪组当九宫格C位呢？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+
+Avatar模拟回应 创建时间:2025-05-02 20:17:05
+响应类型: quest
+内容: 期中考试范围突然加了新闻采编基础！原本整理好的传播学案例库还要重分30%时间复习新内容，该压缩摄影创作时间还是减少跨校沙龙筹备呢？
+用户选择选项：
+  choice1: 调三成摄影时间复习
+  choice2: 沙龙筹备延后两周
+------------------------------
+
+Avatar模拟回应 创建时间:2025-05-02 21:08:21
+响应类型: quest
+内容: 这周既要复习传播伦理又要拍CBD夜景，荷赛作品展和共享文档都还没弄完。深度报道考试要选题了，你说我是聚焦城中村改造还是留守老人专题？
+用户选择选项：
+  choice1: 选城中村改造更有时效性
+  choice2: 留守老人话题更有社会意义
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAsVU1w-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 21:09:43
+响应类型: quest
+内容: 这周在传大模拟新闻现场超紧张，一边剪人民日报短视频，还要筹备影像交流会。深度报道考想用新学的多机位跟拍，选地铁早高峰人群还是深夜便利店故事线呢？
+用户选择选项：
+  choice1: 早高峰人潮更具视觉冲击力
+  choice2: 深夜便利店更有叙事纵深感
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAswr_w-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 21:41:21
+响应类型: share
+内容: 这周我要去图书馆自习，复习新闻学原理
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAscLfg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 21:50:12
+响应类型: share
+内容: 这周我计划去图书馆自习，复习专业课笔记
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAAs0z7Q-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 21:50:41
+响应类型: share
+内容: 这周我要参加校级摄影比赛，出去拍摄校园生活照片
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAs5IWQ-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 21:51:15
+响应类型: share
+内容: 这周我们室友要聚会，讨论期末考试安排
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikY2gHPbcAAAAAAshrOg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-02 21:51:42
+响应类型: share
+内容: 这周要完成课程作业，准备专业分流测评
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAs5WGg-0_raw_image_1.png

@@ -370,3 +370,735 @@ week_index: 3
 Event: 校门外共享单车大面积故障导致早课迟到潮，运维部门宣布三天内完成检修
 Expose: false
 ------------------------------
+
+外部安排事件创建时间:2025-04-22 19:47:29
+month_index: 1
+week_index: 1
+Event: 学院通知拍摄期中作业：4月10日前提交一部3分钟短片，主题为‘城市角落’，需团队合作完成
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 好友发起周末798艺术区摄影采风邀请，建议共同策划展览主题
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 动画系课程突击小考：原画分镜绘制测验（临时加课未提前通知）
+Expose: false
+------------------------------
+month_index: 2
+week_index: 6
+Event: 地铁早高峰期间偶遇独立音乐人街头演出，被邀请参与即兴合作拍摄
+Expose: false
+------------------------------
+month_index: 3
+week_index: 9
+Event: 宿舍区热水管道爆裂维修，临时调整至公共浴室使用（持续3天）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 11
+Event: 期末三维动画大作业：5月26日截止提交Maya角色绑定作品，占学期总评40%
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-22 19:50:04
+month_index: 1
+week_index: 1
+Event: 动画学院通知将举办全国高校动画创作大赛校内选拔赛，作品提交截止日期为第六周周五
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 好友Lucas邀请参加北京市798艺术区周末摄影外拍活动
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 教务系统突然通知因教授外出交流，《原画设计》课程结课考试提前至下周
+Expose: false
+------------------------------
+month_index: 2
+week_index: 6
+Event: 三里屯艺术集市出现即兴街头绘画表演，策展人主动邀约展示个人作品
+Expose: false
+------------------------------
+month_index: 3
+week_index: 9
+Event: 宿舍楼因供电线路故障意外停电24小时影响作业进度
+Expose: false
+------------------------------
+month_index: 3
+week_index: 11
+Event: 常逛的复古服装店举办周年庆折扣活动同步推出穿搭比赛
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-23 22:00:52
+month_index: 4
+week_index: 1
+Event: 学院通知4月15日进行中期作品展示评议会，需提交动画分镜稿
+Expose: true
+------------------------------
+month_index: 4
+week_index: 3
+Event: 摄影社团好友邀约4月25日通惠河畔拍摄落日延时素材
+Expose: false
+------------------------------
+month_index: 4
+week_index: 4
+Event: 北京市朝阳区开展高校文创市集，摊位申请截止4月29日
+Expose: true
+------------------------------
+month_index: 5
+week_index: 2
+Event: 动画创作课期末大作业要求5月16日前提交3分钟动画demo
+Expose: true
+------------------------------
+month_index: 5
+week_index: 3
+Event: 凌晨三点剪片时突发笔记本电脑显卡烧毁
+Expose: false
+------------------------------
+month_index: 5
+week_index: 4
+Event: 音乐社成员因设备借用问题发生财务纠纷
+Expose: false
+------------------------------
+month_index: 6
+week_index: 1
+Event: 教秘通知6月10日进行角色设计课程期末笔试
+Expose: true
+------------------------------
+month_index: 6
+week_index: 3
+Event: 朝阳区文创扶持基金开始接受申报，资料交至区政府
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-23 22:39:09
+month_index: 1
+week_index: 1
+Event: 教务处突然通知下周举行数字媒体艺术基础期末考试
+Expose: false
+------------------------------
+month_index: 1
+week_index: 2
+Event: 学校动漫社发起校园春日Lolita茶话会招募
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 朝阳区双桥地铁站出口举办次元市集开放报名
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 专业课老师临时增加三维建模期中作业DDL提前两周
+Expose: false
+------------------------------
+month_index: 2
+week_index: 2
+Event: 中国传媒大学电竞联盟组织《原神》高校邀请赛
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 北京798艺术区开展元宇宙数字艺术展映周
+Expose: true
+------------------------------
+month_index: 3
+week_index: 1
+Event: 北京地铁6号线早高峰突发设备故障停运三小时
+Expose: false
+------------------------------
+month_index: 3
+week_index: 3
+Event: 中国国际动漫节原创作品征稿截止日期提前通知
+Expose: true
+------------------------------
+month_index: 3
+week_index: 4
+Event: 学校附近漫咖主题剧本杀店装修停业两周公告
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 2
+Event: 无客观事件
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-04-23 23:34:31
+month_index: 1
+week_index: 1
+Event: 学校发布本学期期末动画创作选题范围（提交提案截止日期：第六周）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 朝阳区青年摄影艺术节征稿启事（截稿日期：第九周）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 好友组队参加网易云校园音乐人原创大赛，邀请担任MV分镜设计
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 动画学院期中三维软件操作考核（突击随堂测试）
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 校园西街艺术市集发生摊位纠纷（与商贩产生肢体冲突）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 2
+Event: 全国大学生广告艺术节学院奖春季赛截稿（提交作品当日网络故障）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 实验楼突发性电路检修导致连续三日通宵作业中断
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 北京国际设计周外围展志愿者招募（要求提供过往策展经验）
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-23 23:50:59
+month_index: 1
+week_index: 1
+Event: 学院通知下周期中考试（动画原理与分镜设计）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 北京市大学生摄影大赛征稿截止提醒
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 音乐社团发起的夜场即兴创作会临时改期
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 宿管科突击检查违禁电器
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 室友生日派对筹划群组突然解散
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 全国大学生电子竞技联赛区域赛报名开启
+Expose: true
+------------------------------
+month_index: 3
+week_index: 1
+Event: 朝阳区派出所反诈骗宣传进校园活动
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 三间房咖啡市集突发临时交通管制
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 期末动画毕设选题截止日提前通知
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-24 00:12:08
+month_index: 1
+week_index: 1
+Event: 学校发布期中考时间表（新闻理论、传播学概论）覆盖次周期末考试范围50%
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 学生会发起'光影二十四帧'校园微电影大赛 报名截止第三周末
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 地铁22号线施工围挡侵占校园北门 部分外卖取餐点向东南迁移300米
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 凌晨两点收到乐队成员微信消息'周五排练放鸽子' 未说明具体原因
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 教务处发布暑期社会实践立项通知 重点立项团队可获800元经费
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 北京国际电影节露天放映单元在三间房社区广场举办 需持学生证领票
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 室友在未告知情况下将多人作业提交时间提前三天
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 新闻摄影课期末大作业要求递交10组胡同人文主题摄影并附田野笔记
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-04-24 00:59:40
+month_index: 1
+week_index: 1
+Event: 新闻学院宣布月底举行春季学期摄影采风实践考核，计入实践课成绩（校内事件）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 北京国际短片电影周青年导演座谈会在朝阳文化馆举办（社会事件）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 室友临时发起通宵剪辑视频的邀约（好友事件）
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 学生社团因排练时间冲突导致器材室钥匙纠纷（好友事件）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 选修课小组作业被分配与拖延症同学搭档（校内事件）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 2
+Event: 朝阳区突发暴雨导致校园西北门积水严重（社会事件）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 校级新闻评论期末闭卷考试时间公示（校内事件）
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-02 19:33:31
+month_index: 1
+week_index: 1
+Event: 新闻采写课程论文截稿日（可预知）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 学院影像竞赛开启征稿（展板通知）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 社会新闻实践课突发外景拍摄任务
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 地铁22号线突发施工致课堂迟到20分钟
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 期中摄影器材租用系统故障（临时邮件通报）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 实验电影院露天放映会（海报预告）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 社团好友组织深夜798摄影出逃计划
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 期末融媒体作品答辩日期通知（教务处公告）
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-02 20:01:34
+month_index: 4
+week_index: 1
+Event: 新闻学院通知本学期期中考试将于四月第三周进行，考试范围涵盖新闻采编基础与传播学概论
+Expose: true
+------------------------------
+month_index: 4
+week_index: 3
+Event: 期中考试周开始，中国传媒大学各院系停课集中组织考试
+Expose: true
+------------------------------
+month_index: 4
+week_index: 4
+Event: 朝阳区突发地铁14号线设备故障导致早高峰延误，三间房区域学生集体迟到
+Expose: false
+------------------------------
+month_index: 5
+week_index: 2
+Event: 网易云音乐校园歌手大赛中国传媒大学分赛区开放报名
+Expose: true
+------------------------------
+month_index: 5
+week_index: 4
+Event: 摄影社团成员因借用器材未按时归还与设备管理员发生争执
+Expose: false
+------------------------------
+month_index: 6
+week_index: 1
+Event: 教务处发布夏季学期选课通知，新闻专业需在六月第二周完成选课
+Expose: true
+------------------------------
+month_index: 6
+week_index: 3
+Event: 北京市启动老旧小区改造工程，三间房西街部分路段实施夜间施工
+Expose: true
+------------------------------
+month_index: 6
+week_index: 4
+Event: 朝阳文化馆举办青年影像展，免费向高校艺术类学生开放预约
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-02 21:02:45
+month_index: 1
+week_index: 1
+Event: 新闻学院发布期中考核安排通知（传播学概论闭卷笔试占60%、摄影实践作品提交占40%）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 学生会发起'朝阳记疫'主题短视频大赛征稿（设备与剪辑培训可预约）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 高数月考通知公布（将综合出勤率与作业完成度评定平时成绩）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 室友发起五道口Livehouse拼车夜游活动（需分担约车费用80元）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 图书馆发布期末复习专座预约指南（可申请延长夜间开放时长）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 社会新闻：本市开展高校周边青年旅舍消防隐患整治专项行动
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 摄影社团成员失联（引发微信社群对校外约拍安全规范的激烈讨论）
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-02 21:05:53
+month_index: 1
+week_index: 1
+Event: 新闻学院宣布四月中旬举办‘深度报道’期中专题考试（笔试+实务拍摄），具体日期将在教务系统公布
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 同专业好友提议五一假期去平遥国际摄影节采风，需提前预订车票和展区通行证
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 北京地铁14号线突发接触网故障导致停运三小时，影响通州片区高校生进城交通
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 学校通知6月10日前需上传‘马克思主义新闻观’课程论文至超星平台
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 校园乐队主唱因排练时间冲突与键盘手发生争执，原定五月底的LiveHouse演出面临取消风险
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 期末考试周安排公布：新闻摄影实务考试定于7月8日上午在传播大楼数字影棚进行
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 网易云音乐人扶持计划开启校园选拔，决赛将于杭州举办
+Expose: true
+------------------------------
+month_index: 3
+week_index: 4
+Event: 朝阳区文创办突然征集大学生新媒体创意作品，截止日期三天后
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-02 21:30:14
+month_index: 1
+week_index: 1
+Event: 新闻学院组织校园短视频大赛报名（截止日期第三周）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 突降暴雨导致校新闻中心直播设备意外进水损坏
+Expose: false
+------------------------------
+month_index: 1
+week_index: 3
+Event: 《新闻写作基础》期中考试（闭卷）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 校团委组织朝阳公园樱花人像外拍活动
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 室友擅自使用其珍藏版黑胶唱片导致划痕纠纷
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 三里屯美术馆举办青年影像艺术展向社会征稿
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 《传播学概论》期末考试改为48小时限时论文制
+Expose: false
+------------------------------
+month_index: 3
+week_index: 3
+Event: 流浪猫保护社团请求合作拍摄公益宣传片
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 地铁6号线信号故障造成早课大规模迟到事件
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-02 21:37:29
+month_index: 1
+week_index: 1
+Event: 开学典礼
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 新生军训
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 好友聚餐
+Expose: false
+------------------------------
+month_index: 1
+week_index: 4
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 5
+Event: 期中考试
+Expose: true
+------------------------------
+month_index: 2
+week_index: 6
+Event: 社团招新
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 8
+Event: 校园音乐节
+Expose: true
+------------------------------
+month_index: 3
+week_index: 9
+Event: 期末考试
+Expose: true
+------------------------------
+month_index: 3
+week_index: 10
+Event: 毕业设计选题
+Expose: true
+------------------------------
+month_index: 3
+week_index: 11
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 12
+Event: 无客观事件
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-02 21:39:21
+month_index: 1
+week_index: 1
+Event: 校内通知：下周开始为期两周的考查周，包括新闻学原理、传播学等三门课程的考试
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 好友事件：舍友生日聚会
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 社会事件：北京市举办春季书展
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 5
+Event: 校内比赛：大学生短视频大赛报名开始
+Expose: true
+------------------------------
+month_index: 2
+week_index: 6
+Event: 社会事件：国家公布最新就业数据
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 好友事件：与朋友在校外商业街拍照
+Expose: false
+------------------------------
+month_index: 2
+week_index: 8
+Event: 校内通知：下周开始为期一周的体育节，包括多项竞技比赛
+Expose: true
+------------------------------
+month_index: 3
+week_index: 9
+Event: 社会事件：著名品牌在北京举办新品发布会
+Expose: true
+------------------------------
+month_index: 3
+week_index: 10
+Event: 好友事件：舍友关系紧张，产生矛盾
+Expose: false
+------------------------------
+month_index: 3
+week_index: 11
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 12
+Event: 无客观事件
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-02 21:49:47
+month_index: 1
+week_index: 1
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 1
+week_index: 2
+Event: 新闻学院专业分流测评
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 室友聚会，讨论即将到来的期末考试安排
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 校级摄影比赛预 eliminatioin
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 6
+Event: 期末考试开始
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 好友生日聚会
+Expose: true
+------------------------------
+month_index: 2
+week_index: 8
+Event: 学校艺术节开始
+Expose: true
+------------------------------
+month_index: 3
+week_index: 9
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 10
+Event: Academic Advising会议，讨论下学期课程安排
+Expose: true
+------------------------------
+month_index: 3
+week_index: 11
+Event: 社会实践报名开始
+Expose: true
+------------------------------
+month_index: 3
+week_index: 12
+Event: 无客观事件
+Expose: false
+------------------------------

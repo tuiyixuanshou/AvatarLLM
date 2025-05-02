@@ -85,6 +85,7 @@ class LLM_Manager:
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
     
+
     def _add_assistant_message(self,text):
         self.dialogue_history.append({
             "role":"assistant",

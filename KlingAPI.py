@@ -44,6 +44,7 @@ def _async_Kling_Image_Generation(image_prompt,callback=None):
 
 def _Kling_Image_Generation(image_prompt):
     api_token = encode_jwt_token(ak,sk)
+    print(api_token)
     headers = {
     "Authorization": f"Bearer {api_token}",  # 替换为你的实际 Token
     "Content-Type": "application/json"
@@ -96,7 +97,7 @@ def handle_image_url(image_url):
     if image_url:
         print(f"Generated Image URL: {image_url}")
         save_to_file("Avatar_Story.txt",image_url,"a")
-        if settings.WEEK_INDEX<=4:
+        if settings.WEEK_INDEX<=3:
             settings.WEEK_INDEX = settings.WEEK_INDEX+1
             #Avatar_Driven_Respond.Avatar_Proactive(prompt_Writer.Image_Prompt_Writer)
             Image_Generation.Avatar_Proactive_Image()
@@ -107,19 +108,19 @@ def handle_image_url(image_url):
         print("图片查询时遇到问题！")
 
 def encode_jwt_token(ak, sk):
-    headers = {
-        "alg": "HS256",
-        "typ": "JWT"
-    }
     payload = {
         "iss": ak,
-        "exp": int(time.time()) + 1800, # 有效时间，此处示例代表当前时间+1800s(30min)
-        "nbf": int(time.time()) - 5 # 开始生效的时间，此处示例代表当前时间-5秒
+        "exp": int(time.time()) + 1800,
+        "nbf": int(time.time()) - 30
     }
-    
-    token = jwt.encode(payload, sk, headers=headers)
+    headers = {
+        "typ": "JWT",
+        "alg": "HS256"
+    }
+    token = jwt.encode(payload=payload, key=sk, algorithm="HS256", headers=headers)
+    if isinstance(token, bytes):
+        token = token.decode("utf-8")
     return token
-
 
 # if __name__ == "__main__":
 #     Kling_API_Image("""scene": "University Study Lounge with Whiteboard at Dusk","elements": {
