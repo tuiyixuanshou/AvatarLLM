@@ -325,3 +325,82 @@ Avatar模拟回应 创建时间:2025-05-02 21:51:42
   choice2: 无
 ------------------------------
 https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAAs5WGg-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-04 19:10:22
+响应类型: share
+内容: 本周我准备参加大学新生适应性心理测试并撰写心得
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+
+Avatar模拟回应 创建时间:2025-05-04 19:50:48
+响应类型: quest
+内容: 这周除了泡图书馆看传播学文献，校园媒体中心的剪辑训练营也开班了，要拍运动会宣传片。不过在选拍摄风格上有点纠结，是想用赛博朋克特效展现力量感，还是走日系清新风突出青春活力呀？
+用户选择选项：
+  choice1: 炫酷机甲特效风
+  choice2: 樱花滤镜小清新
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAA0Vi6w-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-04 19:51:32
+响应类型: share
+内容: 这周跑三间房文创园拍樱花写真，刚更新动态就涨了500粉！下午还要和动画系大神头脑风暴展览方案，用虚拟投影混合新闻时间线你觉得酷不酷？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjh53mgHRVEAAAAAA0SUEw-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-04 19:52:14
+响应类型: share
+内容: 今天给创业团队拍完产品图，甲方爸爸超满意！可是在整理文献对比报告时发现两个超棒的案例，纠结要不要整合进自媒体选题库呢？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl58rmgHRLsAAAAAA0qV7g-0_raw_image_1.png
+Avatar模拟回应 创建时间:2025-05-04 19:52:58
+响应类型: quest
+内容: 刚在图书馆东区挑完摄影展作品，发现运动会报名快截止了。你说我是报名4×100米接力赛练团队协作，还是参加摄影记者团记录比赛瞬间更有意义呀？
+用户选择选项：
+  choice1: 热血接力跑
+  choice2: 幕后镜头控
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAA0V9RA-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAA4M4YQ-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAA4HYBA-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/ClozK2gHQoUAAAAAA4JSjw-0_raw_video_1.mp4
+Avatar模拟回应 创建时间:2025-05-05 15:31:46
+响应类型: quest
+内容: 这周把新闻传播理论思维导图搞完啦，但《光影叙事》拍摄还剩灯光设计没定！在琴房扒周杰伦的新和弦上头到凌晨两点，宿管阿姨差点锁门——话说摄影展主题用市井烟火还是赛博霓虹好？
+用户选择选项：
+  选择烟火人间: 市井早市蒸腾的热气配青砖胡同的光影，叙事感更强
+  选择未来之镜: 用798的金属骨架反射电子屏蓝光，更有先锋张力
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAA4KHdg-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/ClozK2gHQoUAAAAAA4L__A-0_raw_video_1.mp4
+Avatar模拟回应 创建时间:2025-05-05 15:35:59
+响应类型: share
+内容: 这周爆肝写财经类短视频文案到凌晨，顺手蹭热点发了篇Z世代就业解读，没想到播放量破万！还跟导演系大佬在咖啡馆脑暴出城中村纪录片大纲，下周开拍！
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjh53mgHRVEAAAAAA3yfFw-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl58rmgHRLsAAAAAA4KSbA-0_raw_video_1.mp4
+Avatar模拟回应 创建时间:2025-05-05 15:39:48
+响应类型: share
+内容: 在传播学小组研讨会上爆肝设计出媒体效能量化模型，数据可视化的时候PPT差点崩了！晚上剪热点视频时发现标题带‘人工智能’关键词播放量飙升2倍，算法真香～
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjh53mgHRVEAAAAAA3zOQw-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgHRVEAAAAAA3zUOA-0_raw_video_1.mp4
+Avatar模拟回应 创建时间:2025-05-05 15:43:49
+响应类型: share
+内容: 这周晨跑时突然找到融合新闻与音乐的新灵感，把菜市场的吆喝声采样成了爵士鼓点！顺带帮社团搬设备偷学了导演分镜秘籍，摄影展终于压线交稿啦～
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAA4OPZw-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgHRVEAAAAAA30F2w-0_raw_video_1.mp4

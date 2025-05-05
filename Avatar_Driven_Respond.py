@@ -4,7 +4,7 @@ from tools import load_prompt,save_to_file,ListString
 from dataclasses import dataclass
 from typing import List, Dict, Callable, Optional
 from datetime import datetime
-import prompt_Writer
+import KlingAI_Flow
 
 @dataclass
 class AvatarResObject:
@@ -41,7 +41,7 @@ def Avatar_Proactive(callback:Optional[Callable] = None):
             if callback:callback(avatar_string)
         except Exception as e:
             print(f"callback解析事件数据失败：{str(e)}\n再次生成：")
-            Avatar_Proactive(prompt_Writer.Image_Prompt_Writer)
+            #Avatar_Proactive(prompt_Writer.Image_Prompt_Writer)
     
     settings.passive_dial_manager.user_input_send(prompt,callback=Avatar_Proactive_callback)
 

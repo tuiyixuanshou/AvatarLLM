@@ -1102,3 +1102,419 @@ week_index: 12
 Event: 无客观事件
 Expose: false
 ------------------------------
+
+外部安排事件创建时间:2025-05-04 13:29:14
+month_index: 1
+week_index: 1
+Event: 校内活动：大学新生适应性心理测试
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 好友事件：室友聚餐
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 社会事件：北京市文旅局举办文化周活动
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 5
+Event: 校内事件：期中考试
+Expose: true
+------------------------------
+month_index: 2
+week_index: 6
+Event: 好友事件：宿舍生日聚会
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 社会事件：NASA举办全球天文观测日
+Expose: true
+------------------------------
+month_index: 2
+week_index: 8
+Event: 校内活动：职业_ORIENTATION讲座
+Expose: true
+------------------------------
+month_index: 3
+week_index: 9
+Event: 社会事件：中国传媒大学举办创业比赛
+Expose: true
+------------------------------
+month_index: 3
+week_index: 10
+Event: 好友事件：朋友婚礼
+Expose: true
+------------------------------
+month_index: 3
+week_index: 11
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 12
+Event: 校内事件：期末考试
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-04 19:11:52
+month_index: 1
+week_index: 1
+Event: 无客观事件
+Expose: False
+------------------------------
+month_index: 1
+week_index: 2
+Event: 校内文体比赛报名开始
+Expose: True
+------------------------------
+month_index: 1
+week_index: 3
+Event: 大学生艺术作品展览
+Expose: True
+------------------------------
+month_index: 1
+week_index: 4
+Event: 期中考周开始
+Expose: True
+------------------------------
+month_index: 2
+week_index: 5
+Event: 好友聚会：criptor游戏局
+Expose: False
+------------------------------
+month_index: 2
+week_index: 6
+Event: 无客观事件
+Expose: False
+------------------------------
+month_index: 2
+week_index: 7
+Event: 全国大学生新闻稿件大赛报名截止
+Expose: True
+------------------------------
+month_index: 2
+week_index: 8
+Event: 校内 photography比赛
+Expose: True
+------------------------------
+month_index: 3
+week_index: 9
+Event: 大学生模拟职场实践项目开始
+Expose: True
+------------------------------
+month_index: 3
+week_index: 10
+Event: 期末考周开始
+Expose: True
+------------------------------
+month_index: 3
+week_index: 11
+Event: 无客观事件
+Expose: False
+------------------------------
+month_index: 3
+week_index: 12
+Event: 无客观事件
+Expose: False
+------------------------------
+
+外部安排事件创建时间:2025-05-04 19:13:22
+month_index: 1
+week_index: 1
+Event: 无客观事件
+Expose: False
+------------------------------
+month_index: 1
+week_index: 2
+Event: 校内事件：期中考试（可预知）
+Expose: True
+------------------------------
+month_index: 1
+week_index: 3
+Event: 好友事件：室友生日聚会
+Expose: False
+------------------------------
+month_index: 1
+week_index: 4
+Event: 校内事件：学院文化节准备会
+Expose: True
+------------------------------
+month_index: 2
+week_index: 5
+Event: 无客观事件
+Expose: False
+------------------------------
+month_index: 2
+week_index: 6
+Event: 社会事件：北京市大学生创业比赛（可预知）
+Expose: True
+------------------------------
+month_index: 2
+week_index: 7
+Event: 好友事件：与舍友一起参加校内音乐比赛
+Expose: False
+------------------------------
+month_index: 2
+week_index: 8
+Event: 校内事件：期末考试安排发布（可预知）
+Expose: True
+------------------------------
+month_index: 3
+week_index: 9
+Event: 社会事件：北京市实习岗位招聘会（可预知）
+Expose: True
+------------------------------
+month_index: 3
+week_index: 10
+Event: 无客观事件
+Expose: False
+------------------------------
+month_index: 3
+week_index: 11
+Event: 好友事件：室友团建活动
+Expose: False
+------------------------------
+month_index: 3
+week_index: 12
+Event: 无客观事件
+Expose: False
+------------------------------
+
+外部安排事件创建时间:2025-05-04 19:14:11
+month_index: 1
+week_index: 1
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 1
+week_index: 2
+Event: 校内活动：朝阳区大学生摄影比赛报名开始
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 好友事件：室友生日聚会
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 社会事件：北京市举办春季音乐节
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 6
+Event: 校内事件：期中考试
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 好友事件：班级团建活动
+Expose: true
+------------------------------
+month_index: 2
+week_index: 8
+Event: 社会事件： collided Zones展览开幕
+Expose: true
+------------------------------
+month_index: 3
+week_index: 9
+Event: 校内事件：大学生艺术節报名开始
+Expose: true
+------------------------------
+month_index: 3
+week_index: 10
+Event: 好友事件：室友 Vegan嘛
+Expose: false
+------------------------------
+month_index: 3
+week_index: 11
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 12
+Event: 社会事件：北京市夏季音乐节结束
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-04 19:45:35
+month_index: 1
+week_index: 1
+Event: 新闻学院发布期中摄影纪实大作业，要求两周内完成街拍选题
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 室友因音响扰民问题与楼下寝室发生争执
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 全球新闻摄影大赛校内巡回展在三教展厅举办
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 朝阳区青年音乐节招募校园志愿者
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 新闻伦理期末考试突然改为线上开卷模式
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 市级大学生穿搭创意比赛开放报名
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 浙江老乡会组织清明返乡采风活动
+Expose: true
+------------------------------
+month_index: 3
+week_index: 4
+Event: 寝室空调集体故障需临时搬迁至周转楼
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-04 19:49:28
+month_index: 1
+week_index: 1
+Event: 校园春季运动会报名通知（3月25日-4月5日）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 2
+Event: 新闻学院自媒体运营课程大作业截止（4月22日前提交）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 突发：寝室卫生间漏水导致地板被淹
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 期中考试周（新闻实务/传播学概论基础课考试）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 室友生日聚会邀请（5月8日19点海底捞聚餐）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 北京国际电影节外围活动志愿者招募（5月20日截止）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 新闻摄影课期末作品汇报展（6月12日传媒博物馆展厅）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 突发：校园论坛出现针对新闻学院教学质量的争议热帖
+Expose: false
+------------------------------
+
+外部安排事件创建时间:2025-05-05 15:26:45
+month_index: 1
+week_index: 1
+Event: 新闻学院摄影社团开放日-器材体验与作品征集
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 校服自由穿搭日引发的师生礼仪争论风波
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 广播电视编导专业课期末作品DDL提前公布
+Expose: true
+------------------------------
+month_index: 2
+week_index: 3
+Event: 杭州市文旅局实习生招募宣讲会
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 校友论坛现场直播设备突发故障事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 新闻采写期末考试范围变更通知
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 短视频创作大赛颁奖典礼暨新赛道启动会
+Expose: true
+------------------------------
+month_index: 3
+week_index: 4
+Event: 北京市文化创意产业新政解读讲座
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-05 15:30:08
+month_index: 1
+week_index: 1
+Event: 新闻学院春季摄影展作品提交截止（校级）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 校园流浪猫投喂点改建引发动保社团抗议（校内社会事件）
+Expose: false
+------------------------------
+month_index: 2
+week_index: 1
+Event: 新闻采写基础期中考试（必修课考核）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 音乐社社长突发住院导致专场演唱会取消（个人突发事件）
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 北京市高校自媒体创作大赛报名启动（市级竞赛）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 杭州国际青年影像周校内选拔赛（国家级赛事预选）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 寝室楼深夜断电新政引发集体请愿（生活突发事件）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 影视鉴赏课程期末论文答辩（专业选修考核）
+Expose: true
+------------------------------
