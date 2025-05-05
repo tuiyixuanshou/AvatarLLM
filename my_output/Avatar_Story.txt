@@ -403,4 +403,40 @@ Avatar模拟回应 创建时间:2025-05-05 15:43:49
   choice2: 无
 ------------------------------
 https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAA4OPZw-0_raw_image_1.png
-https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgHRVEAAAAAA30F2w-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgHRVEAAAAAA30F2w-0_raw_video_1.mp4https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjh53mgHRVEAAAAAA35lLQ-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-05 16:33:24
+响应类型: share
+内容: 这周真的超忙！参加影像人类学论坛时发现了超多适合论文的灵感，还在网易约稿里拍了地铁口滑板少年的亚文化穿搭。不过开题报告赶得头晕，导师让我再深化访谈设计，感觉要住在图书馆了......
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl58rmgHRLsAAAAAA4VRuQ-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-05 16:33:57
+响应类型: share
+内容: 终于把开题报告肝完了！这周在三影堂拍到了超赞的展陈设计，灯光打在金属装置上好未来感～还跑去清华见策展小伙伴，发现798有个废弃车间特别适合做新媒体展，就是租金有点肉疼QAQ
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAA4WItg-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-05 16:34:38
+响应类型: share
+内容: 这周在摇滚音乐节培训志愿者时发现灯光和摄影配合太讲究了！学习FCP调色到凌晨，现在看什么都是曲线图😂 晚上在后海抓拍滑板少年摔跤的瞬间，意外收获了超棒的动态构图～
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikY2gHPbcAAAAAA4E1gg-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-05 16:35:19
+响应类型: share
+内容: 论文初稿赶得头秃呜呜！不过在预答辩时老师夸调研方法很有新意～自媒体数据涨了2000粉，但选题又要大调整QAQ 剧本杀活动约到中戏超酷的小姐姐，她说下次带我去黑匣子剧场玩！
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAA4cfgw-0_raw_image_1.png

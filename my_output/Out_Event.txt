@@ -1518,3 +1518,45 @@ week_index: 4
 Event: 影视鉴赏课程期末论文答辩（专业选修考核）
 Expose: true
 ------------------------------
+
+外部安排事件创建时间:2025-05-05 16:31:31
+month_index: 1
+week_index: 1
+Event: 新闻学院中期论文开题报告截止
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 校园摇滚音乐节征集摄影志愿者（展板提前一周公布）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 寝室楼下共享单车停放区域施工（施工告示张贴）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 同班同学发起798艺术展拼车出游邀约
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 传播学概论课程随堂测试（突击考试未提前通知）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 1
+Event: 北京国际电影节高校巡展抢票活动（官网公告）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 室友擅自使用其胶片相机导致卡卷曝光
+Expose: false
+------------------------------
+month_index: 3
+week_index: 3
+Event: 央视新闻部开放日实习生选拔（宣传单页发放）
+Expose: true
+------------------------------

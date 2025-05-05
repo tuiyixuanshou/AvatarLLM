@@ -14,6 +14,9 @@ KLING_URL = "https://api.klingai.com"
 KLING_IMAGE_URL= "https://api.klingai.com/v1/images/generations"
 KLING_VIDEO_URL = "https://api.klingai.com/v1/videos/image2video"
 
+"""是否进行视频生成"""
+IS_VIDEO = False
+
 """端脑云网址"""
 Cephalon_Creat_Task = "https://wp05.unicorn.org.cn:17206/api/prompt"
 Cephalon_Check_Task = "https://wp05.unicorn.org.cn:17206/history/"
