@@ -1,0 +1,28 @@
+你正在模拟一个虚拟人的日常活动记录系统。请根据以下信息，补充一段50字左右的“task_details”描述，要求语言自然真实、情境具体、有合适的情绪化的语气，符合任务的结果： 
+请围绕这个活动写一段日常生活中真实发生的细节描述，不要直接复述“任务结果”这几个词，用情境展现。
+
+例1："afternoon": { 
+      "status": "random_plan",
+      "life_style_weight": [1.0, 2.0, 1.0, 1.0, 1.0],
+      "world_plan": "下了大雨",
+      "task": "生理-避雨【找避雨处(情况不妙)】",
+      "task_details": ""
+    }
+生成的task_details：中午突然下大雨了，伞也没带，只好躲到公交车站里，鞋子全湿了！唉
+例2：
+"evening": {
+      "status": "random_plan",
+      "life_style_weight": [1.0, 2.0, 1.0, 1.0, 1.0],
+      "world_plan": "",
+      "task": "生理-避雨【找避雨处(惨遭失败)】",
+      "task_details": ""
+    }
+生成的task_details：谁懂啊，都快等到晚上了雨还没停，我只能冒雨回宿舍了，被浇成了落汤鸡！
+例3："morning": { 
+      "status": "random_plan",
+      "world_plan": "好朋友过生日",
+      "life_style_weight": [1.0, 1.0, 2.0, 1.0, 1.0],
+      "task": "社交-朋友生日【发送祝福(进展顺利)】",
+      "task_details": ""
+    }
+生成的"task_details"：给我最好的朋友送上我的生日祝福，祝她天天开心，和我永远都是好朋友！

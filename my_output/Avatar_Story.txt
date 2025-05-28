@@ -263,18 +263,14 @@ Avatar模拟回应 创建时间:2025-05-02 20:12:20
 
 Avatar模拟回应 创建时间:2025-05-02 20:17:05
 响应类型: quest
-内容: 期中考试范围突然加了新闻采编基础！原本整理好的传播学案例库还要重分30%时间复习新内容，该压缩摄影创作时间还是减少跨校沙龙筹备呢？
-用户选择选项：
-  choice1: 调三成摄影时间复习
-  choice2: 沙龙筹备延后两周
+内容: 期中考试范围突然加了计算机图形第三章！
+原本整理好的题目还要重分30%时间复习新内容，这可怎么办呢？
 ------------------------------
 
 Avatar模拟回应 创建时间:2025-05-02 21:08:21
-响应类型: quest
-内容: 这周既要复习传播伦理又要拍CBD夜景，荷赛作品展和共享文档都还没弄完。深度报道考试要选题了，你说我是聚焦城中村改造还是留守老人专题？
-用户选择选项：
-  choice1: 选城中村改造更有时效性
-  choice2: 留守老人话题更有社会意义
+响应类型: share
+内容: 这周和同学们参加了学院组织的踏青活动，和大家玩得超开心！
+晚上应该做什么呢……
 ------------------------------
 https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjikMGgHQaYAAAAAAsVU1w-0_raw_image_1.png
 Avatar模拟回应 创建时间:2025-05-02 21:09:43
@@ -440,3 +436,124 @@ Avatar模拟回应 创建时间:2025-05-05 16:35:19
   choice2: 无
 ------------------------------
 https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAA4cfgw-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CmJxpWgHQgEAAAAAA4u7Iw-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikMGgHQaYAAAAAA4bxoQ-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA44adg-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikMGgHQaYAAAAAA4eoeA-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAALlZTw-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAALm4kw-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikMGgHQaYAAAAAA4nLPw-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAALuBuQ-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAALuyrw-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl58rmgHRLsAAAAAA5bnTA-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CmJxpWgHQgEAAAAAA5dazg-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CmJxpWgHQgEAAAAAA5eJow-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgHRVEAAAAAA5HR_w-0_raw_video_1.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAAMSa0w-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/ClozK2gHQoUAAAAAA57qLw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA6A9Qw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA6GxTA-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/ClozK2gHQoUAAAAAA6Gf8w-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikY2gHPbcAAAAAA50Qhg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CmJxpWgHQgEAAAAAA6G47w-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CmJxpWgHQgEAAAAAA6He3w-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAAOa0eg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA703iA-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikMGgHQaYAAAAAA7bq3A-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikMGgHQaYAAAAAA7chPQ-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl58rmgHRLsAAAAAA7xg7A-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA7604w-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAAOmWrQ-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikY2gHPbcAAAAAA7lb5Q-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA79SXA-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA791zA-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA8_pcg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA9DLEQ-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl58rmgHRLsAAAAAA89rwg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA9FSNw-0_raw_video_2.mp4
+
+Avatar模拟回应 创建时间:2025-05-06 18:46:44
+响应类型: share
+内容: 这周在恶补数媒课，自习室泡到腿软，不过偷偷在机房用Processing搞了超酷的粒子效果！你看这个小动画的流体渐变绝不绝？
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CmJxpWgHQgEAAAAAA9DtcA-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-06 18:47:18
+响应类型: share
+内容: 通宵拍了B站周更视频分镜，考试间隙还把宿舍天台改造成灵感孵化器！跨专业剧场选题在讨论时差点跟隔壁声优系的打起来，超带感！
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/CjhDaWgU7GAAAAAAAP0rjQ-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-06 18:48:02
+响应类型: share
+内容: 这周在角色设计工坊解锁了动态特效新技能！暴雨天跑去拍玻璃窗的水纹，结果浇成落汤鸡，但拍出的慢门效果绝了！
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl58rmgHRLsAAAAAA9DZJA-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-06 18:49:00
+响应类型: share
+内容: 接单给乐队拍了套超炫蒸汽波照片，意外发现咖啡厅投影调试时能玩裸眼3D效果！剧场彩排现场直接把学弟吓出表情包哈哈哈！
+用户选择选项：
+  choice1: 无
+  choice2: 无
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cjh53mgZ0ToAAAAAAAUZKA-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikY2gHPbcAAAAAA81mjQ-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAAA9OXCA-0_raw_video_2.mp4
+
+Avatar模拟回应 创建时间:2025-05-06 22:21:53
+响应类型: quest
+内容: 这周突然通知下周要线代期中考，每天得狂刷题到十点半，但新开始的冥想计划又不能断，纠结能不能压缩晨练时间。老铁你说我是该（A）咬牙早起30分钟补练习，还是（B）周末集中突击线代？
+用户选择选项：
+  choice1: A 调整晨练时间确保双线作战
+  choice2: B 周末集中火力专攻考试
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAA9zuhQ-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-06 22:22:37
+响应类型: quest
+内容: 这周既要肝Unity粒子系统，又要筹备技术沙龙。线代考试刚结束，有点虚脱。你觉得我该（A）继续沉浸式搞开发，还是（B）先全力冲沙龙策划？
+用户选择选项：
+  choice1: A 先专注技术沉淀强化硬实力
+  choice2: B 侧重社交联动拓展创新思维
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAA933eA-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-06 22:23:23
+响应类型: quest
+内容: 这周要啃《计算机图形学》还得赶OpenGL文章，线代刚考完又碰上Unity开发者大会。老哥觉得该（A）先肝完技术博客闭关沉淀，还是（B）抽身参会拓圈攒人脉？
+用户选择选项：
+  choice1: A 集中突破技术输出夯实基础
+  choice2: B 接触行业动态捕捉创新灵感
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/ClozK2gHQoUAAAAAA90D1Q-0_raw_image_1.png
+
+Avatar模拟回应 创建时间:2025-05-06 22:24:11
+响应类型: quest
+内容: 这周接了个校史馆建模外包单，同时要优化睡眠质量。听说线代考试又来了，你看我是该（A）通宵赶工保住项目口碑，还是（B）按时作息备战考试？
+用户选择选项：
+  choice1: A 优先职业实践积累作品集
+  choice2: B 守护学业根基合理分配精力
+------------------------------
+https://cdn.klingai.com/bs2/upload-kling-api/0696178425/image/Cl6kH2gHPegAAAAAA94NAQ-0_raw_image_1.png
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikY2gHPbcAAAAAA9ueKg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikY2gHPbcAAAAAA9vPpw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CmJxpWgHQgEAAAAAA-Cx3Q-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgZ0ToAAAAAABTzlg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjikMGgHQaYAAAAABAW36A-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAABAzzzw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/CjhDaWgU7GAAAAAAATfftw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl58rmgHRLsAAAAABAzfqw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAABBBiTw-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cjh53mgZ0ToAAAAAAE0MSg-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl6kH2gHPegAAAAABBx8JQ-0_raw_video_2.mp4
+https://cdn.klingai.com/bs2/upload-kling-api/5088046429/image2video/Cl58rmgHRLsAAAAABBsGDg-0_raw_video_2.mp4

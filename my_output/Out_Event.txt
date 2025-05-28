@@ -288,12 +288,12 @@ Expose: false
 外部安排事件创建时间:2025-04-22 19:13:55
 month_index: 1
 week_index: 1
-Event: 校团委通知数字媒体领域企业开放日活动，需线下参观报名
+Event: 数字媒体领域企业开放日活动，需线下参观报名
 Expose: true
 ------------------------------
 month_index: 1
 week_index: 3
-Event: 同寝室友因考研复习占用共享书桌时间产生争执
+Event: 同寝室友因复习占用共享书桌时间产生争执
 Expose: false
 ------------------------------
 month_index: 2
@@ -1558,5 +1558,198 @@ Expose: false
 month_index: 3
 week_index: 3
 Event: 央视新闻部开放日实习生选拔（宣传单页发放）
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-06 11:29:24
+month_index: 1
+week_index: 1
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 1
+week_index: 2
+Event: 课堂投影仪功能异常，需要找教室管理员解决
+Expose: false
+------------------------------
+month_index: 1
+week_index: 3
+Event: 动画与数字艺术学院将举办新生动漫作品展
+Expose: true
+------------------------------
+month_index: 1
+week_index: 4
+Event: 学校将举办学术素养讲座，所有大一学生需参加
+Expose: true
+------------------------------
+month_index: 2
+week_index: 5
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 2
+week_index: 6
+Event: 中期考试（考试科目：数字媒体技术基础、艺术史）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 7
+Event: 室友聚餐，庆祝某室友生日
+Expose: false
+------------------------------
+month_index: 2
+week_index: 8
+Event: 学校举办创业创新比赛，动画与数字艺术学院将派队参加
+Expose: true
+------------------------------
+month_index: 3
+week_index: 9
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 10
+Event: final exams（考试科目：数字媒体技术基础、艺术史）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 11
+Event: 无客观事件
+Expose: false
+------------------------------
+month_index: 3
+week_index: 12
+Event: 学校举办毕业设计开题报告，部分大三大四学生将参加
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-06 18:44:40
+month_index: 1
+week_index: 1
+Event: 数字媒体技术专业期中考试周（必修课综合测试）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 学院举办动漫角色设计创意工坊（可报名参加）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 室友在寝室突发急性肠胃炎需送医
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 全国互联网+大学生创新创业大赛校内选拔报名
+Expose: true
+------------------------------
+month_index: 2
+week_index: 4
+Event: 朝阳区青年艺术节校园摄影单元作品征集
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: CUC校园乐队招募新主唱公告
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 地铁6号线突发故障导致上课迟到
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 北京国际大学生电影节志愿者招募
+Expose: true
+------------------------------
+month_index: 4
+week_index: 2
+Event: 五一假期三间房社区艺术市集邀请摆摊
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-06 22:15:53
+month_index: 1
+week_index: 1
+Event: 校级期中考试周（数字媒体技术核心课程考试）
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 动画学院职业发展讲座（字节跳动技术总监专场）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 室友生日聚会（王府井海底捞聚餐）
+Expose: true
+------------------------------
+month_index: 2
+week_index: 2
+Event: 校园网络突发故障（持续8小时影响选课系统）
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 北京市大学生编程马拉松比赛（中国传媒大学选拔赛）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 1
+Event: 期末考试复习周（图书馆延长开放至23:00）
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 寝室空调故障维修（持续3天高温预警）
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 数字媒体技术专业期末作品展示会
+Expose: true
+------------------------------
+
+外部安排事件创建时间:2025-05-06 22:20:03
+month_index: 1
+week_index: 1
+Event: 线性代数期中考试公告发布
+Expose: true
+------------------------------
+month_index: 1
+week_index: 3
+Event: 学生会组织的专业分流说明会
+Expose: true
+------------------------------
+month_index: 2
+week_index: 1
+Event: 五一假期前图书馆自习座位临时预约制实施
+Expose: false
+------------------------------
+month_index: 2
+week_index: 3
+Event: 动画系实验室显卡突发故障导致毕设延期
+Expose: false
+------------------------------
+month_index: 2
+week_index: 4
+Event: 室友生日聚会邀请
+Expose: true
+------------------------------
+month_index: 3
+week_index: 2
+Event: 北京市青年数字艺术展征稿截止提醒
+Expose: true
+------------------------------
+month_index: 3
+week_index: 3
+Event: 朝阳区突发暴雨导致动画渲染机房停电
+Expose: false
+------------------------------
+month_index: 3
+week_index: 4
+Event: 数据结构课程期末考试安排公示
 Expose: true
 ------------------------------

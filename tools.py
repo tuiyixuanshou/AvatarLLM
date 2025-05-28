@@ -2,7 +2,7 @@ from typing import List, Dict, Callable, Optional
 from dataclasses import asdict, is_dataclass
 import os
 
-def load_prompt(filename:str)->str:
+def load_prompt(filename:str,file=None)->str:
     base_dir = os.path.dirname(__file__)
     file_path = os.path.join(base_dir,"my_prompt",filename)
     my_prompt = ""

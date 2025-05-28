@@ -74,6 +74,7 @@ class LLM_Manager:
             "stream":False,
             "response_format":{"type":"json_object"}
             }
+            
         else:
             payload = {
             "model":self.model_name,
@@ -83,6 +84,7 @@ class LLM_Manager:
 
         response = requests.post(self.base_url,headers=headers,json = payload)
         response.raise_for_status()
+        print(response.json())
         return response.json()["choices"][0]["message"]["content"]
     
 

@@ -1,0 +1,102 @@
+[
+  {
+    "date": "2025-06-23",
+    "weekday": "星期一",
+    "morning": {
+      "status": "random_plan",
+      "world_plan": "",
+      "life_style_weight": [1.0, 2.0, 1.0, 1.0, 1.0],
+      "task": "工作-工作【开视频会议(状况堪忧)】",
+      "task_details": "一大早视频会议就出状况，网络卡得要命，老板的问题都听不清，急得我直冒汗，这破网速真是要命！"
+    },
+    "afternoon": {
+      "status": "random_plan",
+      "life_style_weight": [1.0, 2.0, 1.0, 1.0, 1.0],
+      "world_plan": "下了大雨",
+      "task": "工作-工作【做项目规划(进展顺利)】",
+      "task_details": "午休时突然下起倾盆大雨，我正专注地做着项目规划，听着窗外哗啦啦的雨声反而觉得特别安心，工作效率都提高了不少呢！"
+    },
+    "evening": {
+      "status": "random_plan",
+      "life_style_weight": [1.0, 2.0, 1.0, 1.0, 1.0],
+      "world_plan": "",
+      "task": "生理-避雨【找避雨处(惨遭失败)】",
+      "task_details": ""
+    }
+  },
+  {
+    "date": "2025-06-24",
+    "weekday": "星期二",
+    "morning": {
+      "status": "random_plan",
+      "world_plan": "好朋友过生日",
+      "life_style_weight": [1.0, 1.0, 2.0, 1.0, 1.0],
+      "task": "社交-朋友生日【发送祝福(进展顺利)】",
+      "task_details": ""
+    },
+    "afternoon": {
+      "status": "random_plan",
+      "world_plan": "",
+      "life_style_weight": [1.0, 1.0, 2.0, 1.0, 1.0],
+      "task": "休闲-运动型休闲【跳绳(小有收获)】",
+      "task_details": ""
+    },
+    "evening": {
+      "status": "random_plan",
+      "world_plan": "临时开会，必须去",
+      "life_style_weight": [1.0, 1.0, 2.0, 1.0, 1.0],
+      "task": "工作-临时开会【发言(惨遭失败)】",
+      "task_details": ""
+    }
+  },
+  {
+    "date": "2025-06-25",
+    "weekday": "星期三",
+    "morning": {
+      "status": "random_plan",
+      "world_plan": "运动会开始了",
+      "life_style_weight": [1.0, 1.0, 1.0, 2.0, 1.0],
+      "task": "工作-临时开会【准备会议材料(实现目标)】",
+      "task_details": ""
+    },
+    "afternoon": {
+      "status": "random_plan",
+      "world_plan": "",
+      "life_style_weight": [1.0, 1.0, 1.0, 2.0, 1.0],
+      "task": "生理-吃午餐【吃中餐(惨遭失败)】",
+      "task_details": ""
+    },
+    "evening": {
+      "status": "random_plan",
+      "world_plan": "",
+      "life_style_weight": [1.0, 1.0, 1.0, 2.0, 1.0],
+      "task": "社交-朋友集体媒介型休闲【刷视频(惨遭失败)】",
+      "task_details": ""
+    }
+  },
+  {
+    "date": "2025-06-26",
+    "weekday": "星期四",
+    "morning": {
+      "status": "random_plan",
+      "world_plan": "",
+      "life_style_weight": [1.0, 1.0, 1.0, 1.0, 2.0],
+      "task": "工作-临时开会【发言(情况不妙)】",
+      "task_details": ""
+    },
+    "afternoon": {
+      "status": "random_plan",
+      "world_plan": "挨老师骂了",
+      "life_style_weight": [1.0, 1.0, 1.0, 1.0, 2.0],
+      "task": "情感-挨骂【自我怀疑(状况堪忧)】",
+      "task_details": ""
+    },
+    "evening": {
+      "status": "random_plan",
+      "world_plan": "新游戏发售",
+      "life_style_weight": [1.0, 1.0, 1.0, 1.0, 2.0],
+      "task": "情感-倒霉事【和小猫赛跑输了】",
+      "task_details": ""
+    }
+  }
+]

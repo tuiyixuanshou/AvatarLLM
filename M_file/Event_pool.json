@@ -1,0 +1,301 @@
+{
+    "生理-吃早餐": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.8,
+        "psycho_cunsumption": 0.5,
+        "Weight": [0.9, 0.2, 0.7, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1],
+        "Time": ["morning"],
+        "Detail": ["吃早饭"]
+    },
+    "生理-吃午餐": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.9,
+        "psycho_cunsumption": 0.5,
+        "Weight": [0.9, 0.2, 0.7, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1],
+        "Time": ["afternoon"],
+        "Detail": ["吃饺子", "吃面条", "吃包子", "吃火锅", "吃烧烤", "吃汉堡", "吃中餐", "吃西餐", "吃自助"]
+    },
+    "生理-吃晚餐": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.9,
+        "psycho_cunsumption": 0.5,
+        "Weight": [0.9, 0.2, 0.7, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1],
+        "Time": ["evening"],
+        "Detail": ["吃饺子", "吃面条", "吃包子", "吃火锅", "吃烧烤", "吃汉堡", "吃中餐", "吃西餐", "吃自助"]
+    },
+    "生理-午间睡觉": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.7,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.6, 0.3, 0.8, 0.1, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "Time": ["afternoon"],
+        "Detail": ["午间睡觉"]
+    },
+    "生理-夜晚睡觉": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 1.0,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.8, 0.4, 1.0, 0.1, 0.3, 0.2, 0.0, 0.1, 0.1, 0.0, 0.1, 0.0],
+        "Time": ["evening"],
+        "Detail": ["夜晚睡觉"]
+    },
+
+    "工作-学习": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.4,
+        "bio_cunsumption": -0.3,
+        "psycho_cunsumption": -0.2,
+        "Weight": [0.2, 0.1, 0.4, 0.3, 0.3, 1.0, 0.8, 0.7, 0.1, 0.3, 0.4, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["上课", "复习", "做实验", "与老师沟通"]
+    },
+    "工作-学习考核": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": -0.9,
+        "Weight": [0.3, 0.2, 0.5, 0.5, 0.6, 1.0, 0.3, 0.9, 0.2, 0.6, 0.7, 0.4],
+        "Time": ["morning", "afternoon"],
+        "Detail": ["阶段考试"]
+    },
+    "工作-逃避学习": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.1,
+        "bio_cunsumption": 0.1,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.2, 0.4, 0.3, 0.6, 0.4, 0.1, 0.4, 0.1, 0.1, 0.2, 0.0, 0.1],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["翘课", "上课走神", "上课睡觉", "被老师罚站", "抄作业", "上课说话", "上课叠纸飞机", "考试睡觉"]
+    },
+    "工作-学习（熬夜）": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": -0.8,
+        "psycho_cunsumption": -0.7,
+        "Weight": [0.3, 0.1, 0.4, 0.4, 0.3, 1.0, 0.8, 0.6, 0.1, 0.2, 0.3, 0.2],
+        "Time": ["evening"],
+        "Detail": ["熬夜学习", "熬夜复习", "熬夜做实验"]
+    },
+    "工作-工作": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": -0.2,
+        "Weight": [0.4, 0.2, 0.6, 0.3, 0.4, 1.0, 0.5, 0.8, 0.3, 0.4, 0.6, 0.3],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["写报告", "开视频会议", "做项目规划"]
+    },
+    "工作-工作考核": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.6,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": -0.9,
+        "Weight": [0.4, 0.3, 0.6, 0.6, 0.7, 1.0, 0.2, 0.9, 0.3, 0.7, 0.8, 0.5],
+        "Time": ["morning", "afternoon"],
+        "Detail": ["绩效评估", "项目汇报", "升职考核"]
+    },
+    "工作-逃避工作": {
+       "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.1,
+        "bio_cunsumption": 0.1,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.2, 0.4, 0.3, 0.6, 0.4, 0.1, 0.4, 0.1, 0.1, 0.2, 0.0, 0.1],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["偷偷摸鱼", "发呆", "偷偷刷手机", "偷偷刷网页", "偷偷玩游戏"]
+    },
+    "工作-工作（熬夜）": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.4,
+        "bio_cunsumption": -0.9,
+        "psycho_cunsumption": -0.7,
+        "Weight": [0.5, 0.2, 0.5, 0.3, 0.3, 1.0, 0.4, 0.8, 0.2, 0.3, 0.5, 0.2],
+        "Time": ["evening"],
+        "Detail": ["熬夜写报告", "熬夜做项目规划"]
+    },
+
+    "休闲-运动型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.6,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": 0.3,
+        "Weight": [1.0, 0.3, 0.7, 0.3, 0.2, 0.3, 0.3, 0.2, 0.2, 0.3, 0.2, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["排球", "篮球", "足球", "乒乓球", "羽毛球", "网球", "游泳", "跳绳", "跑步", "滑板", "登山", "快步走", "骑行", "瑜伽", "健身", "滑雪", "潜水"]
+    },
+    "休闲-户外自然型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.6, 0.2, 0.4, 0.3, 0.3, 0.3, 0.8, 0.2, 0.3, 0.5, 0.2, 0.6],
+        "Time": ["afternoon"],
+        "Detail": ["背包旅行", "城市漫步", "参观古镇", "爬山看日出", "海边漫步", "乡村体验", "野外露营", "摄影采风"]
+    },
+    "休闲-户外冒险型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.7,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.9, 0.1, 0.3, 0.5, 0.1, 0.4, 1.0, 0.1, 0.1, 0.4, 0.2, 0.3],
+        "Time": ["afternoon"],
+        "Detail": ["森林徒步", "山路探险", "洞穴探秘", "废墟探险", "攀岩", "野外生存挑战", "深山溯溪", "秘密地点探索"]
+    },
+    "休闲-媒介型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": -0.3,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.2, 0.3, 0.5, 0.9, 0.4, 0.2, 0.6, 0.1, 0.1, 0.3, 0.1, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["玩桌游", "下棋", "打牌", "玩电子游戏", "看电影", "看电视", "听音乐", "刷视频"]
+    },
+    "休闲-媒介型休闲（熬夜）": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.2,
+        "bio_cunsumption": -0.9,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.8, 0.2, 0.2, 1.0, 0.2, 0.1, 1.0, 0.1, 0.1, 0.5, 0.1, 0.2],
+        "Time": ["evening"],
+        "Detail": ["玩桌游", "下棋", "打牌", "玩电子游戏", "看电影", "看电视", "听音乐", "刷视频"]
+    },
+    "休闲-创造型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.4,
+        "bio_cunsumption": 0.1,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.4, 0.3, 0.6, 0.8, 0.3, 0.4, 0.7, 0.2, 0.2, 0.4, 0.2, 0.3],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["绘画", "雕塑", "唱歌", "演奏音乐", "写字",
+                   "写小说", "写日记", "做手工艺", "摄影", "拍Vlog",
+                   "叠纸飞机", "做手工"
+                   ]
+    },
+    "休闲-内在调节型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.2,
+        "bio_cunsumption": 0.6,
+        "psycho_cunsumption": 0.1,
+        "Weight": [0.2, 0.6, 0.6, 0.5, 0.5, 0.4, 0.3, 0.2, 0.1, 0.2, 0.1, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["冥想", "茶艺", "插花", "发呆", "看漫画", "看小说", "养鱼", "喂小狗", "喂小猫", "泡澡"]
+    },
+    "休闲-外在调节型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": 0.2,
+        "psycho_cunsumption": 0.1,
+        "Weight": [0.3, 0.2, 0.4, 0.6, 0.3, 0.3, 0.7, 0.3, 0.2, 0.4, 0.2, 0.4],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["商场购物", "超市购物", "参观画展", "参观艺术博物馆", "参观历史博物馆", "参观科技馆"]
+    },
+
+    "社交-志愿服务": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.2,
+        "psycho_cunsumption": 0.0,
+        "Weight": [0.4, 0.3, 0.3, 0.4, 0.4, 0.6, 0.3, 0.4, 1.0, 0.3, 0.6, 0.5],
+        "Time": ["morning", "afternoon"],
+        "Detail": ["社区助老", "社区清洁", "爱心义卖", "流浪动物救治"]
+    },
+    "社交-朋友集体聚会": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": 0.2,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.2, 0.1, 0.1, 0.7, 0.4, 0.3, 0.6, 0.5, 0.8, 0.9, 0.4, 0.8],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": [
+        "聚会闲聊", "电话长谈", "喝茶聊天", "散步谈心", "讨论兴趣话题",
+        "分享生活趣事", "倾诉烦恼寻求安慰", "朋友家聚餐", "咖啡馆聊天聚会", "桌游聚会",
+        "烧烤野餐聚会", "朋友生日聚会", "密室逃脱聚会", "唱歌KTV聚会", "打卡新餐厅聚会"
+        ]
+    },
+    "社交-朋友集体运动型休闲": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.6,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.8, 0.2, 0.5, 0.6, 0.3, 0.5, 0.5, 0.4, 0.7, 0.6, 0.6, 0.8],
+        "Time": ["morning", "afternoon"],
+        "Detail": ["排球", "篮球", "足球", "乒乓球", "羽毛球", "网球", "游泳", "跳绳", "跑步", "滑板", "登山", "快步走", "骑行", "瑜伽", "健身", "滑雪", "潜水"]
+    },
+    "社交-朋友集体媒介型休闲": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.3, 0.2, 0.4, 0.8, 0.4, 0.2, 0.6, 0.3, 0.8, 0.7, 0.5, 0.8],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["玩桌游", "下棋", "打牌", "玩电子游戏", "看电影", "看电视", "听音乐", "刷视频"]
+    },
+    "社交-朋友集体媒介型休闲（熬夜）": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.2,
+        "bio_cunsumption": -0.9,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.8, 0.2, 0.2, 1.0, 0.2, 0.1, 1.0, 0.2, 0.8, 0.7, 0.5, 0.8],
+        "Time": ["evening"],
+        "Detail": ["玩桌游", "下棋", "打牌", "玩电子游戏", "看电影", "看电视", "听音乐", "刷视频"]
+    },
+    "情感-共情交流": {
+        "tag": [0,0,0,0,1.0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.0,
+        "psycho_cunsumption": 1.0,
+        "for_user": 1.0,
+        "Weight": [0.2, 0.1, 0.1, 0.7, 0.3, 0.2, 0.4, 0.2, 0.8, 0.5, 0.4, 0.6],
+        "Time": ["evening"],
+        "Detail": [
+            "与你聊开心的事情", "与你聊八卦事情", "安慰你", "慰问你", "鼓励你", "与你开玩笑", 
+            "装模作样的陪你聊天", "听你吐槽", "陪你安静待着", "你想说什么我都听", "谈谈你最近的烦恼", "给你写信",
+            "说说你在意的事", "聊聊你今天高兴的事情", "谈谈你的梦想", "聊聊你的目标和挑战", "陪你发泄一下", "思念你"
+                   ]
+    },
+    "情感-倒霉事": {
+        "tag": [0,0,0,0,1.0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.0,
+        "psycho_cunsumption": 1.0,
+        "for_user": 1.0,
+        "Weight": [0.2, 0.2, 0.1, 0.6, 0.2, 0.1, 0.5, 0.2, 0.6, 0.4, 0.2, 0.5],
+        "Time": ["evening"],
+        "Detail": ["踩到狗屎", "雨天忘带伞", "喜欢的玩具丢了", "袜子穿反了", "刚写的作业被风吹走", "刚买的冰淇淋掉地上",
+                   "被雨淋成鸡窝头", "偷偷吃糖被发现", "和小猫赛跑输了", "鞋穿反了", "不会写名字", "写字笔断了",
+                   "恶作剧失败", "讲冷笑话", "传纸条传给了老师", "夜晚停电了", "吃到臭鱼", "被狗追", "骑车摔了", "走路撞到电线杆"
+                   ]
+    }
+}

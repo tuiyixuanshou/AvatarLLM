@@ -53,3 +53,23 @@ class AvatarImageVideoGenerator:
             callback(response)
 
         settings.Prompt_manager.user_input_send(prompt, callback=on_video_prompt_ready, type="string")
+
+    def generate_Singlevideo_prompt(self, avatar_respond, callback):
+        #prompt = load_prompt("Video_Promptnew") +f"agent模拟活动内容描述：{avatar_respond}"
+        prompt = f"""
+主体:已原图中已有的白色小动物为主体
+主体动作:角色坐在服务器机房中，聚精会神地敲击键盘，屏幕上显示出用 Processing 制作的粒子动画；几秒后，角色瞪大眼睛，轻轻扬眉，露出“成了！”的惊喜神情。
+符合运动规律
+场景:保持原图中已有的场景不变
+镜头语言:保持镜头固定不变
+光影:机房整体为低光蓝调，服务器上的指示灯点点闪烁；屏幕投射出的绿色代码光映在角色脸上，粒子动画启动时，屏幕亮度骤增，投射出柔和但科幻感十足的光晕，瞬间照亮角色表情。
+氛围:略带神秘、沉浸式科技氛围，带有“深夜偷偷搞点炫技小创作”的少年感；节奏感由静转动，从代码敲击到动画绽放形成小高潮，像是“苦读之余悄悄点燃的灵感之火”。
+"""
+        print(prompt)
+        callback(prompt)
+
+        def on_video_prompt_ready(response: str, error: str):
+            print("Kling 视频 Prompt:", response)
+            callback(response)
+
+        #settings.Prompt_manager.user_input_send(prompt, callback=on_video_prompt_ready, type="string")

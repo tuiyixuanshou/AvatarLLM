@@ -6,6 +6,7 @@ import settings
 from threading import Thread
 from tools import load_prompt,save_to_file
 import Image_Generation
+from datetime import datetime
 
 ak = settings.AK
 sk = settings.SK
@@ -102,8 +103,8 @@ def _auto_check_task_status(task_id, callback=None):
 #     else:
 #         print("图片查询时遇到问题！")
 
-def Kling_API_Video(prompt, image_url):
-    Thread(target=_async_Kling_Video_Generation, args=(prompt, image_url,handle_video_url)).start()
+def Kling_API_Video(prompt, image_url,callback = None):
+    Thread(target=_async_Kling_Video_Generation, args=(prompt, image_url,callback)).start()
 
 def _async_Kling_Video_Generation(video_prompt,image_url,callback=None):
     try:
@@ -142,11 +143,15 @@ def _Kling_Video_Generation(prompt, image_url):
         data = {
             "model_name": "kling-v1-6",
             "image": image_url,
-            "image_tail": image_url,
+            #"image_tail": image_url,
             "prompt": prompt,
             "cfg_scale": 0.85,
-            "mode": "pro"
+            "mode": "std"
         }
+        now = datetime.now()
+        formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        timeRecord = f"\n视频生成创建时间:{formatted_time}\n"
+        print(timeRecord)
         response = requests.post(settings.KLING_VIDEO_URL, headers=headers, data=json.dumps(data))
         response.raise_for_status()
         return response.json()
@@ -175,6 +180,10 @@ def _auto_check_video_status(task_id, callback):
         print(f"Task Status: {cur_task_status}")
 
     if cur_task_status == "succeed" and cur_respond:
+        now = datetime.now()
+        formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        timeRecord = f"\n视频生成成功时间:{formatted_time}\n"
+        print(timeRecord)
         video_url = cur_respond.get("data", {}).get("task_result", {}).get("videos", [{}])[0].get("url", "")
         print(f"Generated Video URL: {video_url}")
         callback(video_url)

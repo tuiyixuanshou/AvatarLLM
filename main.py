@@ -33,4 +33,4 @@ if __name__ == "__main__":
                 if(user_input.lower() == "test"):
                     Image_Generation.Avatar_Proactive_Image()
                 else:
-                    response = settings.passive_dial_manager.user_input_send(user_input,_Passive_Dial_Callback)
+                    response = settings.passive_dial_manager.user_input_send(user_input,_Passive_Dial_Callback,type= "string")
