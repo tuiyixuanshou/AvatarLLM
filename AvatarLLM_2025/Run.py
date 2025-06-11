@@ -19,6 +19,9 @@ if __name__ == "__main__":
     agent = Avatar.VirtualAgent(Avatar.personality2, Avatar.emotional1, behavior_library)
     agent.print_state()
     agent.gen_calender() #生成日历
+    agent.calendar_module.save_calendar()
+
+    agent.dialogue_module.dialog_mode_ai_emotionally_supportive("治愈","Dialogue_Persona.txt")
 
     while True:
         user_input = input("\nYou: ")
@@ -26,4 +29,4 @@ if __name__ == "__main__":
             print("Exiting the Dialogue Module. Goodbye!")
             break
         
-        agent.dialogue_module.llm_reply(user_input,"Dialogue_Persona.txt")
+        agent.dialogue_module.dialog_mode_communication_ai_with_user(user_input,"Dialogue_Persona_Single.txt")

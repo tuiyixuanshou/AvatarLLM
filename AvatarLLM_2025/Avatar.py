@@ -38,7 +38,7 @@ class VirtualAgent:
 
     def gen_calender(self):
         print(f"\n🎯 每日计划生成开始-------------------------------------------------")
-        for day in range(3):
+        for day in range(7):
             print(f"\n📅 Day {day}: {self.calendar_module.calendar[day]['date']} {self.calendar_module.calendar[day]['weekday']} -------------------------------------------------")
             for Time_slot in ["morning", "afternoon", "evening"]:
                 self.calendar_module.prepare_calendar(day,Time_slot)
@@ -47,7 +47,7 @@ class VirtualAgent:
         print(f"\n🎯 每日计划生成结束，Avatar开始生成执行细节-------------------------------------------------")
         self.reset_state() #重置虚拟人状态
         self.external_event_manager.save_External_event_init() #重置外部事件库
-        for day in range(3):
+        for day in range(7):
             print(f"\n📅 Day {day}: {self.calendar_module.calendar[day]['date']} {self.calendar_module.calendar[day]['weekday']} -------------------------------------------------")
             for Time_slot in ["morning", "afternoon", "evening"]:
                 self.calendar_module.play_calendar(day,Time_slot)

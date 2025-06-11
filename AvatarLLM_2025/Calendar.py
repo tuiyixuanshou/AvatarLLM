@@ -32,8 +32,11 @@ class Calendar:
             "task_planning_score":"",   # 当前计划做的事件的权重
             "task_future":"",           # 未来可能要做的事件
             "task_future_score":"",     # 未来可能要做的事件的权重
+            "task_future_detail":"",    # 未来可能要做的事件的细节
             "task_actual":"",           # 当前实际执行的事件
-            "task_details": ""          # 当前实际执行的事件的具体行动描述
+            "task_details": "",         # 当前实际执行的事件的具体行动描述
+            "task_expression": "",      # 当前实际执行的时间的情绪表达
+            "task_prompt":""            # 文生图的Prompt
         }
     
     def _fill_period(self, city: str, date, period: str):
@@ -56,8 +59,11 @@ class Calendar:
             "task_planning_score":"",   # 当前计划做的事件的权重
             "task_future":"",           # 未来可能要做的事件
             "task_future_score":"",     # 未来可能要做的事件的权重
+            "task_future_detail":"",    # 未来可能要做的事件的细节
             "task_actual":"",           # 当前实际执行的事件
-            "task_details": ""          # 当前实际执行的事件的具体行动描述
+            "task_details": "",         # 当前实际执行的事件的具体行动描述
+            "task_expression": "",      # 当前实际执行的时间的情绪表达
+            "task_prompt":""            # 文生图的Prompt
         }
     
     def _solar_to_lunar(self, date: datetime.date) -> str:
@@ -232,11 +238,11 @@ class Calendar:
                     "afternoon": self._fill_period(location,day,"afternoon"),
                     "evening": self._fill_period(location,day,"evening"),
                 })
-            self.save_calendar(self.calendar)
+            self.save_calendar()
             print(f"🆕 新建基础日历: {self.path}")
 
-    def save_calendar(self,calendar):
-        json_str = json.dumps(calendar, ensure_ascii=False, indent=2)
+    def save_calendar(self):
+        json_str = json.dumps(self.calendar, ensure_ascii=False, indent=2)
         json_str = re.sub(
             r'\[\s*((?:[^\[\]]|\n)+?)\s*\]',
             lambda m: '[' + ' '.join(m.group(1).replace('\n', '').split()) + ']',
@@ -395,7 +401,6 @@ class Calendar:
         self.calendar[day_index][time_slot]["life_style_weight"] = [round(w, 3) for w in life_style_weight]
 
         print(f"🚩{self.calendar[day_index]['date']}{time_slot}的life_style_weights:生理🍔 {self.calendar[day_index][time_slot]['life_style_weight'][0]},工作✍  {self.calendar[day_index][time_slot]['life_style_weight'][1]},休闲⚽ {self.calendar[day_index][time_slot]['life_style_weight'][2]},社交🗯  {self.calendar[day_index][time_slot]['life_style_weight'][3]},情感💕 {self.calendar[day_index][time_slot]['life_style_weight'][4]}")
-
 
         # ==== 外部事件响应 ====#
         if status == "" or status == "random_plan":
@@ -559,23 +564,28 @@ class Calendar:
                 friends = json.load(f)             
         friends = []
 
-        out_t2i = False
-        out_expression = False
-        out_future = False
+        out_t2i = True
+        out_expression = True
+        out_future = True
 
         # 当前事件的内容文案生成
-        task_detail = self.fill_task_details(
-            self.calendar, day_index, time_slot, 
-            task_prompt_file, 
-            gender = self.agent.gender,
-            bio_energy = self.agent.bio_energy,
-            task_planning = task_planning, task_planning_score = task_planning_score, 
-            task_future = None, task_future_score = 0.0, 
-            task_actual = task_actual, 
-            holidayInfo = holidayInfo, 
-            weatherInfo = weatherInfo, 
-            friends = friends
-            )
+        if self.calendar[day_index][time_slot]["task_details"] == "":
+            task_detail = self.fill_task_details(
+                self.calendar, day_index, time_slot, 
+                task_prompt_file, 
+                gender = self.agent.gender,
+                bio_energy = self.agent.bio_energy,
+                task_planning = task_planning, 
+                task_planning_score = task_planning_score, 
+                task_future = None, 
+                task_future_score = 0.0, 
+                task_actual = task_actual, 
+                holidayInfo = holidayInfo, 
+                weatherInfo = weatherInfo, 
+                friends = friends
+                )
+        else:
+            task_detail = self.calendar[day_index][time_slot]["task_details"]
         #if NoExpand == False:
         #    task_detail = self.task_details_expand_user_favorite("Expand_Task_Detail_User_Favorite.txt", task_detail, "动漫")
         print("💬 详细内容：" + task_detail)
@@ -584,48 +594,84 @@ class Calendar:
 
         # 未来期待的内容文案生成
         task_future_detail = ""
-        if out_future:
-            if (not task_future_planning == None) and (float(future_score)>1.0):
-                task_future_detail = self.fill_task_details(
-                    self.calendar, day_index, time_slot, 
-                    "Prepare_Planning.txt", 
-                    task_planning = task_planning, task_planning_score = task_planning_score, 
-                    task_future = task_future_planning, task_future_score = future_score, 
-                    task_actual = task_actual, 
-                    holidayInfo = holidayInfo, 
-                    weatherInfo = weatherInfo, 
-                    friends = friends
-                    )
-                print("💬 期待内容：" + task_future_detail)
+        if self.calendar[day_index][time_slot]["task_future_detail"] == "" and self.calendar[day_index][time_slot]["task_details"] == "":
+            if out_future:
+                if (not task_future_planning == None) and (float(future_score)>1.0):
+                    task_future_detail = self.fill_task_details(
+                        self.calendar, day_index, time_slot, 
+                        "Prepare_Planning.txt", 
+                        task_planning = task_planning, 
+                        task_planning_score = task_planning_score, 
+                        task_future = task_future_planning, 
+                        task_future_score = future_score, 
+                        task_actual = task_actual, 
+                        holidayInfo = holidayInfo, 
+                        weatherInfo = weatherInfo, 
+                        friends = friends
+                        )
+                    print("💬 期待内容：" + task_future_detail)
+        else:
+            task_future_detail = self.calendar[day_index][time_slot]["task_future_detail"]
 
         # 文生图指令词生成
         task_prompt = ""
-        if out_t2i:
-            task_prompt = self.task_details_expand(
-                    self.calendar, day_index, time_slot, 
-                    "Expand_Task_T2I_Prompt_Gen.txt", 
-                    task_detail+"事情结果（" + task_result + ")",
-                    holidayInfo = holidayInfo, 
-                    weatherInfo = weatherInfo, 
-                    friends = friends
-                    )
-            task_prompt = "图片内容:[" + task_prompt + "] 图片格式:[正方形]"
-            print("💬 文生图指令：" + task_prompt)
+        if self.calendar[day_index][time_slot]["task_prompt"] == "" and self.calendar[day_index][time_slot]["task_details"] == "":
+            if out_t2i:
+                task_prompt = self.task_details_expand(
+                        self.calendar, day_index, time_slot, 
+                        "Expand_Task_T2I_Prompt_Gen.txt", 
+                        task_detail+"事情结果（" + task_result + ")",
+                        holidayInfo = holidayInfo, 
+                        weatherInfo = weatherInfo, 
+                        friends = friends
+                        )
+                task_prompt = "图片内容:[" + task_prompt + "] 图片格式:[正方形]"
+                print("💬 文生图指令：" + task_prompt)
+        else:
+            task_prompt = self.calendar[day_index][time_slot]["task_prompt"]
 
         # 当前的事件心理描述生成
         task_expression = ""
-        if out_expression:
-            task_expression = self.task_details_expand(
-                    self.calendar, day_index, time_slot, 
-                    expression_prompt_file, 
-                    task_detail+"事情结果（" + task_result + ")",
-                    holidayInfo = holidayInfo, 
-                    weatherInfo = weatherInfo, 
-                    friends = friends
-                    )
-            print("💬 心理描写：" + task_expression)
-
+        if self.calendar[day_index][time_slot]["task_expression"] == "" and self.calendar[day_index][time_slot]["task_details"] == "":
+            if out_expression:
+                task_expression = self.task_details_expand(
+                        self.calendar, day_index, time_slot, 
+                        expression_prompt_file, 
+                        task_detail+"事情结果（" + task_result + ")",
+                        holidayInfo = holidayInfo, 
+                        weatherInfo = weatherInfo, 
+                        friends = friends
+                        )
+                print("💬 心理描写：" + task_expression)
+        else:
+            task_expression = self.calendar[day_index][time_slot]["task_expression"]
         self.agent.print_state()
+
+        #计划更新到calendar中
+        if task_future_planning == None:
+            self.calendar[day_index][time_slot]["task_future"] = ''
+            self.calendar[day_index][time_slot]["task_future_score"] = 0.0
+            self.calendar[day_index][time_slot]["task_future_detail"] = ''
+        else:
+            self.calendar[day_index][time_slot]["task_future"] = task_future_planning
+            self.calendar[day_index][time_slot]["task_future_score"] = future_score
+            self.calendar[day_index][time_slot]["task_future_detail"] = task_future_detail
+
+        if task_actual == None:
+            self.calendar[day_index][time_slot]["task_actual"] = ""
+        else:
+            self.calendar[day_index][time_slot]["task_actual"] = task_actual
+
+        if task_expression == None:
+            self.calendar[day_index][time_slot]["task_expression"] = ""
+        else:
+            self.calendar[day_index][time_slot]["task_expression"] = task_expression
+
+        if task_prompt == None:
+            self.calendar[day_index][time_slot]["task_prompt"] = ""
+        else:
+            self.calendar[day_index][time_slot]["task_prompt"] = task_prompt
+
         print("\n")
 
     def show(self, day_index=None):
@@ -644,3 +690,92 @@ class Calendar:
             print(f"{filename}读取失败")
             system_prompt = ""
         return system_prompt
+    
+    def event_summary(self, today, current_hour):
+        history_event_summary = ''
+        current_event_summary = ''
+        future_event_summary = ''
+
+        if current_hour < 6:
+            today = today - timedelta(days=1)
+
+        calendar = self.calendar
+        # ==== 过去事件的相关记忆==== #       
+        #从日历中选择出过去的事件
+        if not calendar == None:
+            time_index_container = [0,0]
+            reverse_time_slot = ["morning", "afternoon", "evening"]
+            for idx, item in enumerate(calendar):
+                if item['date'] == today.isoformat():
+                    time_index_container[0] = idx
+                    break
+            day_index = time_index_container[0]
+            # 判断当前时间属于哪个时段
+            if 6 <= current_hour < 12:
+                time_slot = 0  # 早上
+            elif 12 <= current_hour < 18:
+                time_slot = 1  # 中午
+            else:
+                time_slot = 2  # 晚上
+
+            for index in range(-2,1):
+                _day_index = day_index + index
+                if _day_index >= 0 and _day_index < len(calendar): 
+                    for _time_slot in range(0,3):
+                        if index == 0:
+                            if _time_slot > time_slot:
+                                break
+                            if _time_slot == time_slot:
+                                proactive_system = f"时间：{calendar[_day_index]['date']}{reverse_time_slot[_time_slot]},事件描述:{calendar[_day_index][reverse_time_slot[_time_slot]]['task_planning']}"
+                                proactive_message = calendar[_day_index][reverse_time_slot[_time_slot]]['task_details']
+                                if len(proactive_message)> 0:
+                                    info = proactive_system + "事件细节:" + proactive_message
+                                    current_event_summary += '{' + info + '}'
+                        proactive_system = f"时间：{calendar[_day_index]['date']}{reverse_time_slot[_time_slot]},事件描述:{calendar[_day_index][reverse_time_slot[_time_slot]]['task_planning']}"
+                        proactive_message = calendar[_day_index][reverse_time_slot[_time_slot]]['task_details']
+                        if len(proactive_message)> 0:
+                            info = proactive_system + "事件细节:" + proactive_message
+                            history_event_summary += '{' + info + '}'
+
+        # ==== 近期的规划 ==== #
+        #从日历中选择出对未来期待度最大的事件
+        if not calendar == None:
+            time_index_container = [0,0]
+            reverse_time_slot = ["morning", "afternoon", "evening"]
+            # 获取当前时间
+            current_hour = datetime.now().hour
+            today = datetime.now().date().isoformat()
+            for idx, item in enumerate(calendar):
+                if item['date'] == today:
+                    time_index_container[0] = idx
+                    break
+            day_index = time_index_container[0]
+            # 判断当前时间属于哪个时段
+            if 6 <= current_hour < 12:
+                time_slot = 0  # 早上
+            elif 12 <= current_hour < 18:
+                time_slot = 1  # 中午
+            else:
+                time_slot = 2  # 晚上
+
+            for index in range(0,3):
+                _day_index = day_index + index
+                if _day_index >= 0 and _day_index < len(calendar): 
+                    for _time_slot in range(0,3):
+                        if index == 0:
+                            if _time_slot <= time_slot:
+                                break
+                        value = float(calendar[_day_index][reverse_time_slot[_time_slot]]['task_planning_score'])
+                        if value > 2.0:
+                            proactive_system = f"时间：{calendar[_day_index]['date']}{reverse_time_slot[_time_slot]},事件描述:{calendar[_day_index][reverse_time_slot[_time_slot]]['task_planning']}"
+                            if len(proactive_system)> 0:
+                                info = proactive_system
+                                future_event_summary += '{' + info + '}'
+        if future_event_summary == '':
+            future_event_summary = '还没想好（禁止编事情）'
+        #recent_proactive_event = self.agent.memory_module.recent_proactive_event.copy() #近期规划的相关记忆
+        #event_summary = ",".join(recent_proactive_event)
+        #event_summary = ",".join(
+        #    f"[{e['date']} {e['time_slot']}] {e['message']}" for e in recent_proactive_event
+        #)
+        return history_event_summary,current_event_summary,future_event_summary
