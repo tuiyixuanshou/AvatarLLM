@@ -725,12 +725,13 @@ class Calendar:
                         if index == 0:
                             if _time_slot > time_slot:
                                 break
-                            if _time_slot == time_slot:
+                            elif _time_slot == time_slot:
                                 proactive_system = f"时间：{calendar[_day_index]['date']}{reverse_time_slot[_time_slot]},事件描述:{calendar[_day_index][reverse_time_slot[_time_slot]]['task_planning']}"
                                 proactive_message = calendar[_day_index][reverse_time_slot[_time_slot]]['task_details']
                                 if len(proactive_message)> 0:
                                     info = proactive_system + "事件细节:" + proactive_message
                                     current_event_summary += '{' + info + '}'
+                                break
                         proactive_system = f"时间：{calendar[_day_index]['date']}{reverse_time_slot[_time_slot]},事件描述:{calendar[_day_index][reverse_time_slot[_time_slot]]['task_planning']}"
                         proactive_message = calendar[_day_index][reverse_time_slot[_time_slot]]['task_details']
                         if len(proactive_message)> 0:

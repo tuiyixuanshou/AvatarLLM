@@ -28,7 +28,142 @@ class DialogModule:
         print(f"chosen states:{res}")
         self.avatar_status = res #更新状态
 
-    def dialog_mode_ai_emotionally_supportive (self, type = '', system_file = "Dialogue_Single.txt"):
+    def dialog_mode_ai_self_disclosure (self, user_info = "", type = "示弱/评价/成就/喜好/自嘲", system_file = "Dialogue_Single.txt"):
+        client = OpenAI(api_key="sk-0e5049d058f64e2aa17946507519ac53", base_url="https://api.deepseek.com")
+
+        calendar = self.agent.calendar_module
+        str = self.load_prompt(system_file)
+        hour = datetime.now().hour
+
+        holiday = self.agent.calendar_module._get_holiday(datetime.today())
+
+        sys_msg = []
+
+        time_state = ''
+        if random.random()<0.0:
+            time_state = '正在(要强调时间)'
+            _,current_event_summary,__ = calendar.event_summary(today = datetime.now().date(), current_hour = datetime.now().hour)
+            period = ''
+            weather_random = 0.0
+            if hour>5 and hour<12:
+                if hour<9:
+                    if random.random()<0.5:
+                        weather_random = 1.0
+                elif hour<12:
+                    if random.random()<0.3:
+                        weather_random = 1.0
+                period = 'morning'
+            if hour>=12 and hour<18:
+                if random.random()<0.2:
+                    weather_random = 1.0
+                period = 'afternoon'
+            if hour>=18 and hour<24:
+                if random.random()<0.1:
+                    weather_random = 1.0
+                period = 'evening'
+            weather = self.agent.calendar_module._get_weather_by_period('北京', datetime.today(), period)
+                
+            if weather_random>0.0:
+                str += "\n参考天气情况:" + weather
+            if not holiday == '无':
+                str += "\n参考节假日情况:" + holiday
+            if "事件细节:" in current_event_summary:
+                current_event_summary = current_event_summary.split("事件细节:")[0] + "}"
+            else:
+                current_event_summary = current_event_summary
+            str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
+            str += "当前的事件:"+current_event_summary
+        elif random.random()<0.0:
+            time_state = '将要(要强调时间)'
+            _,current_event_summary,__ = calendar.event_summary(today = datetime.now().date(), current_hour = datetime.now().hour+6)
+
+            period = ''
+            weather_random = 0.0
+            if hour+6>=12 and hour+6<18:
+                if random.random()<0.2:
+                    weather_random = 1.0
+                period = 'afternoon'
+            if hour+6>=18 and hour+6<24:
+                if random.random()<0.1:
+                    weather_random = 1.0
+                period = 'evening'
+            weather = self.agent.calendar_module._get_weather_by_period('北京', datetime.today(), period)
+
+            if weather_random>0.0:
+                str += "\n参考天气情况:" + weather
+            if not holiday == '无':
+                str += "\n参考节假日情况:" + holiday
+            if "事件细节:" in current_event_summary:
+                future_event_summary = current_event_summary.split("事件细节:")[0] + "}"
+            else:
+                future_event_summary = current_event_summary
+            str += "\n根据当前时间:" + (datetime.now()).strftime('%Y-%m-%d %H:%M')
+            str += "未来的计划:"+future_event_summary
+        else:
+            time_state = '过去(要强调时间)'
+            history_event_summary,_,__ = calendar.event_summary(today = datetime.now().date(), current_hour = datetime.now().hour)
+            entries = [entry.strip() for entry in history_event_summary.split("}") if entry.strip()]
+            entries = [entry + "}" for entry in entries]
+            history_event_summary = entries[int(random.random()*len(entries))]
+            str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
+            str += "过去的事件:"+history_event_summary
+
+        if type == '示弱/评价/成就/喜好/自嘲/回忆' or type == '':
+            type = '示弱/评价/成就/喜好/自嘲/回忆'.split('/')
+            type = random.choice(type)
+
+        if type == '示弱':
+            if random.random()<0.5:
+                str += "\n以'小白" + time_state + "做具体事情,小白担心自身遇到困难/寻求用户帮助'句式生成"
+            else:
+                str += "\n以'小白担心自己" + time_state + "做具体事情遇到困难,寻求用户帮助'句式生成" 
+        elif type == '评价':
+            if random.random()<0.5:
+                str += "\n以'小白" + time_state + "做具体事情,小白寻求用户看法/意见/评价'句式生成"
+            else:
+                str += "\n以'小白担心自己" + time_state + "做具体事情遇到困难,小白寻求用户帮助'句式生成"
+        elif type == '成就':
+            if random.random()<0.5:
+                str += "\n以'小白" + time_state + "做具体事情接近成功,希望用户表扬自己'句式生成"
+            else:
+                str += "\n以'小白以自己" + time_state + "完成某个事情接近成功(透露一些线索),小白表达让用户猜猜看是什么事情'句式生成"
+        elif type == '喜好':
+            if random.random()<0.5:
+                str += "\n以'小白对具体事情的看法,询问用户的喜好'句式生成"
+            else:
+                str += "\n以'小白对具体事情的看法,引导用户评价这件事情'句式生成"
+        elif type == '自嘲':
+            if random.random()<0.5:
+                str += "\n以'小白对" + time_state + "具体事情的自嘲,并自问自答'句式生成"
+            else:
+                str += "\n以'小白对" + time_state + "具体事情的自嘲,询问用户的态度'句式生成"
+        elif type == '回忆':
+            if random.random()<0.5:
+                str += "\n以'小白对" + time_state + "具体事情的回忆,并自问自答'句式生成"
+            else:
+                str += "\n以'小白对" + time_state + "具体事情的回忆,询问用户的态度'句式生成"
+        
+        str += "严格禁止罗列分项式回答！(严格小于30个字)"
+        str += "\n对话语气要与用户的特征匹配:" + user_info
+        sys_msg = [{
+                "role":"system",
+                "content":str
+            }]
+        print(sys_msg)
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=sys_msg,
+            stream=False
+        )
+        res= response.choices[0].message.content
+
+        new_memory = []
+        new_memory.append({"role":"assistant", "content":res})
+        self.agent.memory_module.store_short_term_memory(new_memory)
+
+        print("\n小白:" + res)
+
+    def dialog_mode_ai_emotionally_supportive (self, user_info = "", type = "问候/陪伴/治愈", system_file = "Dialogue_Single.txt"):
         client = OpenAI(api_key="sk-0e5049d058f64e2aa17946507519ac53", base_url="https://api.deepseek.com")
 
         calendar = self.agent.calendar_module
@@ -57,11 +192,12 @@ class DialogModule:
         weather = self.agent.calendar_module._get_weather_by_period('北京', datetime.today(), period)
         holiday = self.agent.calendar_module._get_holiday(datetime.today())
         
-        #发送策略
-        #1、考虑不同时间段
-        #2、考虑天气特征
-        #3、考虑用户之前是否有特殊情况(心情不好、生病、遇到挫折)
         sys_msg = []
+
+        if type == '问候/陪伴/治愈' or type == '':
+            type = '问候/陪伴/治愈'.split('/')
+            type = random.choice(type)
+
         if type == '问候':
             bStr = False
             str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
@@ -71,33 +207,33 @@ class DialogModule:
                 str += "\n参考节假日情况:" + holiday
 
             if hour>=0 and hour<6:
-                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 bStr = True
 
             if hour>=6 and hour<8 and random.random()<0.8:
-                str += "\n简单给用户一些温馨的早安问候,祝用户今天顺利,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些温馨的早安问候,祝用户今天顺利,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 bStr = True
 
             if hour>=11 and hour<14 and random.random()<0.8:
-                str += "\n简单给用户一些温馨的午间问候,是否吃饭了或上午是否顺利等,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些温馨的午间问候,是否吃饭了或上午是否顺利等,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
                 bStr = True
 
             if hour>=21 and random.random()-(hour-21)/3<0.8:
                 if random.random()<0.5:
-                    str += "\n简单给用户一些温馨的晚安问候,祝福对方晚安,祝用户休息好,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的晚安问候,祝福对方晚安,祝用户休息好,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 else:
-                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
                 bStr = True
             
             if not bStr:
                 if random.random()<0.5:
-                    str += "\n简单给用户一些温馨的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 else:
-                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
             str += "类似这样的:/n早上好呀,窗外阳光刚刚好,今天也要温柔地开始哦./n晚上风有点凉,早点休息吧,别让手机抢走你的梦."
@@ -105,17 +241,17 @@ class DialogModule:
         elif type == '陪伴':
             bStr = False
             if hour>=0 and hour<6:
-                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 bStr = True
 
             if hour>=6 and hour<8 and random.random()<0.8:
                 str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                str += "\n简单给用户一些陪伴存在类的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些陪伴存在类的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 bStr = True
 
             if hour>=11 and hour<14 and random.random()<0.8:
                 str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                str += "\n简单给用户一些陪伴存在类的问候,鼓励用户克服困难,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些陪伴存在类的问候,鼓励用户克服困难,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
                 bStr = True
@@ -123,18 +259,18 @@ class DialogModule:
             if hour>=21 and random.random()-(hour-21)/3<0.8:
                 str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
                 if random.random()<0.5:
-                    str += "\n简单给用户一些温馨的晚间陪伴问候,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的晚间陪伴问候,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 else:
-                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
                 bStr = True
             
             if not bStr:
                 if random.random()<0.5:
-                    str += "\n简单给用户一些陪伴存在类的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些陪伴存在类的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 else:
-                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
 
@@ -144,17 +280,17 @@ class DialogModule:
             bStr = False
 
             if hour>=0 and hour<6:
-                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 bStr = True
 
             if hour>=6 and hour<8 and random.random()<0.8:
                 str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                str += "\n给用户一些治愈安抚类的问候,要表达让用户放松,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n给用户一些治愈安抚类的问候,要表达让用户放松,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 bStr = True
 
             if hour>=11 and hour<14 and random.random()<0.8:
                 str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                str += "\n给用户一些治愈安抚类的问候,要表达让用户放松,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                str += "\n给用户一些治愈安抚类的问候,要表达让用户放松,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
                 bStr = True
@@ -162,61 +298,25 @@ class DialogModule:
             if hour>=21 and random.random()-(hour-21)/3<0.8:
                 str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
                 if random.random()<0.5:
-                    str += "\n给用户一些治愈安抚类的问候,不要鼓励,要表达陪伴用户,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n给用户一些治愈安抚类的问候,不要鼓励,要表达陪伴用户,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 else:
-                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
                 bStr = True
             
             if not bStr:
                 if random.random()<0.5:
-                    str += "\n给用户一些治愈安抚类的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n给用户一些治愈安抚类的问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 else:
-                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
+                    str += "\n简单给用户一些温馨的问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短."
                 if random.random()<0.5:
                     str += "可以适当表达你正在做的事情:"+current_event_summary
 
             str += "类似这样的:/n如果累了,就让我陪你静静待一会儿,不说话也可以./n没关系的,即使现在很难,我也会陪你走一直走的./n你不用每天都很厉害,有时候安稳地生活就很棒了."
 
-        else:
-            bStr = False
-
-            if hour>=0 and hour<6:
-                str += "\n简单给用户一些温馨的凌晨问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                bStr = True
-
-            if hour>=6 and hour<8 and random.random()<0.8:
-                str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                str += "\n给用户一些简单的调皮问候,要表达让用户放松,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                bStr = True
-
-            if hour>=11 and hour<14 and random.random()<0.8:
-                str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                str += "\n给用户一些简单的调皮问候,要表达让用户放松,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                if random.random()<0.5:
-                    str += "可以适当表达你正在做的事情:"+current_event_summary
-                bStr = True
-
-            if hour>=21 and random.random()-(hour-21)/3<0.8:
-                str += "\n根据当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-                if random.random()<0.5:
-                    str += "\n给用户一些简单的调皮问候,不要鼓励,要表达陪伴用户,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                else:
-                    str += "\n给用户一些简单的调皮问候,表达对用户的想念,给一些陪伴,祝福对方晚安,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                if random.random()<0.5:
-                    str += "可以适当表达你正在做的事情:"+current_event_summary
-                bStr = True
-            
-            if not bStr:
-                if random.random()<0.5:
-                    str += "\n给用户一些简单的调皮问候,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                else:
-                    str += "\n给用户一些简单的调皮问候,表达对用户的想念,给一些陪伴,适合两个人不熟悉的情况下的友善交流,日常低频触达.言语简短(小于30个字)."
-                if random.random()<0.5:
-                    str += "可以适当表达你正在做的事情:"+current_event_summary
-
-        str += "严格禁止罗列分项式回答！"
+        str += "严格禁止罗列分项式回答！(严格小于30个字)"
+        str += "\n对话语气要与用户的特征匹配:" + user_info
         sys_msg = [{
                 "role":"system",
                 "content":str
@@ -236,7 +336,7 @@ class DialogModule:
         print("\n小白:" + res)
 
 
-    def dialog_mode_communication_ai_with_user(self, user_input, system_file = "Dialogue_Persona.txt"):
+    def dialog_mode_communication_ai_with_user(self, user_input, user_info = "", system_file = "Dialogue_Persona.txt"):
         calendar = self.agent.calendar_module
 
          #更新短期对话
@@ -245,7 +345,7 @@ class DialogModule:
         self.agent.memory_module.store_short_term_memory(user_memory)
 
         #用户说出内容后进行判断,并指导后续行为
-        self.user_reply_status_change()
+        #self.user_reply_status_change()
 
         client = OpenAI(api_key="sk-0e5049d058f64e2aa17946507519ac53", base_url="https://api.deepseek.com")
 
@@ -256,7 +356,9 @@ class DialogModule:
         str += "\n当前你正在做的事:" + current_event_summary
         str += "\n未来你计划做的事:" + future_event_summary
         str += "\n当前时间:" + datetime.now().strftime('%Y-%m-%d %H:%M')
-        str += "\n参考上述信息回答用户的问题"
+        str += "\n参考上述信息输出你的对话语言(严格小于30个字)"
+        str += "\n对话语气要与用户的特征匹配:" + user_info
+        str += "严格禁止罗列分项式回答！"
         sys_msg = [{
             "role":"system",
             "content":str
@@ -275,6 +377,7 @@ class DialogModule:
 
         message = sys_msg + conversation_context
         print(message)
+        #print(message)
         response = client.chat.completions.create(
             model="deepseek-chat",
             messages=message,
