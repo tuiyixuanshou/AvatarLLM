@@ -24,12 +24,15 @@ if __name__ == "__main__":
     agent.calendar_module.save_calendar()
 
     #agent.dialogue_module.dialog_mode_ai_emotionally_supportive(user_info=user_info,type="问候",system_file="Dialogue_Persona.txt")
-    agent.dialogue_module.dialog_mode_ai_self_disclosure(user_info = user_info, type = "", system_file = "Dialogue_Persona.txt")
-
+    #agent.dialogue_module.dialog_mode_ai_self_disclosure(user_info = user_info, type = "", system_file = "Dialogue_Persona.txt")
+    #agent.dialogue_module.dialog_mode_ai_jobs(user_info = user_info, type = "提醒", system_file = "Dialogue_Persona.txt")
     while True:
         user_input = input("\nYou: ")
         if user_input.lower() == 'exit':
             print("Exiting the Dialogue Module. Goodbye!")
             break
+        if user_input.lower() == 'summary':
+            agent.dialogue_module.dialog_mode_ai_summary(user_info = user_info, type = "提醒", system_file = "Dialogue_Job.txt")
+            break
         
-        agent.dialogue_module.dialog_mode_communication_ai_with_user(user_input,user_info=user_info,system_file="Dialogue_Persona_Single.txt")
+        agent.dialogue_module.dialog_mode_communication_ai_with_user(user_input,user_info=user_info)

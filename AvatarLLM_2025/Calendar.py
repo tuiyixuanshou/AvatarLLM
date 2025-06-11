@@ -36,7 +36,8 @@ class Calendar:
             "task_actual":"",           # 当前实际执行的事件
             "task_details": "",         # 当前实际执行的事件的具体行动描述
             "task_expression": "",      # 当前实际执行的时间的情绪表达
-            "task_prompt":""            # 文生图的Prompt
+            "task_prompt":"",           # 文生图的Prompt
+            "task_summary":""           # 总结用户的重要信息
         }
     
     def _fill_period(self, city: str, date, period: str):
@@ -63,7 +64,8 @@ class Calendar:
             "task_actual":"",           # 当前实际执行的事件
             "task_details": "",         # 当前实际执行的事件的具体行动描述
             "task_expression": "",      # 当前实际执行的时间的情绪表达
-            "task_prompt":""            # 文生图的Prompt
+            "task_prompt":"",           # 文生图的Prompt
+            "task_summary":""           # 总结用户的重要信息
         }
     
     def _solar_to_lunar(self, date: datetime.date) -> str:
