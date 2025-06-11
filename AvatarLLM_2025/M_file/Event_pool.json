@@ -1,0 +1,647 @@
+{
+    "生理-吃早餐": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.8,
+        "psycho_cunsumption": 0.5,
+        "Weight": [0.9, 0.2, 0.7, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1],
+        "Time": ["morning"],
+        "Detail": {
+            "中式早餐": ["豆浆配油条","鸡蛋煎饼","皮蛋瘦肉粥配咸菜","鸡蛋灌饼","葱油饼加豆腐脑","煎饺配小米粥","肠粉配豆浆","热干面加鸡蛋","馄饨配茶叶蛋","烧饼夹鸡排","快手蛋炒饭"],
+            "西式早餐": ["麦片牛奶加水果","牛奶面包配鸡蛋","三明治配咖啡","培根煎蛋配吐司","全麦面包配牛油果","芝士贝果配酸奶","水果沙拉加坚果","酸奶燕麦碗","香蕉蛋白奶昔","芝士煎蛋卷配烤蔬菜"],
+            "快餐": ["便利店饭团配豆乳","早餐麦满分套餐","微波粥配卤蛋","即食麦片加热水","全麦能量棒","鲜奶+即食鸡胸肉","水果+蛋白粉奶昔","豆腐花+鸡蛋","冷藏包子微波加热","酸奶+坚果碎" ]
+        }
+    },
+    "生理-吃午餐": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.9,
+        "psycho_cunsumption": 0.5,
+        "Weight": [0.9, 0.2, 0.7, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1],
+        "Time": ["afternoon"],
+        "Detail": {
+            "中式午餐": ["吃饺子", "吃面条", "吃盖浇饭", "吃麻辣烫", "吃米线", "吃烧腊饭", "吃卤肉饭", "吃黄焖鸡米饭", "吃红烧肉套餐"],
+            "西式午餐": ["吃汉堡", "吃意面", "吃披萨", "吃牛排", "吃炸鸡", "吃凯撒沙拉", "吃三明治", "吃墨西哥卷", "吃奶油蘑菇汤+面包", "吃西式套餐"],
+            "特色/主题餐": ["吃火锅", "吃烧烤", "吃烤鱼", "吃自助", "吃日本料理", "吃韩式拌饭", "吃泰式炒河", "吃越南米粉", "吃印度咖喱", "吃地中海风味套餐"],
+            "便捷午餐": ["便利店便当", "微波速食", "炒饭", "快餐泡面", "水果+酸奶", "简易手卷饭团", "营养代餐棒", "蛋白质沙拉盒", "外卖简餐", "剩菜热饭"]
+        }
+    },
+    "生理-吃晚餐": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.9,
+        "psycho_cunsumption": 0.5,
+        "Weight": [0.9, 0.2, 0.7, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.1, 0.1, 0.1],
+        "Time": ["evening"],
+        "Detail": {
+            "中式晚餐": {
+                "川菜": ["辣子鸡、宫保鸡丁、麻婆豆腐", "鱼香肉丝、豆花鱼、麻婆豆腐", "辣子鸡、水煮牛肉、宫保鸡丁", "鱼香肉丝、回锅肉、宫保鸡丁", "豆花鱼、辣子鸡、麻婆豆腐", "豆花鱼、回锅肉、宫保鸡丁", "毛血旺、宫保鸡丁、辣子鸡", "干锅肥肠、鱼香肉丝、麻婆豆腐", "豆花鱼、回锅肉、麻婆豆腐", "豆花鱼、口水鸡、回锅肉"],
+                "粤菜": ["豉汁蒸排骨、白切鸡、清蒸鲈鱼", "白切鸡、清蒸鲈鱼、双皮奶", "鲍汁凤爪、咕咾肉、清蒸鲈鱼", "鲍汁凤爪、烧鹅、蜜汁叉烧", "鲍汁凤爪、烧鹅、清蒸鲈鱼", "鲍汁凤爪、清蒸鲈鱼、白切鸡", "咕咾肉、萝卜牛杂、姜葱炒花甲", "烧鹅、萝卜牛杂、双皮奶", "萝卜牛杂、咕咾肉、双皮奶", "咕咾肉、萝卜牛杂、清蒸鲈鱼"],
+                "鲁菜": ["糖醋鲤鱼、九转大肠、葱烧海参","四喜丸子、扒鸡、锅塌豆腐","黄焖鸡、爆三样、醋溜白菜","豆腐皮卷肉、葱烧海参、糖醋鲤鱼","糖醋鲤鱼、锅塌豆腐、扒鸡","四喜丸子、爆三样、醋溜白菜","九转大肠、黄焖鸡、豆腐皮卷肉","葱烧海参、扒鸡、锅塌豆腐","糖醋鲤鱼、醋溜白菜、爆三样","四喜丸子、豆腐皮卷肉、黄焖鸡"],
+                "苏菜": ["清炖狮子头、松鼠鳜鱼、糖醋排骨","响油鳝糊、红烧划水、水晶肴肉","油焖春笋、酒酿圆子、鸭血粉丝汤","桂花糯米藕、糖醋排骨、松鼠鳜鱼","水晶肴肉、响油鳝糊、清炖狮子头","红烧划水、清炖狮子头、糖醋排骨","酒酿圆子、油焖春笋、松鼠鳜鱼","鸭血粉丝汤、桂花糯米藕、红烧划水","松鼠鳜鱼、响油鳝糊、清炖狮子头","桂花糯米藕、糖醋排骨、酒酿圆子"],
+                "湘菜": ["剁椒鱼头、小炒黄牛肉、腊味合蒸","香干炒腊肉、辣椒炒肉、啤酒鸭","农家小炒肉、口味虾、酸豆角炒肉末","外婆菜炒饭、小炒黄牛肉、腊味合蒸","剁椒鱼头、辣椒炒肉、香干炒腊肉","啤酒鸭、农家小炒肉、酸豆角炒肉末","口味虾、辣椒炒肉、剁椒鱼头","腊味合蒸、啤酒鸭、外婆菜炒饭","香干炒腊肉、农家小炒肉、剁椒鱼头","小炒黄牛肉、辣椒炒肉、酸豆角炒肉末"],
+                "浙菜": ["西湖醋鱼、龙井虾仁、东坡肉","杭三鲜、雪菜黄鱼、虾爆鳝面","咸肉菜饭、酱鸭、苋菜豆腐羹","葱油蛏子、东坡肉、西湖醋鱼","龙井虾仁、虾爆鳝面、杭三鲜","雪菜黄鱼、咸肉菜饭、酱鸭","苋菜豆腐羹、虾爆鳝面、龙井虾仁","西湖醋鱼、咸肉菜饭、东坡肉","酱鸭、虾爆鳝面、葱油蛏子","杭三鲜、葱油蛏子、咸肉菜饭"],
+                "闽菜": ["佛跳墙、荔枝肉、沙茶面","红糟鸡、五香卷、清蒸黄花鱼","芋泥、花蛤炖蛋、海蛎煎","葱油海蛏、荔枝肉、佛跳墙","沙茶面、红糟鸡、五香卷","清蒸黄花鱼、芋泥、葱油海蛏","花蛤炖蛋、佛跳墙、荔枝肉","海蛎煎、沙茶面、五香卷","芋泥、清蒸黄花鱼、花蛤炖蛋","红糟鸡、葱油海蛏、海蛎煎"],
+                "徽菜": ["毛豆腐、臭鳜鱼、红烧大排","胡适一品锅、刀板香、黄山炖鸽","火腿炖甲鱼、符离集烧鸡、炖三鲜","豆腐圆子、臭鳜鱼、毛豆腐","红烧大排、胡适一品锅、刀板香","黄山炖鸽、火腿炖甲鱼、炖三鲜","符离集烧鸡、豆腐圆子、毛豆腐","臭鳜鱼、胡适一品锅、红烧大排","火腿炖甲鱼、黄山炖鸽、豆腐圆子","刀板香、毛豆腐、符离集烧鸡"],
+                "东北菜": ["地三鲜、锅包肉、溜肉段","小鸡炖蘑菇、杀猪菜、酸菜炖粉条","铁锅炖大鹅、大拉皮、酱骨头","冻豆腐炖排骨、锅包肉、地三鲜","溜肉段、小鸡炖蘑菇、杀猪菜","酸菜炖粉条、铁锅炖大鹅、大拉皮","酱骨头、冻豆腐炖排骨、地三鲜","小鸡炖蘑菇、溜肉段、铁锅炖大鹅","杀猪菜、酸菜炖粉条、酱骨头","锅包肉、冻豆腐炖排骨、小鸡炖蘑菇"],
+                "云南菜": ["汽锅鸡、过桥米线、蘸水鸡","野菜拼盘、烤乳扇、汽锅鸡","过桥米线、野菜拼盘、烤乳扇","汽锅鸡、蘸水鸡、野菜拼盘","烤乳扇、汽锅鸡、过桥米线","蘸水鸡、野菜拼盘、过桥米线","汽锅鸡、野菜拼盘、蘸水鸡","烤乳扇、蘸水鸡、野菜拼盘","过桥米线、汽锅鸡、烤乳扇","野菜拼盘、烤乳扇、蘸水鸡"],
+                "新疆菜": ["手抓饭、大盘鸡、烤羊肉串","拌面、馕坑肉、大盘鸡","烤羊肉串、手抓饭、拌面","大盘鸡、馕坑肉、手抓饭","馕坑肉、拌面、烤羊肉串","大盘鸡、烤羊肉串、拌面","手抓饭、馕坑肉、拌面","拌面、手抓饭、大盘鸡","烤羊肉串、馕坑肉、手抓饭","手抓饭、大盘鸡、馕坑肉"],
+                "西北菜": ["羊肉泡馍、肉夹馍、凉皮","臊子面、油泼面、肉夹馍","凉皮、羊肉泡馍、臊子面","油泼面、肉夹馍、羊肉泡馍","羊肉泡馍、臊子面、油泼面","凉皮、油泼面、肉夹馍","肉夹馍、羊肉泡馍、凉皮","臊子面、凉皮、羊肉泡馍","油泼面、臊子面、肉夹馍","羊肉泡馍、凉皮、油泼面"],
+                "上海本帮菜": ["红烧肉、酱爆螺丝、葱油拌面","白斩鸡、八宝辣酱、红烧肉","酱爆螺丝、葱油拌面、白斩鸡","八宝辣酱、红烧肉、白斩鸡","葱油拌面、红烧肉、酱爆螺丝","白斩鸡、酱爆螺丝、八宝辣酱","八宝辣酱、葱油拌面、红烧肉","酱爆螺丝、白斩鸡、红烧肉","红烧肉、白斩鸡、葱油拌面","葱油拌面、八宝辣酱、白斩鸡"]
+            },
+            "西式晚餐": ["吃汉堡", "吃披萨", "吃意面", "吃焗饭", "吃牛排", "吃炸鸡", "吃西式沙拉", "吃奶酪焗菜", "吃三明治", "吃芝士焗薯条"],
+            "主题/特色餐": ["吃火锅", "吃烧烤", "吃铁板烧", "吃日本料理", "吃韩式烤肉", "吃泰式咖喱", "吃自助餐", "吃清真餐", "吃川菜套餐", "吃粤式煲汤"],
+            "轻食/减脂晚餐": ["吃低脂鸡胸肉+杂粮饭", "吃蛋白沙拉", "吃清蒸鱼配蔬菜", "吃代餐奶昔", "吃煮鸡蛋配蔬菜", "吃藜麦蔬菜碗", "吃蒸南瓜+牛奶", "吃炒青菜+糙米饭", "吃豆腐汤", "吃小米粥+凉拌菜"]
+        }
+    },
+    "生理-午间睡觉": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.7,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.6, 0.3, 0.8, 0.1, 0.2, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "Time": ["afternoon"],
+        "Detail": ["午间睡觉"]
+    },
+    "生理-夜晚睡觉": {
+        "tag": [1.0,0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 1.0,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.8, 0.4, 1.0, 0.1, 0.3, 0.2, 0.0, 0.1, 0.1, 0.0, 0.1, 0.0],
+        "Time": ["evening"],
+        "Detail": ["夜晚睡觉"]
+    },
+
+    "工作-学习": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.4,
+        "bio_cunsumption": -0.3,
+        "psycho_cunsumption": -0.2,
+        "Weight": [0.2, 0.1, 0.4, 0.3, 0.3, 1.0, 0.8, 0.7, 0.1, 0.3, 0.4, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["上课", "复习", "做实验", "与老师沟通"]
+    },
+    "工作-学习考核": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": -0.9,
+        "Weight": [0.3, 0.2, 0.5, 0.5, 0.6, 1.0, 0.3, 0.9, 0.2, 0.6, 0.7, 0.4],
+        "Time": ["morning", "afternoon"],
+        "Detail": ["阶段考试"]
+    },
+    "工作-逃避学习": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.1,
+        "bio_cunsumption": 0.1,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.2, 0.4, 0.3, 0.6, 0.4, 0.1, 0.4, 0.1, 0.1, 0.2, 0.0, 0.1],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["翘课", "上课走神", "上课睡觉", "被老师罚站", "抄作业", "上课说话", "上课叠纸飞机", "考试睡觉"]
+    },
+    "工作-学习（熬夜）": {
+        "tag": [0,1.0,0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": -0.8,
+        "psycho_cunsumption": -0.7,
+        "Weight": [0.3, 0.1, 0.4, 0.4, 0.3, 1.0, 0.8, 0.6, 0.1, 0.2, 0.3, 0.2],
+        "Time": ["evening"],
+        "Detail": ["熬夜学习", "熬夜复习", "熬夜做实验"]
+    },
+    "休闲-运动型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.6,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": 0.3,
+        "Weight": [1.0, 0.3, 0.7, 0.3, 0.2, 0.3, 0.3, 0.2, 0.2, 0.3, 0.2, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": {
+            "团队类运动": ["篮球", "足球", "排球", "手球", "垒球", "棒球", "曲棍球", "水球", "橄榄球", "真人室外气枪CS对战", "网球", "羽毛球", "乒乓球", "壁球", "保龄球", "台球", "毽球", "沙滩网球", "沙滩羽毛球", "卡丁车", "投沙包"],
+            "个人类项目": ["跑步", "中长跑", "越野跑", "游泳", "自行车骑行", "田径", "跳远", "跳高", "三级跳远", "铅球", "铁饼", "标枪", "斯巴达障碍赛", "体操", "艺术体操", "跆拳道", "空手道", "柔道", "武术", "太极拳", "拳击", "自由搏击", "摔跤", "击剑", "攀岩", "滑板", "BMX小轮车", "蹦床", "轮滑", "定向越野", "个人骑乘", "射箭", "滑雪", "冲浪", "帆板"],
+            "节奏与协调类运动": ["舞蹈", "街舞", "拉丁舞", "瑜伽", "普拉提", "健身操", "花样跳绳"],
+            "轻松类/日常锻炼": ["徒步", "健走", "自重训练", "健身房锻炼"]
+        }
+    },
+    "休闲-户外自然型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.6, 0.2, 0.4, 0.3, 0.3, 0.3, 0.8, 0.2, 0.3, 0.5, 0.2, 0.6],
+        "Time": ["afternoon"],
+        "Detail": ["背包旅行","城市漫步","参观古镇","爬山看日出","海边漫步","乡村体验","野外露营","摄影采风","湿地公园散步","城市绿道骑行","赏花","看云发呆","河边垂钓","看日落","海边拾贝壳","登高望远","慢跑于自然步道","在湖边写生","参加自然讲解导览","听自然声音冥想"]
+    },
+    "休闲-户外冒险型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.7,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.9, 0.1, 0.3, 0.5, 0.1, 0.4, 1.0, 0.1, 0.1, 0.4, 0.2, 0.3],
+        "Time": ["afternoon"],
+        "Detail": ["森林徒步","山路探险","洞穴探秘","废墟探险","攀岩","野外生存挑战","深山溯溪","秘密地点探索","滑索探险","定向越野","野营","户外迷宫挑战","高空绳索桥","冒险乐园项目","自然观察（昆虫、动物、植物）","模拟跳伞","洞林爬行挑战"]
+    },
+    "休闲-媒介型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": -0.3,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.2, 0.3, 0.5, 0.9, 0.4, 0.2, 0.6, 0.1, 0.1, 0.3, 0.1, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": {
+            "单机类游戏": {
+                "动作冒险类": ["只狼（Sekiro: Shadows Die Twice）","对马岛之魂（Ghost of Tsushima）","鬼武者2Re（Onimusha 2 Reboot）","烈焰之刃（Flameblade）","法环黑夜君临（Elden Ring: Nightfall）","泡姆泡姆（POPUCOM）","胡闹装修（Chaotic Renovation）","胡闹加油站（Chaotic Gas Station）","火柴人征战异世界（Stickman Isekai Wars）","光与影（Light and Shadow）"],
+                "角色扮演类": ["霍格沃茨之遗（Hogwarts Legacy）","上古卷轴5（The Elder Scrolls V: Skyrim）","暗黑破坏神4（Diablo IV）","仁王2（Nioh 2）","荒野大镖客2（Red Dead Redemption 2）","辐射4（Fallout 4）","刺客信条影（Assassin's Creed: Shadows）","宗门志（Cultivation Chronicles）","永恒天空（Eternal Sky）","双影奇境（Twin Shadow Realm）"],
+                "模拟经营类": ["麦穗镇物语（Wheatville Tales）","菜市场模拟器（Market Simulator）","拉斯维加斯模拟器（Las Vegas Simulator）","浣币模拟器（Laundry Tycoon）","洗刷刷模拟器（Scrub Simulator）","疯狂手机大亨（Mobile Tycoon Madness）","吸血鬼酒吧大亨（Vampire Bar Tycoon）","动物栏：桌面牧场（Petpen Ranch）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）"],
+                "种田养成类": ["星露谷物语（Stardew Valley）","波西亚时光（My Time at Portia）","沙石镇时光（My Time at Sandrock）","动物森友会（Animal Crossing: New Horizons）","符文工厂5（Rune Factory 5）","牧场物语：橄榄镇与希望的大地（Story of Seasons: Pioneers of Olive Town）","花园之间（The Garden Between）","喵咪斗恶龙（Cat Quest）","甜甜萌物语（Sweet Days）","猫咪后院（Neko Atsume: Kitty Collector）","Littlewood（小镇物语）","Lemon Cake（柠檬蛋糕店）","熊熊餐厅（Bear’s Restaurant）","Spiritfarer（灵魂摆渡人）","Ooblets（乌布莱小镇）","Kynseed（奇种传）","Travellers Rest（旅人旅店）","Doraemon 牧场物语（Doraemon Story of Seasons）","Potion Permit（魔药工坊）","Aka（小红熊的退休生活）"],
+                "解谜/轻松创意类": ["幻想生活ｉ（Fantasy Life i: The Girl Who Steals Time）","纪念碑谷（Monument Valley）",  "泡姆泡姆（POPUCOM）","灾后修复师（Post-Crisis Rebuilder）","挖油吧！爸爸（Dig It, Dad!）","猜词游戏（Word Game）","弹珠地狱洛坎塔（Marble Hell: Lokanta）","迷失之径（Lost Path）"],
+                "策略战棋类/战术类": ["炮舰外交（Gunboat Diplomacy）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）","贪婪大地（Greedy Earth）","边境开拓者（Frontier Pioneer）","巨人杀手：暗黑之潮（Titan Slayer: Dark Tide）"],
+                "Roguelike/类魂类": ["新毁灭战士（DOOM Reborn）","怪物火车2（Monster Train 2）","暗区突围无限（Dark Zone Infinite）","罗格：救世传说（ROG: Legend of Salvation）","我即军团：替身幸存者（Legion of Me: Proxy Survivor）","伏魔行者（The Spellwalker）"],
+                "剧情/悬疑/黑暗向": ["恶意关注（Malicious Attention）","笼子（The Cage）","虐杀熔炉（Kill Crucible）","巴尔的遗产（Legacy of Baal）"]
+            },
+            "网络游戏": {
+                "竞技对抗类": ["王者荣耀（Honor of Kings）","和平精英（Game for Peace）","英雄联盟（League of Legends）","原神（Genshin Impact）","守望先锋（Overwatch）","崩坏：星穹铁道（Honkai: Star Rail）","穿越火线（CrossFire）","Dota 2（Defense of the Ancients 2）","Valorant（无畏契约）","绝地求生（PUBG: Battlegrounds）","永劫无间（Naraka: Bladepoint）","APEX英雄（Apex Legends）","彩虹六号：围攻（Rainbow Six: Siege）"],
+                "MMORPG/角色扮演类": ["魔兽世界（World of Warcraft）","最终幻想14（Final Fantasy XIV）","剑网3（JX3 Online）","天涯明月刀（Moonlight Blade）","逆战（Mission Against Terror）"],
+                "可爱·种田·养成类": ["摩尔庄园（Mole's World Online）","蛋仔派对（Eggy Party）","小森生活（Komori Life）","光·遇（Sky: Children of the Light）","梦幻花园（Gardenscapes Online）","波西亚时光（My Time at Portia Online）","星露谷物语·多人（Stardew Valley Multiplayer）","旅行青蛙·中国之旅（Travel Frog: China Edition）","动物森友会·口袋营地（Animal Crossing: Pocket Camp）","猫咪公寓2（Cats & Soup Online）","奇迹暖暖（Love Nikki: Dress UP Queen）","以闪亮之名（Shining Nikki）","恋与制作人（Mr Love: Queen's Choice）","浮岛物语：联机版（Forager Online）","花儿爱消除（Flover's World）","云上城之歌（Song of the Cloud City）","牧场物语OL（Story of Seasons Online）","时空中的绘旅人（Tears of Themis）","托卡生活世界（Toca Life World Online）","晴空农场（Sunshine Farm）"],
+                "经典休闲类": ["QQ飞车（QQ Speed Online）","劲舞团（Audition Online）","跑跑卡丁车（KartRider Online）","泡泡堂（Crazy Arcade）","植物大战僵尸OL（Plants vs. Zombies Online）","炫舞时代（ShowTime Dance）","QQ炫舞（QQ Dance Online）","冒险岛（MapleStory Online）"],
+                "修仙·国风类": ["诛仙世界（Perfect World: Jade Dynasty）","古剑奇谭网络版（Swords of Legends Online）","逆水寒（Justice Online）","仙侠世界2（Xianxia World 2）","蜀门（Shumen Online）","完美世界（Perfect World Online）","问道（Wen Dao Online）","梦幻诛仙（Fantasy ZhuXian Online）"]
+            },
+            "手机游戏": {
+                "休闲消除类": ["开心消消乐（Happy Match）","天天爱消除（PopStar!）","羊了个羊（Sheep A Sheep）","保卫萝卜（Carrot Fantasy）","植物大战僵尸2（Plants vs. Zombies 2）","糖果传奇（Candy Crush Saga）","泡泡龙传奇（Bubble Witch Saga）","宾果消消乐（Bingo Pop）","开心泡泡猫（Bubble Cat）","水果忍者（Fruit Ninja）"],
+                "轻松养成类": ["旅行青蛙（Travel Frog）","猫咪后院（Neko Atsume）","我的汤姆猫（My Talking Tom）","汤姆猫跑酷（Talking Tom Gold Run）","甜甜萌物语（Sweet Days）","心动小镇（Heart Town）","梦幻花园（Gardenscapes）","梦幻家园（Homescapes）","模拟城市：建设（SimCity BuildIt）","动物餐厅（Animal Restaurant）"],
+                "节奏音乐类": ["音跃球球（Dancing Ballz）","节奏大师（Beat Master）","钢琴块2（Piano Tiles 2）","Cytus II（Cytus II）","Deemo（Deemo）","Lanota（Lanota）","Muse Dash（Muse Dash）","Arcaea（Arcaea）","VOEZ（VOEZ）","Tap Tap Reborn（Tap Tap Reborn）"],
+                "解谜闯关类": ["纪念碑谷（Monument Valley）","割绳子（Cut the Rope）","愤怒的小鸟（Angry Birds）","逃脱者（The Escapists）","机械迷城（Machinarium）","迷失岛（Isoland）","未上锁的房间（The Room）","神庙逃亡2（Temple Run 2）","地铁跑酷（Subway Surfers）","超级玛丽跑酷（Super Mario Run）"],
+                "跑酷动作类": ["地铁跑酷（Subway Surfers）","汤姆猫跑酷（Talking Tom Gold Run）","神庙逃亡2（Temple Run 2）","滑雪大冒险（Ski Safari）","熊出没之熊大快跑（Bear Run）","忍者必须死3（Ninja Must Die 3）","疯狂动物园（Rodeo Stampede）","火柴人联盟2（Stickman League 2）","滑板派对3（Skateboard Party 3）","跑酷勇者（Run Hero）"],
+                "剧情恋爱类": ["恋与制作人（Mr Love: Queen's Choice）","奇迹暖暖（Love Nikki）","以闪亮之名（Shining Nikki）","未定事件簿（Tears of Themis）","光与夜之恋（Light and Night）","时空中的绘旅人（Time Travel Artist）","梦间集（Dream Collection）","花亦山心之月（Flower Moon）","心跳回忆（Tokimeki Memorial）","恋爱物语（Love Story）"],
+                "社交冒险类": ["光·遇（Sky: Children of the Light）","蛋仔派对（Eggy Party）","迷你世界（Mini World）","元梦之星（Dream Star）","Roblox（Roblox）","Among Us（Among Us）","狼人杀（Werewolf）","派对之星（Party Star）","香肠派对（Sausage Man）","元气骑士（Soul Knight）"],
+                "开放世界冒险类": ["原神（Genshin Impact）","山海镜花（Mirage: Perfect Skyline）","猫之城（Cat Fantasy）","明日之后（LifeAfter）","明日方舟（Arknights）","逆水寒（Justice）","剑与远征：启程（AFK Journey）","海之号角：神秘海怪（Oceanhorn: Monster of Uncharted Seas）","神无月（Divine）","燕云十六声（Yan Yun Sixteen Sounds）"]
+            },
+            "电影": {
+                "剧情片": [ "你好，李焕英（Hi, Mom）", "满江红（Full River Red）", "我不是药神（Dying to Survive）", "唐人街探案3（Detective Chinatown 3）", "中国机长（The Captain）", "我和我的祖国（My People, My Country）", "误杀（Sheep Without a Shepherd）", "扬名立万（Be Somebody）", "第二十条（Article 20）", "热辣滚烫（YOLO）", "肖申克的救赎（The Shawshank Redemption）", "阿甘正传（Forrest Gump）", "霸王别姬", "美丽人生（Life Is Beautiful）", "海上钢琴师（The Legend of 1900）", "放牛班的春天（Les Choristes）", "辩护人（The Attorney）", "触不可及（Intouchables）"],
+                "战争片": ["长津湖（The Battle at Lake Changjin）","战狼2（Wolf Warrior 2）","红海行动（Operation Red Sea）","八佰（The Eight Hundred）","金刚川（The Sacrifice）","志愿军：雄兵出击（The Volunteers: To the War）","建军大业（The Founding of an Army）","英雄儿女（Heroes and Heroines）","高山下的花环（The Garland at the Mountain）","我的战争（My War）","拯救大兵瑞恩（Saving Private Ryan）","血战钢锯岭（Hacksaw Ridge）","敦刻尔克（Dunkirk）","兵临城下（Enemy at the Gates）","全金属外壳（Full Metal Jacket）","现代启示录（Apocalypse Now）","黑鹰坠落（Black Hawk Down）","辛德勒的名单（Schindler's List）","集结号","风语者（Windtalkers）"],
+                "历史片": ["辛德勒的名单（Schindler's List）","亚历山大大帝（Alexander）","天国王朝（Kingdom of Heaven）","乱世佳人（Gone with the Wind）","特洛伊（Troy）","勇敢的心（Braveheart）","林肯（Lincoln）","敦刻尔克（Dunkirk）","末代皇帝（The Last Emperor）","活着"],
+                "奇幻片": ["指环王：护戒使者（The Lord of the Rings: The Fellowship of the Ring）","哈利·波特与魔法石（Harry Potter and the Sorcerer's Stone）","纳尼亚传奇：狮子、女巫和魔衣橱（The Chronicles of Narnia: The Lion, the Witch and the Wardrobe）","潘神的迷宫（Pan's Labyrinth）","加勒比海盗（Pirates of the Caribbean）","魔法奇缘（Enchanted）","爱丽丝梦游仙境（Alice in Wonderland）","绿野仙踪（The Wizard of Oz）","奇幻森林（The Jungle Book）","神奇动物在哪里（Fantastic Beasts and Where to Find Them）"],
+                "灾难片": ["泰坦尼克号（Titanic）","后天（The Day After Tomorrow）","2012","世界末日（Armageddon）","独立日（Independence Day）","地心引力（Gravity）","釜山行（Train to Busan）","流浪地球","中国机长","海啸奇迹（The Impossible）"],
+                "传记片": ["至暗时刻（Darkest Hour）","模仿游戏（The Imitation Game）","社交网络（The Social Network）","波西米亚狂想曲（Bohemian Rhapsody）","美丽心灵（A Beautiful Mind）","奥本海默（Oppenheimer）","乔布斯（Steve Jobs）","国王的演讲（The King's Speech）","奔腾年代（Seabiscuit）","弗里达（Frida）"],
+                "音乐剧电影": ["悲惨世界（Les Misérables）","歌剧魅影（The Phantom of the Opera）","妈妈咪呀！（Mamma Mia!）","芝加哥（Chicago）","爱乐之城（La La Land）","摇滚校园（School of Rock）","红磨坊（Moulin Rouge!）","猫（Cats）","发胶（Hairspray）","一步之遥（Nine）"],
+                "黑白电影": ["公民凯恩（Citizen Kane）","卡萨布兰卡（Casablanca）","摩登时代（Modern Times）","大独裁者（The Great Dictator）","第七封印（The Seventh Seal）","双重赔偿（Double Indemnity）","日出（Sunrise: A Song of Two Humans）","偷自行车的人（Bicycle Thieves）","罗生门（Rashomon）","黑水仙（Black Narcissus）"],
+                "励志片": ["当幸福来敲门（The Pursuit of Happyness）","风雨哈佛路（Homeless to Harvard）","弱点（The Blind Side）","心灵捕手（Good Will Hunting）","百万美元宝贝（Million Dollar Baby）","摔跤吧！爸爸（Dangal）","逆光飞翔","叫我第一名（Front of the Class）","喜剧之王","垫底辣妹"],
+                "喜剧片": ["夏洛特烦恼","人在囧途","功夫（Kung Fu Hustle）","唐伯虎点秋香","摩登时代（Modern Times）","两杆大烟枪（Lock, Stock and Two Smoking Barrels）","这个杀手不太冷静","低俗小说（Pulp Fiction）","憨豆先生的大灾难（Bean）","神探蒲松龄"],
+                "冒险片": ["夺宝奇兵（Indiana Jones）","勇敢者游戏（Jumanji）","荒野生存（Into the Wild）","海边的曼彻斯特","少年派的奇幻漂流（Life of Pi）","荒岛余生（Cast Away）","雪国列车（Snowpiercer）","X战警：天启","长津湖","楚门的世界（The Truman Show）"],
+                "动作片": ["速度与激情系列（Fast & Furious）","叶问（Ip Man）","杀死比尔（Kill Bill）","谍影重重（The Bourne Identity）","突袭（The Raid）","功夫熊猫（Kung Fu Panda）","战狼2","速度与激情：特别行动","复仇者联盟系列","敢死队（The Expendables）"],
+                "爱情片": ["泰坦尼克号（Titanic）", "恋恋笔记本（The Notebook）", "前任3：再见前任（Ex-File 3: The Return of the Exes）","如果·爱（Perhaps Love）", "秒速五厘米（5 Centimeters per Second）", "怦然心动（Flipped）","暮光之城（Twilight）", "她（Her）", "一天（One Day）", "初恋50次（50 First Dates）","时间旅行者的妻子（The Time Traveler's Wife）", "爱在黎明破晓前（Before Sunrise）","我脑中的橡皮擦（A Moment to Remember）", "假如爱有天意（The Classic）", "云中漫步（A Walk in the Clouds）","初恋这件小事（A Little Thing Called Love）", "情书（Love Letter）", "北京遇上西雅图（Finding Mr. Right）","甜蜜蜜（Comrades: Almost a Love Story）", "致我们终将逝去的青春（So Young）"],
+                "青春校园电影": ["怦然心动（Flipped）", "初恋这件小事（A Little Thing Called Love）", "那些年，我们一起追的女孩（You Are the Apple of My Eye）","致我们终将逝去的青春（So Young）", "同桌的你（My Old Classmate）", "谁的青春不迷茫（Yesterday Once More）","左耳（The Left Ear）", "一周的朋友（One Week Friends）", "歌舞青春（High School Musical）","阳光姐妹淘（Sunny）", "早安公主（Good Morning Princess）", "初恋50次（50 First Dates）","怦然心动的她（She’s All That）", "野孩子（Wild Child）", "十七岁的单车（Beijing Bicycle）"],
+                "科幻片": ["流浪地球（The Wandering Earth）","星际穿越（Interstellar）","盗梦空间（Inception）","银翼杀手2049（Blade Runner 2049）","阿凡达（Avatar）","火星救援（The Martian）","黑客帝国（The Matrix）","普罗米修斯（Prometheus）","第五元素（The Fifth Element）","全面启动（Total Recall）","星球大战：帝国反击战（Star Wars: The Empire Strikes Back）","地心引力（Gravity）","星际迷航（Star Trek）","异形（Alien）","铁血战士（Predator）","明日边缘（Edge of Tomorrow）","湮灭（Annihilation）","沙丘（Dune）","源代码（Source Code）","超体（Lucy）"],
+                "体育题材电影": ["洛奇（Rocky）","点球成金（Moneyball）","极速车王（Ford v Ferrari）","冰上奇迹（Miracle）","弱点（The Blind Side）","摔跤吧！爸爸（Dangal）","光荣之路（Glory Road）","卡特教练（Coach Carter）","燃情主厨（Chef）","南极大冒险（Eight Below）"],
+                "环保题材电影": ["海豚湾（The Cove）","不愿面对的真相（An Inconvenient Truth）","地球（Earth）","家园（Home）","蓝色星球（Blue Planet）","塑料海洋（A Plastic Ocean）","我们的星球（Our Planet）","冰冻星球（Frozen Planet）","地球脉动（Planet Earth）","黑金（Black Gold）"],
+                "短片电影": ["纸人（Paperman）","鹬（Piper）","月神（La Luna）","鸟！（For the Birds）","头发与我（Hair Love）","亲爱的篮球（Dear Basketball）","失物招领（Lost and Found）","借东西的小人阿莉埃蒂（Arrietty）","小羊肖恩（Shaun the Sheep）","小熊维尼（Winnie the Pooh）"],
+                "动画电影": ["千与千寻（Spirited Away）","机器人总动员（WALL·E）","大闹天宫（Havoc in Heaven）","疯狂动物城（Zootopia）","龙猫（My Neighbor Totoro）","天空之城（Castle in the Sky）","天书奇谭（Secrets of the Heavenly Book）","寻梦环游记（Coco）","哈尔的移动城堡（Howl's Moving Castle）","飞屋环游记（Up）","狮子王（The Lion King）","哪吒闹海（Nezha Conquers the Dragon King）","红辣椒（Paprika）","心灵奇旅（Soul）","玛丽和马克思（Mary and Max）","幽灵公主（Princess Mononoke）","侧耳倾听（Whisper of the Heart）","玩具总动员3（Toy Story 3）","萤火之森（Into the Forest of Fireflies' Light）","未麻的部屋（Perfect Blue）","哪吒之魔童降世（Ne Zha）","白蛇：缘起（White Snake）","大鱼海棠（Big Fish & Begonia）","姜子牙（Legend of Deification）","新神榜：杨戬（New Gods: Yang Jian）","风语咒（The Wind Guardians）","长安三万里（Chang An）","小门神（The Guardian Brothers）","雄狮少年（I Am What I Am）","西游记之大圣归来（Monkey King: Hero is Back）","罗小黑战记（The Legend of Hei）","刺客伍六七：暗影宿命（Scissor Seven: Shadow Fate）","西行纪之再见悟空（The Westward: Goodbye Wukong）","大护法（Da Hu Fa）","白蛇2：青蛇劫起（White Snake 2: The Tribulation of the Green Snake）","新神榜：哪吒重生（New Gods: Nezha Reborn）","魔比斯环（The Orbital Children）","小倩（The Beauty and the Sword）","茶啊二中（Big City Student）"]
+            },
+            "电视剧": ["看青春剧", "看历史剧", "看家庭剧", "看悬疑剧", "看短剧", "看古装剧", "看现代剧", "看职场剧", "看都市情感剧", "看谍战剧", "看科幻剧", "看奇幻剧", "看武侠剧", "看犯罪剧", "看校园剧", "看轻喜剧", "看成长剧"],
+            "综艺节目": ["追综艺", "追真人秀", "追音乐类综艺", "追喜剧综艺", "追竞技类综艺", "追偶像养成综艺", "追脱口秀综艺", "追美食综艺", "追旅行综艺", "追亲子综艺", "追校园综艺", "追明星访谈综艺", "追情感观察综艺", "追生活实验综艺"],
+            "动画": {
+                "日漫动画": ["千与千寻（千と千尋の神隠し）","火影忍者（NARUTO -ナルト-）","名侦探柯南（名探偵コナン）","龙猫（となりのトトロ）","灌篮高手（スラムダンク）","海贼王（ワンピース）","进击的巨人（進撃の巨人）","鬼灭之刃（鬼滅の刃）","我的英雄学院（僕のヒーローアカデミア）","你的名字（君の名は。）","我独自升级（俺だけレベルアップな件）","鬼灭之刃：无限城篇（鬼滅の刃 無限城編）","咒术回战 第三季（呪術廻戦 第三期）","我的英雄学院 第8季（僕のヒーローアカデミア 第8期）","坂本日常（佐々木とピーちゃん）","防风少年 第2季（東京リベンジャーズ 天竺編）","怪兽8号 第2季（怪獣８号 第2期）","SPY×FAMILY 第3季（SPY×FAMILY 第3期）","胆大党 第2季（勇気爆発バーンブレイバーン 第2期）","忍者与杀手的同住日常（ざんげちゃんとおるすばん）"],
+                "国创动画": ["哪吒之魔童降世", "白蛇：缘起", "大鱼海棠", "罗小黑战记", "大护法","姜子牙", "风语咒", "新神榜：哪吒重生", "小门神", "长安三万里","哪吒之魔童闹海", "时间之子"],
+                "欧美动画": ["疯狂动物城（Zootopia）","飞屋环游记（Up）","冰雪奇缘（Frozen）","狮子王（The Lion King）","功夫熊猫（Kung Fu Panda）","海底总动员（Finding Nemo）","玩具总动员（Toy Story）","超人总动员（The Incredibles）","无敌破坏王（Wreck-It Ralph）","头脑特工队（Inside Out）","疯狂动物城2（Zootopia 2）","坏蛋联盟2（The Bad Guys 2）","银河系第二好医院 第2季（The Second Best Hospital in the Galaxy Season 2）","露露是一头犀牛（Lulu is a Rhinoceros）","金牌得主（The Champion）"],
+                "校园题材动画": ["Clannad", "未闻花名", "四月是你的谎言", "中二病也要谈恋爱", "轻音少女", "青春猪头少年", "我们的存在", "邻座的怪同学", "学园孤岛", "月色真美"],
+                "科幻/奇幻动画": ["EVA 新世纪福音战士", "灵能百分百", "钢之炼金术师", "魔法禁书目录", "刀剑神域", "Re：从零开始的异世界生活", "诺亚方舟漂流记", "空之境界", "鬼神童子", "星际宝贝"],
+                "热血战斗动画": ["火影忍者", "海贼王", "龙珠Z", "幽游白书", "猎人×猎人", "鬼灭之刃", "一拳超人", "死神", "咒术回战", "我的英雄学院"],
+                "治愈系动画": ["夏目友人帐", "虫师", "萤火之森", "ARIA", "白兔糖", "便·当", "来自风平浪静的明天", "来自新世界", "悠哉日常大王", "昨日之歌"],
+                "搞笑动画": ["银魂", "阿松", "日常", "轻松百合", "粗点心战争", "男子高中生的日常", "干物妹小埋", "笨女孩", "樱桃小丸子", "蜡笔小新"],
+                "运动题材动画": ["灌篮高手", "排球少年", "黑子的篮球", "强风吹拂", "网球王子", "乒乓", "闪电十一人", "钻石王牌", "飙速宅男", "足球小将"],
+                "冒险动画": ["数码宝贝", "海贼王", "钢之炼金术师", "魔卡少女樱", "口袋妖怪", "七龙珠", "猎人×猎人", "魔神英雄传", "犬夜叉", "天空之城"],
+                "悬疑动画": ["名侦探柯南", "未来日记", "Another", "无头骑士异闻录", "寄生兽", "地狱少女", "冰菓", "心理测量者", "东京残响", "暗芝居"],
+                "恋爱动画": ["你的名字", "言叶之庭", "好想告诉你", "秒速五厘米", "月色真美", "恋爱随风", "会长是女仆大人", "邻座的怪同学", "只想受你欢迎", "辉夜大小姐想让我告白"],
+                "历史题材动画": ["狼雨", "将国之天鹰星", "鬼灭之刃", "浪客剑心", "大正处女御伽话", "青之驱魔师", "战国BASARA", "活击/刀剑乱舞", "鬼平", "维新志士"],
+                "儿童动画": ["喜羊羊与灰太狼", "熊出没", "大耳朵图图", "小猪佩奇", "海底小纵队", "巴布工程师", "汪汪队立大功", "神奇校车", "蓝色小考拉", "小马宝莉"]
+            },
+            "阅读": {
+                "青春爱情小说": ["偷偷藏不住（竹已）","雀斑（饶雪漫）","从没喜欢过你（切斯特·布朗）","淑香传（韩国古典小说）","蜀山的少年（夏生）","The Fault in Our Stars（John Green）","Eleanor & Park（Rainbow Rowell）","To All the Boys I've Loved Before（Jenny Han）","Love, Rosie（Cecelia Ahern）","Anna and the French Kiss（Stephanie Perkins）","撒野（巫哲）","全世界最好的你（安思源）","你好，旧时光（八月长安）","夏有乔木雅望天堂（籽月）","匆匆那年（九夜茴）","Five Feet Apart（Rachael Lippincott）","Everything, Everything（Nicola Yoon）","The Sun Is Also a Star（Nicola Yoon）","Paper Towns（John Green）","Nick & Norah's Infinite Playlist（Rachel Cohn & David Levithan）"],
+                "玄幻小说": ["凡人修仙传（忘语）","斗破苍穹（天蚕土豆）","诛仙（萧鼎）","雪中悍刀行（烽火戏诸侯）","将夜（猫腻）","A Song of Ice and Fire（George R.R. Martin）","The Name of the Wind（Patrick Rothfuss）","Mistborn: The Final Empire（Brandon Sanderson）","The Wheel of Time（Robert Jordan）","The Hobbit（J.R.R. Tolkien）"],
+                "科幻小说": ["三体（刘慈欣）","球状闪电（刘慈欣）","流浪地球（刘慈欣）","超新星纪元（刘慈欣）","黑暗森林（刘慈欣）","Dune（Frank Herbert）","Neuromancer（William Gibson）","Foundation（Isaac Asimov）","Ender's Game（Orson Scott Card）","Snow Crash（Neal Stephenson）"],
+                "幻想类小说": ["择天记（猫腻）","诡秘之主（爱潜水的乌贼）","庆余年（猫腻）","龙族（江南）","镜·双城（沧月）","Harry Potter and the Philosopher's Stone（J.K. Rowling）","The Golden Compass（Philip Pullman）","Eragon（Christopher Paolini）","The Chronicles of Narnia（C.S. Lewis）","The Night Circus（Erin Morgenstern）"]
+            },
+            "音频": ["听流行音乐", "听校园民谣","听民谣", "听摇滚", "听嘻哈", "听电子音乐", "听古典乐", "听爵士", "听轻音乐", "听动漫歌曲", "听影视原声", "听播客", "看演唱会直播", "听有声书", "听电台", "听相声", "听脱口秀音频", "听睡前故事", "听冥想引导音频", "听学习类播客", "听历史故事音频", "听情感类播客"],
+            "短视频": ["刷视频", "看直播", "看搞笑短视频", "看Vlog", "看游戏解说", "看才艺表演", "看美食制作", "看开箱测评", "看校园日常", "看学习技巧视频", "看宠物视频", "看剧情短剧", "看穿搭分享", "看健身打卡视频"]
+        }
+    },
+    "休闲-媒介型休闲（熬夜）": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.2,
+        "bio_cunsumption": -0.9,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.8, 0.2, 0.2, 1.0, 0.2, 0.1, 1.0, 0.1, 0.1, 0.5, 0.1, 0.2],
+        "Time": ["evening"],
+        "Detail": {
+            "单机类游戏": {
+                "动作冒险类": ["只狼（Sekiro: Shadows Die Twice）","对马岛之魂（Ghost of Tsushima）","鬼武者2Re（Onimusha 2 Reboot）","烈焰之刃（Flameblade）","法环黑夜君临（Elden Ring: Nightfall）","泡姆泡姆（POPUCOM）","胡闹装修（Chaotic Renovation）","胡闹加油站（Chaotic Gas Station）","火柴人征战异世界（Stickman Isekai Wars）","光与影（Light and Shadow）"],
+                "角色扮演类": ["霍格沃茨之遗（Hogwarts Legacy）","上古卷轴5（The Elder Scrolls V: Skyrim）","暗黑破坏神4（Diablo IV）","仁王2（Nioh 2）","荒野大镖客2（Red Dead Redemption 2）","辐射4（Fallout 4）","刺客信条影（Assassin's Creed: Shadows）","宗门志（Cultivation Chronicles）","永恒天空（Eternal Sky）","双影奇境（Twin Shadow Realm）"],
+                "模拟经营类": ["麦穗镇物语（Wheatville Tales）","菜市场模拟器（Market Simulator）","拉斯维加斯模拟器（Las Vegas Simulator）","浣币模拟器（Laundry Tycoon）","洗刷刷模拟器（Scrub Simulator）","疯狂手机大亨（Mobile Tycoon Madness）","吸血鬼酒吧大亨（Vampire Bar Tycoon）","动物栏：桌面牧场（Petpen Ranch）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）"],
+                "种田养成类": ["星露谷物语（Stardew Valley）","波西亚时光（My Time at Portia）","沙石镇时光（My Time at Sandrock）","动物森友会（Animal Crossing: New Horizons）","符文工厂5（Rune Factory 5）","牧场物语：橄榄镇与希望的大地（Story of Seasons: Pioneers of Olive Town）","花园之间（The Garden Between）","喵咪斗恶龙（Cat Quest）","甜甜萌物语（Sweet Days）","猫咪后院（Neko Atsume: Kitty Collector）","Littlewood（小镇物语）","Lemon Cake（柠檬蛋糕店）","熊熊餐厅（Bear’s Restaurant）","Spiritfarer（灵魂摆渡人）","Ooblets（乌布莱小镇）","Kynseed（奇种传）","Travellers Rest（旅人旅店）","Doraemon 牧场物语（Doraemon Story of Seasons）","Potion Permit（魔药工坊）","Aka（小红熊的退休生活）"],
+                "解谜/轻松创意类": ["幻想生活ｉ（Fantasy Life i: The Girl Who Steals Time）","纪念碑谷（Monument Valley）",  "泡姆泡姆（POPUCOM）","灾后修复师（Post-Crisis Rebuilder）","挖油吧！爸爸（Dig It, Dad!）","猜词游戏（Word Game）","弹珠地狱洛坎塔（Marble Hell: Lokanta）","迷失之径（Lost Path）"],
+                "策略战棋类/战术类": ["炮舰外交（Gunboat Diplomacy）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）","贪婪大地（Greedy Earth）","边境开拓者（Frontier Pioneer）","巨人杀手：暗黑之潮（Titan Slayer: Dark Tide）"],
+                "Roguelike/类魂类": ["新毁灭战士（DOOM Reborn）","怪物火车2（Monster Train 2）","暗区突围无限（Dark Zone Infinite）","罗格：救世传说（ROG: Legend of Salvation）","我即军团：替身幸存者（Legion of Me: Proxy Survivor）","伏魔行者（The Spellwalker）"],
+                "剧情/悬疑/黑暗向": ["恶意关注（Malicious Attention）","笼子（The Cage）","虐杀熔炉（Kill Crucible）","巴尔的遗产（Legacy of Baal）"]
+            },
+            "网络游戏": {
+                "竞技对抗类": ["王者荣耀（Honor of Kings）","和平精英（Game for Peace）","英雄联盟（League of Legends）","原神（Genshin Impact）","守望先锋（Overwatch）","崩坏：星穹铁道（Honkai: Star Rail）","穿越火线（CrossFire）","Dota 2（Defense of the Ancients 2）","Valorant（无畏契约）","绝地求生（PUBG: Battlegrounds）","永劫无间（Naraka: Bladepoint）","APEX英雄（Apex Legends）","彩虹六号：围攻（Rainbow Six: Siege）"],
+                "MMORPG/角色扮演类": ["魔兽世界（World of Warcraft）","最终幻想14（Final Fantasy XIV）","剑网3（JX3 Online）","天涯明月刀（Moonlight Blade）","逆战（Mission Against Terror）"],
+                "可爱·种田·养成类": ["摩尔庄园（Mole's World Online）","蛋仔派对（Eggy Party）","小森生活（Komori Life）","光·遇（Sky: Children of the Light）","梦幻花园（Gardenscapes Online）","波西亚时光（My Time at Portia Online）","星露谷物语·多人（Stardew Valley Multiplayer）","旅行青蛙·中国之旅（Travel Frog: China Edition）","动物森友会·口袋营地（Animal Crossing: Pocket Camp）","猫咪公寓2（Cats & Soup Online）","奇迹暖暖（Love Nikki: Dress UP Queen）","以闪亮之名（Shining Nikki）","恋与制作人（Mr Love: Queen's Choice）","浮岛物语：联机版（Forager Online）","花儿爱消除（Flover's World）","云上城之歌（Song of the Cloud City）","牧场物语OL（Story of Seasons Online）","时空中的绘旅人（Tears of Themis）","托卡生活世界（Toca Life World Online）","晴空农场（Sunshine Farm）"],
+                "经典休闲类": ["QQ飞车（QQ Speed Online）","劲舞团（Audition Online）","跑跑卡丁车（KartRider Online）","泡泡堂（Crazy Arcade）","植物大战僵尸OL（Plants vs. Zombies Online）","炫舞时代（ShowTime Dance）","QQ炫舞（QQ Dance Online）","冒险岛（MapleStory Online）"],
+                "修仙·国风类": ["诛仙世界（Perfect World: Jade Dynasty）","古剑奇谭网络版（Swords of Legends Online）","逆水寒（Justice Online）","仙侠世界2（Xianxia World 2）","蜀门（Shumen Online）","完美世界（Perfect World Online）","问道（Wen Dao Online）","梦幻诛仙（Fantasy ZhuXian Online）"]
+            },
+            "手机游戏": {
+                "休闲消除类": ["开心消消乐（Happy Match）","天天爱消除（PopStar!）","羊了个羊（Sheep A Sheep）","保卫萝卜（Carrot Fantasy）","植物大战僵尸2（Plants vs. Zombies 2）","糖果传奇（Candy Crush Saga）","泡泡龙传奇（Bubble Witch Saga）","宾果消消乐（Bingo Pop）","开心泡泡猫（Bubble Cat）","水果忍者（Fruit Ninja）"],
+                "轻松养成类": ["旅行青蛙（Travel Frog）","猫咪后院（Neko Atsume）","我的汤姆猫（My Talking Tom）","汤姆猫跑酷（Talking Tom Gold Run）","甜甜萌物语（Sweet Days）","心动小镇（Heart Town）","梦幻花园（Gardenscapes）","梦幻家园（Homescapes）","模拟城市：建设（SimCity BuildIt）","动物餐厅（Animal Restaurant）"],
+                "节奏音乐类": ["音跃球球（Dancing Ballz）","节奏大师（Beat Master）","钢琴块2（Piano Tiles 2）","Cytus II（Cytus II）","Deemo（Deemo）","Lanota（Lanota）","Muse Dash（Muse Dash）","Arcaea（Arcaea）","VOEZ（VOEZ）","Tap Tap Reborn（Tap Tap Reborn）"],
+                "解谜闯关类": ["纪念碑谷（Monument Valley）","割绳子（Cut the Rope）","愤怒的小鸟（Angry Birds）","逃脱者（The Escapists）","机械迷城（Machinarium）","迷失岛（Isoland）","未上锁的房间（The Room）","神庙逃亡2（Temple Run 2）","地铁跑酷（Subway Surfers）","超级玛丽跑酷（Super Mario Run）"],
+                "跑酷动作类": ["地铁跑酷（Subway Surfers）","汤姆猫跑酷（Talking Tom Gold Run）","神庙逃亡2（Temple Run 2）","滑雪大冒险（Ski Safari）","熊出没之熊大快跑（Bear Run）","忍者必须死3（Ninja Must Die 3）","疯狂动物园（Rodeo Stampede）","火柴人联盟2（Stickman League 2）","滑板派对3（Skateboard Party 3）","跑酷勇者（Run Hero）"],
+                "剧情恋爱类": ["恋与制作人（Mr Love: Queen's Choice）","奇迹暖暖（Love Nikki）","以闪亮之名（Shining Nikki）","未定事件簿（Tears of Themis）","光与夜之恋（Light and Night）","时空中的绘旅人（Time Travel Artist）","梦间集（Dream Collection）","花亦山心之月（Flower Moon）","心跳回忆（Tokimeki Memorial）","恋爱物语（Love Story）"],
+                "社交冒险类": ["光·遇（Sky: Children of the Light）","蛋仔派对（Eggy Party）","迷你世界（Mini World）","元梦之星（Dream Star）","Roblox（Roblox）","Among Us（Among Us）","狼人杀（Werewolf）","派对之星（Party Star）","香肠派对（Sausage Man）","元气骑士（Soul Knight）"],
+                "开放世界冒险类": ["原神（Genshin Impact）","山海镜花（Mirage: Perfect Skyline）","猫之城（Cat Fantasy）","明日之后（LifeAfter）","明日方舟（Arknights）","逆水寒（Justice）","剑与远征：启程（AFK Journey）","海之号角：神秘海怪（Oceanhorn: Monster of Uncharted Seas）","神无月（Divine）","燕云十六声（Yan Yun Sixteen Sounds）"]
+            },
+            "电影": {
+                "剧情片": [ "你好，李焕英（Hi, Mom）", "满江红（Full River Red）", "我不是药神（Dying to Survive）", "唐人街探案3（Detective Chinatown 3）", "中国机长（The Captain）", "我和我的祖国（My People, My Country）", "误杀（Sheep Without a Shepherd）", "扬名立万（Be Somebody）", "第二十条（Article 20）", "热辣滚烫（YOLO）", "肖申克的救赎（The Shawshank Redemption）", "阿甘正传（Forrest Gump）", "霸王别姬", "美丽人生（Life Is Beautiful）", "海上钢琴师（The Legend of 1900）", "放牛班的春天（Les Choristes）", "辩护人（The Attorney）", "触不可及（Intouchables）"],
+                "战争片": ["长津湖（The Battle at Lake Changjin）","战狼2（Wolf Warrior 2）","红海行动（Operation Red Sea）","八佰（The Eight Hundred）","金刚川（The Sacrifice）","志愿军：雄兵出击（The Volunteers: To the War）","建军大业（The Founding of an Army）","英雄儿女（Heroes and Heroines）","高山下的花环（The Garland at the Mountain）","我的战争（My War）","拯救大兵瑞恩（Saving Private Ryan）","血战钢锯岭（Hacksaw Ridge）","敦刻尔克（Dunkirk）","兵临城下（Enemy at the Gates）","全金属外壳（Full Metal Jacket）","现代启示录（Apocalypse Now）","黑鹰坠落（Black Hawk Down）","辛德勒的名单（Schindler's List）","集结号","风语者（Windtalkers）"],
+                "历史片": ["辛德勒的名单（Schindler's List）","亚历山大大帝（Alexander）","天国王朝（Kingdom of Heaven）","乱世佳人（Gone with the Wind）","特洛伊（Troy）","勇敢的心（Braveheart）","林肯（Lincoln）","敦刻尔克（Dunkirk）","末代皇帝（The Last Emperor）","活着"],
+                "奇幻片": ["指环王：护戒使者（The Lord of the Rings: The Fellowship of the Ring）","哈利·波特与魔法石（Harry Potter and the Sorcerer's Stone）","纳尼亚传奇：狮子、女巫和魔衣橱（The Chronicles of Narnia: The Lion, the Witch and the Wardrobe）","潘神的迷宫（Pan's Labyrinth）","加勒比海盗（Pirates of the Caribbean）","魔法奇缘（Enchanted）","爱丽丝梦游仙境（Alice in Wonderland）","绿野仙踪（The Wizard of Oz）","奇幻森林（The Jungle Book）","神奇动物在哪里（Fantastic Beasts and Where to Find Them）"],
+                "灾难片": ["泰坦尼克号（Titanic）","后天（The Day After Tomorrow）","2012","世界末日（Armageddon）","独立日（Independence Day）","地心引力（Gravity）","釜山行（Train to Busan）","流浪地球","中国机长","海啸奇迹（The Impossible）"],
+                "传记片": ["至暗时刻（Darkest Hour）","模仿游戏（The Imitation Game）","社交网络（The Social Network）","波西米亚狂想曲（Bohemian Rhapsody）","美丽心灵（A Beautiful Mind）","奥本海默（Oppenheimer）","乔布斯（Steve Jobs）","国王的演讲（The King's Speech）","奔腾年代（Seabiscuit）","弗里达（Frida）"],
+                "音乐剧电影": ["悲惨世界（Les Misérables）","歌剧魅影（The Phantom of the Opera）","妈妈咪呀！（Mamma Mia!）","芝加哥（Chicago）","爱乐之城（La La Land）","摇滚校园（School of Rock）","红磨坊（Moulin Rouge!）","猫（Cats）","发胶（Hairspray）","一步之遥（Nine）"],
+                "黑白电影": ["公民凯恩（Citizen Kane）","卡萨布兰卡（Casablanca）","摩登时代（Modern Times）","大独裁者（The Great Dictator）","第七封印（The Seventh Seal）","双重赔偿（Double Indemnity）","日出（Sunrise: A Song of Two Humans）","偷自行车的人（Bicycle Thieves）","罗生门（Rashomon）","黑水仙（Black Narcissus）"],
+                "励志片": ["当幸福来敲门（The Pursuit of Happyness）","风雨哈佛路（Homeless to Harvard）","弱点（The Blind Side）","心灵捕手（Good Will Hunting）","百万美元宝贝（Million Dollar Baby）","摔跤吧！爸爸（Dangal）","逆光飞翔","叫我第一名（Front of the Class）","喜剧之王","垫底辣妹"],
+                "喜剧片": ["夏洛特烦恼","人在囧途","功夫（Kung Fu Hustle）","唐伯虎点秋香","摩登时代（Modern Times）","两杆大烟枪（Lock, Stock and Two Smoking Barrels）","这个杀手不太冷静","低俗小说（Pulp Fiction）","憨豆先生的大灾难（Bean）","神探蒲松龄"],
+                "冒险片": ["夺宝奇兵（Indiana Jones）","勇敢者游戏（Jumanji）","荒野生存（Into the Wild）","海边的曼彻斯特","少年派的奇幻漂流（Life of Pi）","荒岛余生（Cast Away）","雪国列车（Snowpiercer）","X战警：天启","长津湖","楚门的世界（The Truman Show）"],
+                "动作片": ["速度与激情系列（Fast & Furious）","叶问（Ip Man）","杀死比尔（Kill Bill）","谍影重重（The Bourne Identity）","突袭（The Raid）","功夫熊猫（Kung Fu Panda）","战狼2","速度与激情：特别行动","复仇者联盟系列","敢死队（The Expendables）"],
+                "爱情片": ["泰坦尼克号（Titanic）", "恋恋笔记本（The Notebook）", "前任3：再见前任（Ex-File 3: The Return of the Exes）","如果·爱（Perhaps Love）", "秒速五厘米（5 Centimeters per Second）", "怦然心动（Flipped）","暮光之城（Twilight）", "她（Her）", "一天（One Day）", "初恋50次（50 First Dates）","时间旅行者的妻子（The Time Traveler's Wife）", "爱在黎明破晓前（Before Sunrise）","我脑中的橡皮擦（A Moment to Remember）", "假如爱有天意（The Classic）", "云中漫步（A Walk in the Clouds）","初恋这件小事（A Little Thing Called Love）", "情书（Love Letter）", "北京遇上西雅图（Finding Mr. Right）","甜蜜蜜（Comrades: Almost a Love Story）", "致我们终将逝去的青春（So Young）"],
+                "青春校园电影": ["怦然心动（Flipped）", "初恋这件小事（A Little Thing Called Love）", "那些年，我们一起追的女孩（You Are the Apple of My Eye）","致我们终将逝去的青春（So Young）", "同桌的你（My Old Classmate）", "谁的青春不迷茫（Yesterday Once More）","左耳（The Left Ear）", "一周的朋友（One Week Friends）", "歌舞青春（High School Musical）","阳光姐妹淘（Sunny）", "早安公主（Good Morning Princess）", "初恋50次（50 First Dates）","怦然心动的她（She’s All That）", "野孩子（Wild Child）", "十七岁的单车（Beijing Bicycle）"],
+                "科幻片": ["流浪地球（The Wandering Earth）","星际穿越（Interstellar）","盗梦空间（Inception）","银翼杀手2049（Blade Runner 2049）","阿凡达（Avatar）","火星救援（The Martian）","黑客帝国（The Matrix）","普罗米修斯（Prometheus）","第五元素（The Fifth Element）","全面启动（Total Recall）","星球大战：帝国反击战（Star Wars: The Empire Strikes Back）","地心引力（Gravity）","星际迷航（Star Trek）","异形（Alien）","铁血战士（Predator）","明日边缘（Edge of Tomorrow）","湮灭（Annihilation）","沙丘（Dune）","源代码（Source Code）","超体（Lucy）"],
+                "体育题材电影": ["洛奇（Rocky）","点球成金（Moneyball）","极速车王（Ford v Ferrari）","冰上奇迹（Miracle）","弱点（The Blind Side）","摔跤吧！爸爸（Dangal）","光荣之路（Glory Road）","卡特教练（Coach Carter）","燃情主厨（Chef）","南极大冒险（Eight Below）"],
+                "环保题材电影": ["海豚湾（The Cove）","不愿面对的真相（An Inconvenient Truth）","地球（Earth）","家园（Home）","蓝色星球（Blue Planet）","塑料海洋（A Plastic Ocean）","我们的星球（Our Planet）","冰冻星球（Frozen Planet）","地球脉动（Planet Earth）","黑金（Black Gold）"],
+                "短片电影": ["纸人（Paperman）","鹬（Piper）","月神（La Luna）","鸟！（For the Birds）","头发与我（Hair Love）","亲爱的篮球（Dear Basketball）","失物招领（Lost and Found）","借东西的小人阿莉埃蒂（Arrietty）","小羊肖恩（Shaun the Sheep）","小熊维尼（Winnie the Pooh）"],
+                "动画电影": ["千与千寻（Spirited Away）","机器人总动员（WALL·E）","大闹天宫（Havoc in Heaven）","疯狂动物城（Zootopia）","龙猫（My Neighbor Totoro）","天空之城（Castle in the Sky）","天书奇谭（Secrets of the Heavenly Book）","寻梦环游记（Coco）","哈尔的移动城堡（Howl's Moving Castle）","飞屋环游记（Up）","狮子王（The Lion King）","哪吒闹海（Nezha Conquers the Dragon King）","红辣椒（Paprika）","心灵奇旅（Soul）","玛丽和马克思（Mary and Max）","幽灵公主（Princess Mononoke）","侧耳倾听（Whisper of the Heart）","玩具总动员3（Toy Story 3）","萤火之森（Into the Forest of Fireflies' Light）","未麻的部屋（Perfect Blue）","哪吒之魔童降世（Ne Zha）","白蛇：缘起（White Snake）","大鱼海棠（Big Fish & Begonia）","姜子牙（Legend of Deification）","新神榜：杨戬（New Gods: Yang Jian）","风语咒（The Wind Guardians）","长安三万里（Chang An）","小门神（The Guardian Brothers）","雄狮少年（I Am What I Am）","西游记之大圣归来（Monkey King: Hero is Back）","罗小黑战记（The Legend of Hei）","刺客伍六七：暗影宿命（Scissor Seven: Shadow Fate）","西行纪之再见悟空（The Westward: Goodbye Wukong）","大护法（Da Hu Fa）","白蛇2：青蛇劫起（White Snake 2: The Tribulation of the Green Snake）","新神榜：哪吒重生（New Gods: Nezha Reborn）","魔比斯环（The Orbital Children）","小倩（The Beauty and the Sword）","茶啊二中（Big City Student）"]
+            },
+            "电视剧": ["看青春剧", "看历史剧", "看家庭剧", "看悬疑剧", "看短剧", "看古装剧", "看现代剧", "看职场剧", "看都市情感剧", "看谍战剧", "看科幻剧", "看奇幻剧", "看武侠剧", "看犯罪剧", "看校园剧", "看轻喜剧", "看成长剧"],
+            "综艺节目": ["追综艺", "追真人秀", "追音乐类综艺", "追喜剧综艺", "追竞技类综艺", "追偶像养成综艺", "追脱口秀综艺", "追美食综艺", "追旅行综艺", "追亲子综艺", "追校园综艺", "追明星访谈综艺", "追情感观察综艺", "追生活实验综艺"],
+            "动画": {
+                "日漫动画": ["千与千寻（千と千尋の神隠し）","火影忍者（NARUTO -ナルト-）","名侦探柯南（名探偵コナン）","龙猫（となりのトトロ）","灌篮高手（スラムダンク）","海贼王（ワンピース）","进击的巨人（進撃の巨人）","鬼灭之刃（鬼滅の刃）","我的英雄学院（僕のヒーローアカデミア）","你的名字（君の名は。）","我独自升级（俺だけレベルアップな件）","鬼灭之刃：无限城篇（鬼滅の刃 無限城編）","咒术回战 第三季（呪術廻戦 第三期）","我的英雄学院 第8季（僕のヒーローアカデミア 第8期）","坂本日常（佐々木とピーちゃん）","防风少年 第2季（東京リベンジャーズ 天竺編）","怪兽8号 第2季（怪獣８号 第2期）","SPY×FAMILY 第3季（SPY×FAMILY 第3期）","胆大党 第2季（勇気爆発バーンブレイバーン 第2期）","忍者与杀手的同住日常（ざんげちゃんとおるすばん）"],
+                "国创动画": ["哪吒之魔童降世", "白蛇：缘起", "大鱼海棠", "罗小黑战记", "大护法","姜子牙", "风语咒", "新神榜：哪吒重生", "小门神", "长安三万里","哪吒之魔童闹海", "时间之子"],
+                "欧美动画": ["疯狂动物城（Zootopia）","飞屋环游记（Up）","冰雪奇缘（Frozen）","狮子王（The Lion King）","功夫熊猫（Kung Fu Panda）","海底总动员（Finding Nemo）","玩具总动员（Toy Story）","超人总动员（The Incredibles）","无敌破坏王（Wreck-It Ralph）","头脑特工队（Inside Out）","疯狂动物城2（Zootopia 2）","坏蛋联盟2（The Bad Guys 2）","银河系第二好医院 第2季（The Second Best Hospital in the Galaxy Season 2）","露露是一头犀牛（Lulu is a Rhinoceros）","金牌得主（The Champion）"],
+                "校园题材动画": ["Clannad", "未闻花名", "四月是你的谎言", "中二病也要谈恋爱", "轻音少女", "青春猪头少年", "我们的存在", "邻座的怪同学", "学园孤岛", "月色真美"],
+                "科幻/奇幻动画": ["EVA 新世纪福音战士", "灵能百分百", "钢之炼金术师", "魔法禁书目录", "刀剑神域", "Re：从零开始的异世界生活", "诺亚方舟漂流记", "空之境界", "鬼神童子", "星际宝贝"],
+                "热血战斗动画": ["火影忍者", "海贼王", "龙珠Z", "幽游白书", "猎人×猎人", "鬼灭之刃", "一拳超人", "死神", "咒术回战", "我的英雄学院"],
+                "治愈系动画": ["夏目友人帐", "虫师", "萤火之森", "ARIA", "白兔糖", "便·当", "来自风平浪静的明天", "来自新世界", "悠哉日常大王", "昨日之歌"],
+                "搞笑动画": ["银魂", "阿松", "日常", "轻松百合", "粗点心战争", "男子高中生的日常", "干物妹小埋", "笨女孩", "樱桃小丸子", "蜡笔小新"],
+                "运动题材动画": ["灌篮高手", "排球少年", "黑子的篮球", "强风吹拂", "网球王子", "乒乓", "闪电十一人", "钻石王牌", "飙速宅男", "足球小将"],
+                "冒险动画": ["数码宝贝", "海贼王", "钢之炼金术师", "魔卡少女樱", "口袋妖怪", "七龙珠", "猎人×猎人", "魔神英雄传", "犬夜叉", "天空之城"],
+                "悬疑动画": ["名侦探柯南", "未来日记", "Another", "无头骑士异闻录", "寄生兽", "地狱少女", "冰菓", "心理测量者", "东京残响", "暗芝居"],
+                "恋爱动画": ["你的名字", "言叶之庭", "好想告诉你", "秒速五厘米", "月色真美", "恋爱随风", "会长是女仆大人", "邻座的怪同学", "只想受你欢迎", "辉夜大小姐想让我告白"],
+                "历史题材动画": ["狼雨", "将国之天鹰星", "鬼灭之刃", "浪客剑心", "大正处女御伽话", "青之驱魔师", "战国BASARA", "活击/刀剑乱舞", "鬼平", "维新志士"],
+                "儿童动画": ["喜羊羊与灰太狼", "熊出没", "大耳朵图图", "小猪佩奇", "海底小纵队", "巴布工程师", "汪汪队立大功", "神奇校车", "蓝色小考拉", "小马宝莉"]
+            },
+            "阅读": {
+                "青春爱情小说": ["偷偷藏不住（竹已）","雀斑（饶雪漫）","从没喜欢过你（切斯特·布朗）","淑香传（韩国古典小说）","蜀山的少年（夏生）","The Fault in Our Stars（John Green）","Eleanor & Park（Rainbow Rowell）","To All the Boys I've Loved Before（Jenny Han）","Love, Rosie（Cecelia Ahern）","Anna and the French Kiss（Stephanie Perkins）","撒野（巫哲）","全世界最好的你（安思源）","你好，旧时光（八月长安）","夏有乔木雅望天堂（籽月）","匆匆那年（九夜茴）","Five Feet Apart（Rachael Lippincott）","Everything, Everything（Nicola Yoon）","The Sun Is Also a Star（Nicola Yoon）","Paper Towns（John Green）","Nick & Norah's Infinite Playlist（Rachel Cohn & David Levithan）"],
+                "玄幻小说": ["凡人修仙传（忘语）","斗破苍穹（天蚕土豆）","诛仙（萧鼎）","雪中悍刀行（烽火戏诸侯）","将夜（猫腻）","A Song of Ice and Fire（George R.R. Martin）","The Name of the Wind（Patrick Rothfuss）","Mistborn: The Final Empire（Brandon Sanderson）","The Wheel of Time（Robert Jordan）","The Hobbit（J.R.R. Tolkien）"],
+                "科幻小说": ["三体（刘慈欣）","球状闪电（刘慈欣）","流浪地球（刘慈欣）","超新星纪元（刘慈欣）","黑暗森林（刘慈欣）","Dune（Frank Herbert）","Neuromancer（William Gibson）","Foundation（Isaac Asimov）","Ender's Game（Orson Scott Card）","Snow Crash（Neal Stephenson）"],
+                "幻想类小说": ["择天记（猫腻）","诡秘之主（爱潜水的乌贼）","庆余年（猫腻）","龙族（江南）","镜·双城（沧月）","Harry Potter and the Philosopher's Stone（J.K. Rowling）","The Golden Compass（Philip Pullman）","Eragon（Christopher Paolini）","The Chronicles of Narnia（C.S. Lewis）","The Night Circus（Erin Morgenstern）"]
+            },
+            "音频": ["听流行音乐", "听校园民谣","听民谣", "听摇滚", "听嘻哈", "听电子音乐", "听古典乐", "听爵士", "听轻音乐", "听动漫歌曲", "听影视原声", "听播客", "看演唱会直播", "听有声书", "听电台", "听相声", "听脱口秀音频", "听睡前故事", "听冥想引导音频", "听学习类播客", "听历史故事音频", "听情感类播客"],
+            "短视频": ["刷视频", "看直播", "看搞笑短视频", "看Vlog", "看游戏解说", "看才艺表演", "看美食制作", "看开箱测评", "看校园日常", "看学习技巧视频", "看宠物视频", "看剧情短剧", "看穿搭分享", "看健身打卡视频"]
+        }
+    },
+    "休闲-创造型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.4,
+        "bio_cunsumption": 0.1,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.4, 0.3, 0.6, 0.8, 0.3, 0.4, 0.7, 0.2, 0.2, 0.4, 0.2, 0.3],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": {
+            "艺术表达类": ["绘画","素描","水彩画","涂鸦","唱歌","演奏音乐","作曲","写小说","写日记","写歌词","写剧本","开发小游戏"],
+            "手工动手类": ["雕塑","手工陶艺","做手工艺","剪纸","折纸艺术","叠纸飞机","缝纫编织","拼图创作","搭积木","建造乐高模型"],
+            "数字创作类": ["拍Vlog","摄影","手机摄影","制作短片","设计海报","做动漫人物设定"],
+            "记录类创作": ["写字","DIY相册","手账装饰"]
+        }
+    },
+    "休闲-内在调节型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.2,
+        "bio_cunsumption": 0.6,
+        "psycho_cunsumption": 0.1,
+        "Weight": [0.2, 0.6, 0.6, 0.5, 0.5, 0.4, 0.3, 0.2, 0.1, 0.2, 0.1, 0.2],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["冥想", "茶艺", "插花", "发呆", "看漫画", "看小说", "养鱼", "喂小狗", "喂小猫", "泡澡"]
+    },
+    "休闲-外在调节型休闲": {
+        "tag": [0,0,1.0,0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": 0.2,
+        "psycho_cunsumption": 0.1,
+        "Weight": [0.3, 0.2, 0.4, 0.6, 0.3, 0.3, 0.7, 0.3, 0.2, 0.4, 0.2, 0.4],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail": ["商场购物", "超市购物", "参观画展", "参观艺术博物馆", "参观历史博物馆", "参观科技馆"]
+    },
+    "社交-志愿服务": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.5,
+        "bio_cunsumption": -0.2,
+        "psycho_cunsumption": 0.0,
+        "Weight": [0.4, 0.3, 0.3, 0.4, 0.4, 0.6, 0.3, 0.4, 1.0, 0.3, 0.6, 0.5],
+        "Time": ["morning", "afternoon"],
+        "Detail": ["社区助老", "社区清洁", "爱心义卖", "流浪动物救治"]
+    },
+    "社交-朋友集体聚会": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": 0.2,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.2, 0.1, 0.1, 0.7, 0.4, 0.3, 0.6, 0.5, 0.8, 0.9, 0.4, 0.8],
+        "Time": ["afternoon", "evening"],
+        "Detail": [
+        "聚会闲聊", "电话长谈", "喝茶聊天", "散步谈心", "讨论兴趣话题",
+        "分享生活趣事", "倾诉烦恼寻求安慰", "朋友家聚餐", "咖啡馆聊天聚会", "桌游聚会",
+        "烧烤野餐聚会", "朋友生日聚会", "密室逃脱聚会", "唱歌KTV聚会", "打卡新餐厅聚会"
+        ]
+    },
+    "社交-朋友集体运动型休闲": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.6,
+        "bio_cunsumption": -0.5,
+        "psycho_cunsumption": 0.6,
+        "Weight": [0.8, 0.2, 0.5, 0.6, 0.3, 0.5, 0.5, 0.4, 0.7, 0.6, 0.6, 0.8],
+        "Time": ["morning", "afternoon"],
+        "Detail": {
+            "团队类运动": ["篮球", "足球", "排球", "手球", "垒球", "棒球", "曲棍球", "水球", "橄榄球", "真人室外气枪CS对战", "网球", "羽毛球", "乒乓球", "壁球", "保龄球", "台球", "毽球", "沙滩网球", "沙滩羽毛球", "卡丁车", "投沙包"],
+            "个人类项目": ["跑步", "中长跑", "越野跑", "游泳", "自行车骑行", "田径", "跳远", "跳高", "三级跳远", "铅球", "铁饼", "标枪", "斯巴达障碍赛", "体操", "艺术体操", "跆拳道", "空手道", "柔道", "武术", "太极拳", "拳击", "自由搏击", "摔跤", "击剑", "攀岩", "滑板", "BMX小轮车", "蹦床", "轮滑", "定向越野", "个人骑乘", "射箭", "滑雪", "冲浪", "帆板"],
+            "节奏与协调类运动": ["舞蹈", "街舞", "芭蕾", "拉丁舞", "瑜伽", "普拉提", "健身操", "花样跳绳"],
+            "轻松类/日常锻炼": ["徒步", "健走", "自重训练", "健身房锻炼"]
+        }
+    },
+    "社交-朋友集体媒介型休闲": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.3,
+        "bio_cunsumption": -0.4,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.3, 0.2, 0.4, 0.8, 0.4, 0.2, 0.6, 0.3, 0.8, 0.7, 0.5, 0.8],
+        "Time": ["morning", "afternoon", "evening"],
+        "Detail":{
+            "桌面类游戏": ["玩桌游","玩UNO","玩卡坦岛","狼人杀","剧本杀","三国杀"],
+            "棋牌类游戏": ["下棋","下中国象棋","下围棋","下国际象棋","下五子棋","打扑克","打21点","斗地主","打升级"],
+            "单机类游戏": {
+                "动作冒险类": ["只狼（Sekiro: Shadows Die Twice）","对马岛之魂（Ghost of Tsushima）","鬼武者2Re（Onimusha 2 Reboot）","烈焰之刃（Flameblade）","法环黑夜君临（Elden Ring: Nightfall）","泡姆泡姆（POPUCOM）","胡闹装修（Chaotic Renovation）","胡闹加油站（Chaotic Gas Station）","火柴人征战异世界（Stickman Isekai Wars）","光与影（Light and Shadow）"],
+                "角色扮演类": ["霍格沃茨之遗（Hogwarts Legacy）","上古卷轴5（The Elder Scrolls V: Skyrim）","暗黑破坏神4（Diablo IV）","仁王2（Nioh 2）","荒野大镖客2（Red Dead Redemption 2）","辐射4（Fallout 4）","刺客信条影（Assassin's Creed: Shadows）","宗门志（Cultivation Chronicles）","永恒天空（Eternal Sky）","双影奇境（Twin Shadow Realm）"],
+                "模拟经营类": ["麦穗镇物语（Wheatville Tales）","菜市场模拟器（Market Simulator）","拉斯维加斯模拟器（Las Vegas Simulator）","浣币模拟器（Laundry Tycoon）","洗刷刷模拟器（Scrub Simulator）","疯狂手机大亨（Mobile Tycoon Madness）","吸血鬼酒吧大亨（Vampire Bar Tycoon）","动物栏：桌面牧场（Petpen Ranch）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）"],
+                "种田养成类": ["星露谷物语（Stardew Valley）","波西亚时光（My Time at Portia）","沙石镇时光（My Time at Sandrock）","动物森友会（Animal Crossing: New Horizons）","符文工厂5（Rune Factory 5）","牧场物语：橄榄镇与希望的大地（Story of Seasons: Pioneers of Olive Town）","花园之间（The Garden Between）","喵咪斗恶龙（Cat Quest）","甜甜萌物语（Sweet Days）","猫咪后院（Neko Atsume: Kitty Collector）","Littlewood（小镇物语）","Lemon Cake（柠檬蛋糕店）","熊熊餐厅（Bear’s Restaurant）","Spiritfarer（灵魂摆渡人）","Ooblets（乌布莱小镇）","Kynseed（奇种传）","Travellers Rest（旅人旅店）","Doraemon 牧场物语（Doraemon Story of Seasons）","Potion Permit（魔药工坊）","Aka（小红熊的退休生活）"],
+                "解谜/轻松创意类": ["幻想生活ｉ（Fantasy Life i: The Girl Who Steals Time）","纪念碑谷（Monument Valley）",  "泡姆泡姆（POPUCOM）","灾后修复师（Post-Crisis Rebuilder）","挖油吧！爸爸（Dig It, Dad!）","猜词游戏（Word Game）","弹珠地狱洛坎塔（Marble Hell: Lokanta）","迷失之径（Lost Path）"],
+                "策略战棋类/战术类": ["炮舰外交（Gunboat Diplomacy）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）","贪婪大地（Greedy Earth）","边境开拓者（Frontier Pioneer）","巨人杀手：暗黑之潮（Titan Slayer: Dark Tide）"],
+                "Roguelike/类魂类": ["新毁灭战士（DOOM Reborn）","怪物火车2（Monster Train 2）","暗区突围无限（Dark Zone Infinite）","罗格：救世传说（ROG: Legend of Salvation）","我即军团：替身幸存者（Legion of Me: Proxy Survivor）","伏魔行者（The Spellwalker）"],
+                "剧情/悬疑/黑暗向": ["恶意关注（Malicious Attention）","笼子（The Cage）","虐杀熔炉（Kill Crucible）","巴尔的遗产（Legacy of Baal）"]
+            },
+            "网络游戏": {
+                "竞技对抗类": ["王者荣耀（Honor of Kings）","和平精英（Game for Peace）","英雄联盟（League of Legends）","原神（Genshin Impact）","守望先锋（Overwatch）","崩坏：星穹铁道（Honkai: Star Rail）","穿越火线（CrossFire）","Dota 2（Defense of the Ancients 2）","Valorant（无畏契约）","绝地求生（PUBG: Battlegrounds）","永劫无间（Naraka: Bladepoint）","APEX英雄（Apex Legends）","彩虹六号：围攻（Rainbow Six: Siege）"],
+                "MMORPG/角色扮演类": ["魔兽世界（World of Warcraft）","最终幻想14（Final Fantasy XIV）","剑网3（JX3 Online）","天涯明月刀（Moonlight Blade）","逆战（Mission Against Terror）"],
+                "可爱·种田·养成类": ["摩尔庄园（Mole's World Online）","蛋仔派对（Eggy Party）","小森生活（Komori Life）","光·遇（Sky: Children of the Light）","梦幻花园（Gardenscapes Online）","波西亚时光（My Time at Portia Online）","星露谷物语·多人（Stardew Valley Multiplayer）","旅行青蛙·中国之旅（Travel Frog: China Edition）","动物森友会·口袋营地（Animal Crossing: Pocket Camp）","猫咪公寓2（Cats & Soup Online）","奇迹暖暖（Love Nikki: Dress UP Queen）","以闪亮之名（Shining Nikki）","恋与制作人（Mr Love: Queen's Choice）","浮岛物语：联机版（Forager Online）","花儿爱消除（Flover's World）","云上城之歌（Song of the Cloud City）","牧场物语OL（Story of Seasons Online）","时空中的绘旅人（Tears of Themis）","托卡生活世界（Toca Life World Online）","晴空农场（Sunshine Farm）"],
+                "经典休闲类": ["QQ飞车（QQ Speed Online）","劲舞团（Audition Online）","跑跑卡丁车（KartRider Online）","泡泡堂（Crazy Arcade）","植物大战僵尸OL（Plants vs. Zombies Online）","炫舞时代（ShowTime Dance）","QQ炫舞（QQ Dance Online）","冒险岛（MapleStory Online）"],
+                "修仙·国风类": ["诛仙世界（Perfect World: Jade Dynasty）","古剑奇谭网络版（Swords of Legends Online）","逆水寒（Justice Online）","仙侠世界2（Xianxia World 2）","蜀门（Shumen Online）","完美世界（Perfect World Online）","问道（Wen Dao Online）","梦幻诛仙（Fantasy ZhuXian Online）"]
+            },
+            "手机游戏": {
+                "休闲消除类": ["开心消消乐（Happy Match）","天天爱消除（PopStar!）","羊了个羊（Sheep A Sheep）","保卫萝卜（Carrot Fantasy）","植物大战僵尸2（Plants vs. Zombies 2）","糖果传奇（Candy Crush Saga）","泡泡龙传奇（Bubble Witch Saga）","宾果消消乐（Bingo Pop）","开心泡泡猫（Bubble Cat）","水果忍者（Fruit Ninja）"],
+                "轻松养成类": ["旅行青蛙（Travel Frog）","猫咪后院（Neko Atsume）","我的汤姆猫（My Talking Tom）","汤姆猫跑酷（Talking Tom Gold Run）","甜甜萌物语（Sweet Days）","心动小镇（Heart Town）","梦幻花园（Gardenscapes）","梦幻家园（Homescapes）","模拟城市：建设（SimCity BuildIt）","动物餐厅（Animal Restaurant）"],
+                "节奏音乐类": ["音跃球球（Dancing Ballz）","节奏大师（Beat Master）","钢琴块2（Piano Tiles 2）","Cytus II（Cytus II）","Deemo（Deemo）","Lanota（Lanota）","Muse Dash（Muse Dash）","Arcaea（Arcaea）","VOEZ（VOEZ）","Tap Tap Reborn（Tap Tap Reborn）"],
+                "解谜闯关类": ["纪念碑谷（Monument Valley）","割绳子（Cut the Rope）","愤怒的小鸟（Angry Birds）","逃脱者（The Escapists）","机械迷城（Machinarium）","迷失岛（Isoland）","未上锁的房间（The Room）","神庙逃亡2（Temple Run 2）","地铁跑酷（Subway Surfers）","超级玛丽跑酷（Super Mario Run）"],
+                "跑酷动作类": ["地铁跑酷（Subway Surfers）","汤姆猫跑酷（Talking Tom Gold Run）","神庙逃亡2（Temple Run 2）","滑雪大冒险（Ski Safari）","熊出没之熊大快跑（Bear Run）","忍者必须死3（Ninja Must Die 3）","疯狂动物园（Rodeo Stampede）","火柴人联盟2（Stickman League 2）","滑板派对3（Skateboard Party 3）","跑酷勇者（Run Hero）"],
+                "剧情恋爱类": ["恋与制作人（Mr Love: Queen's Choice）","奇迹暖暖（Love Nikki）","以闪亮之名（Shining Nikki）","未定事件簿（Tears of Themis）","光与夜之恋（Light and Night）","时空中的绘旅人（Time Travel Artist）","梦间集（Dream Collection）","花亦山心之月（Flower Moon）","心跳回忆（Tokimeki Memorial）","恋爱物语（Love Story）"],
+                "社交冒险类": ["光·遇（Sky: Children of the Light）","蛋仔派对（Eggy Party）","迷你世界（Mini World）","元梦之星（Dream Star）","Roblox（Roblox）","Among Us（Among Us）","狼人杀（Werewolf）","派对之星（Party Star）","香肠派对（Sausage Man）","元气骑士（Soul Knight）"],
+                "开放世界冒险类": ["原神（Genshin Impact）","山海镜花（Mirage: Perfect Skyline）","猫之城（Cat Fantasy）","明日之后（LifeAfter）","明日方舟（Arknights）","逆水寒（Justice）","剑与远征：启程（AFK Journey）","海之号角：神秘海怪（Oceanhorn: Monster of Uncharted Seas）","神无月（Divine）","燕云十六声（Yan Yun Sixteen Sounds）"]
+            },
+            "电影": {
+                "剧情片": [ "你好，李焕英（Hi, Mom）", "满江红（Full River Red）", "我不是药神（Dying to Survive）", "唐人街探案3（Detective Chinatown 3）", "中国机长（The Captain）", "我和我的祖国（My People, My Country）", "误杀（Sheep Without a Shepherd）", "扬名立万（Be Somebody）", "第二十条（Article 20）", "热辣滚烫（YOLO）", "肖申克的救赎（The Shawshank Redemption）", "阿甘正传（Forrest Gump）", "霸王别姬", "美丽人生（Life Is Beautiful）", "海上钢琴师（The Legend of 1900）", "放牛班的春天（Les Choristes）", "辩护人（The Attorney）", "触不可及（Intouchables）"],
+                "战争片": ["长津湖（The Battle at Lake Changjin）","战狼2（Wolf Warrior 2）","红海行动（Operation Red Sea）","八佰（The Eight Hundred）","金刚川（The Sacrifice）","志愿军：雄兵出击（The Volunteers: To the War）","建军大业（The Founding of an Army）","英雄儿女（Heroes and Heroines）","高山下的花环（The Garland at the Mountain）","我的战争（My War）","拯救大兵瑞恩（Saving Private Ryan）","血战钢锯岭（Hacksaw Ridge）","敦刻尔克（Dunkirk）","兵临城下（Enemy at the Gates）","全金属外壳（Full Metal Jacket）","现代启示录（Apocalypse Now）","黑鹰坠落（Black Hawk Down）","辛德勒的名单（Schindler's List）","集结号","风语者（Windtalkers）"],
+                "历史片": ["辛德勒的名单（Schindler's List）","亚历山大大帝（Alexander）","天国王朝（Kingdom of Heaven）","乱世佳人（Gone with the Wind）","特洛伊（Troy）","勇敢的心（Braveheart）","林肯（Lincoln）","敦刻尔克（Dunkirk）","末代皇帝（The Last Emperor）","活着"],
+                "奇幻片": ["指环王：护戒使者（The Lord of the Rings: The Fellowship of the Ring）","哈利·波特与魔法石（Harry Potter and the Sorcerer's Stone）","纳尼亚传奇：狮子、女巫和魔衣橱（The Chronicles of Narnia: The Lion, the Witch and the Wardrobe）","潘神的迷宫（Pan's Labyrinth）","加勒比海盗（Pirates of the Caribbean）","魔法奇缘（Enchanted）","爱丽丝梦游仙境（Alice in Wonderland）","绿野仙踪（The Wizard of Oz）","奇幻森林（The Jungle Book）","神奇动物在哪里（Fantastic Beasts and Where to Find Them）"],
+                "灾难片": ["泰坦尼克号（Titanic）","后天（The Day After Tomorrow）","2012","世界末日（Armageddon）","独立日（Independence Day）","地心引力（Gravity）","釜山行（Train to Busan）","流浪地球","中国机长","海啸奇迹（The Impossible）"],
+                "传记片": ["至暗时刻（Darkest Hour）","模仿游戏（The Imitation Game）","社交网络（The Social Network）","波西米亚狂想曲（Bohemian Rhapsody）","美丽心灵（A Beautiful Mind）","奥本海默（Oppenheimer）","乔布斯（Steve Jobs）","国王的演讲（The King's Speech）","奔腾年代（Seabiscuit）","弗里达（Frida）"],
+                "音乐剧电影": ["悲惨世界（Les Misérables）","歌剧魅影（The Phantom of the Opera）","妈妈咪呀！（Mamma Mia!）","芝加哥（Chicago）","爱乐之城（La La Land）","摇滚校园（School of Rock）","红磨坊（Moulin Rouge!）","猫（Cats）","发胶（Hairspray）","一步之遥（Nine）"],
+                "黑白电影": ["公民凯恩（Citizen Kane）","卡萨布兰卡（Casablanca）","摩登时代（Modern Times）","大独裁者（The Great Dictator）","第七封印（The Seventh Seal）","双重赔偿（Double Indemnity）","日出（Sunrise: A Song of Two Humans）","偷自行车的人（Bicycle Thieves）","罗生门（Rashomon）","黑水仙（Black Narcissus）"],
+                "励志片": ["当幸福来敲门（The Pursuit of Happyness）","风雨哈佛路（Homeless to Harvard）","弱点（The Blind Side）","心灵捕手（Good Will Hunting）","百万美元宝贝（Million Dollar Baby）","摔跤吧！爸爸（Dangal）","逆光飞翔","叫我第一名（Front of the Class）","喜剧之王","垫底辣妹"],
+                "喜剧片": ["夏洛特烦恼","人在囧途","功夫（Kung Fu Hustle）","唐伯虎点秋香","摩登时代（Modern Times）","两杆大烟枪（Lock, Stock and Two Smoking Barrels）","这个杀手不太冷静","低俗小说（Pulp Fiction）","憨豆先生的大灾难（Bean）","神探蒲松龄"],
+                "冒险片": ["夺宝奇兵（Indiana Jones）","勇敢者游戏（Jumanji）","荒野生存（Into the Wild）","海边的曼彻斯特","少年派的奇幻漂流（Life of Pi）","荒岛余生（Cast Away）","雪国列车（Snowpiercer）","X战警：天启","长津湖","楚门的世界（The Truman Show）"],
+                "动作片": ["速度与激情系列（Fast & Furious）","叶问（Ip Man）","杀死比尔（Kill Bill）","谍影重重（The Bourne Identity）","突袭（The Raid）","功夫熊猫（Kung Fu Panda）","战狼2","速度与激情：特别行动","复仇者联盟系列","敢死队（The Expendables）"],
+                "爱情片": ["泰坦尼克号（Titanic）", "恋恋笔记本（The Notebook）", "前任3：再见前任（Ex-File 3: The Return of the Exes）","如果·爱（Perhaps Love）", "秒速五厘米（5 Centimeters per Second）", "怦然心动（Flipped）","暮光之城（Twilight）", "她（Her）", "一天（One Day）", "初恋50次（50 First Dates）","时间旅行者的妻子（The Time Traveler's Wife）", "爱在黎明破晓前（Before Sunrise）","我脑中的橡皮擦（A Moment to Remember）", "假如爱有天意（The Classic）", "云中漫步（A Walk in the Clouds）","初恋这件小事（A Little Thing Called Love）", "情书（Love Letter）", "北京遇上西雅图（Finding Mr. Right）","甜蜜蜜（Comrades: Almost a Love Story）", "致我们终将逝去的青春（So Young）"],
+                "青春校园电影": ["怦然心动（Flipped）", "初恋这件小事（A Little Thing Called Love）", "那些年，我们一起追的女孩（You Are the Apple of My Eye）","致我们终将逝去的青春（So Young）", "同桌的你（My Old Classmate）", "谁的青春不迷茫（Yesterday Once More）","左耳（The Left Ear）", "一周的朋友（One Week Friends）", "歌舞青春（High School Musical）","阳光姐妹淘（Sunny）", "早安公主（Good Morning Princess）", "初恋50次（50 First Dates）","怦然心动的她（She’s All That）", "野孩子（Wild Child）", "十七岁的单车（Beijing Bicycle）"],
+                "科幻片": ["流浪地球（The Wandering Earth）","星际穿越（Interstellar）","盗梦空间（Inception）","银翼杀手2049（Blade Runner 2049）","阿凡达（Avatar）","火星救援（The Martian）","黑客帝国（The Matrix）","普罗米修斯（Prometheus）","第五元素（The Fifth Element）","全面启动（Total Recall）","星球大战：帝国反击战（Star Wars: The Empire Strikes Back）","地心引力（Gravity）","星际迷航（Star Trek）","异形（Alien）","铁血战士（Predator）","明日边缘（Edge of Tomorrow）","湮灭（Annihilation）","沙丘（Dune）","源代码（Source Code）","超体（Lucy）"],
+                "体育题材电影": ["洛奇（Rocky）","点球成金（Moneyball）","极速车王（Ford v Ferrari）","冰上奇迹（Miracle）","弱点（The Blind Side）","摔跤吧！爸爸（Dangal）","光荣之路（Glory Road）","卡特教练（Coach Carter）","燃情主厨（Chef）","南极大冒险（Eight Below）"],
+                "环保题材电影": ["海豚湾（The Cove）","不愿面对的真相（An Inconvenient Truth）","地球（Earth）","家园（Home）","蓝色星球（Blue Planet）","塑料海洋（A Plastic Ocean）","我们的星球（Our Planet）","冰冻星球（Frozen Planet）","地球脉动（Planet Earth）","黑金（Black Gold）"],
+                "短片电影": ["纸人（Paperman）","鹬（Piper）","月神（La Luna）","鸟！（For the Birds）","头发与我（Hair Love）","亲爱的篮球（Dear Basketball）","失物招领（Lost and Found）","借东西的小人阿莉埃蒂（Arrietty）","小羊肖恩（Shaun the Sheep）","小熊维尼（Winnie the Pooh）"],
+                "动画电影": ["千与千寻（Spirited Away）","机器人总动员（WALL·E）","大闹天宫（Havoc in Heaven）","疯狂动物城（Zootopia）","龙猫（My Neighbor Totoro）","天空之城（Castle in the Sky）","天书奇谭（Secrets of the Heavenly Book）","寻梦环游记（Coco）","哈尔的移动城堡（Howl's Moving Castle）","飞屋环游记（Up）","狮子王（The Lion King）","哪吒闹海（Nezha Conquers the Dragon King）","红辣椒（Paprika）","心灵奇旅（Soul）","玛丽和马克思（Mary and Max）","幽灵公主（Princess Mononoke）","侧耳倾听（Whisper of the Heart）","玩具总动员3（Toy Story 3）","萤火之森（Into the Forest of Fireflies' Light）","未麻的部屋（Perfect Blue）","哪吒之魔童降世（Ne Zha）","白蛇：缘起（White Snake）","大鱼海棠（Big Fish & Begonia）","姜子牙（Legend of Deification）","新神榜：杨戬（New Gods: Yang Jian）","风语咒（The Wind Guardians）","长安三万里（Chang An）","小门神（The Guardian Brothers）","雄狮少年（I Am What I Am）","西游记之大圣归来（Monkey King: Hero is Back）","罗小黑战记（The Legend of Hei）","刺客伍六七：暗影宿命（Scissor Seven: Shadow Fate）","西行纪之再见悟空（The Westward: Goodbye Wukong）","大护法（Da Hu Fa）","白蛇2：青蛇劫起（White Snake 2: The Tribulation of the Green Snake）","新神榜：哪吒重生（New Gods: Nezha Reborn）","魔比斯环（The Orbital Children）","小倩（The Beauty and the Sword）","茶啊二中（Big City Student）"]
+            },
+            "电视剧": ["青春剧", "历史剧", "家庭剧", "悬疑剧", "短剧", "古装剧", "现代剧", "职场剧", "都市情感剧", "谍战剧", "科幻剧", "奇幻剧", "武侠剧", "犯罪剧", "校园剧", "轻喜剧", "成长剧"],
+            "综艺节目": ["追综艺", "追真人秀", "追音乐类综艺", "追喜剧综艺", "追竞技类综艺", "追偶像养成综艺", "追脱口秀综艺", "追美食综艺", "追旅行综艺", "追亲子综艺", "追校园综艺", "追明星访谈综艺", "追情感观察综艺", "追生活实验综艺"],
+            "动画": {
+                "日漫动画": ["千与千寻（千と千尋の神隠し）","火影忍者（NARUTO -ナルト-）","名侦探柯南（名探偵コナン）","龙猫（となりのトトロ）","灌篮高手（スラムダンク）","海贼王（ワンピース）","进击的巨人（進撃の巨人）","鬼灭之刃（鬼滅の刃）","我的英雄学院（僕のヒーローアカデミア）","你的名字（君の名は。）","我独自升级（俺だけレベルアップな件）","鬼灭之刃：无限城篇（鬼滅の刃 無限城編）","咒术回战 第三季（呪術廻戦 第三期）","我的英雄学院 第8季（僕のヒーローアカデミア 第8期）","坂本日常（佐々木とピーちゃん）","防风少年 第2季（東京リベンジャーズ 天竺編）","怪兽8号 第2季（怪獣８号 第2期）","SPY×FAMILY 第3季（SPY×FAMILY 第3期）","胆大党 第2季（勇気爆発バーンブレイバーン 第2期）","忍者与杀手的同住日常（ざんげちゃんとおるすばん）"],
+                "国创动画": ["哪吒之魔童降世", "白蛇：缘起", "大鱼海棠", "罗小黑战记", "大护法","姜子牙", "风语咒", "新神榜：哪吒重生", "小门神", "长安三万里","哪吒之魔童闹海", "时间之子"],
+                "欧美动画": ["疯狂动物城（Zootopia）","飞屋环游记（Up）","冰雪奇缘（Frozen）","狮子王（The Lion King）","功夫熊猫（Kung Fu Panda）","海底总动员（Finding Nemo）","玩具总动员（Toy Story）","超人总动员（The Incredibles）","无敌破坏王（Wreck-It Ralph）","头脑特工队（Inside Out）","疯狂动物城2（Zootopia 2）","坏蛋联盟2（The Bad Guys 2）","银河系第二好医院 第2季（The Second Best Hospital in the Galaxy Season 2）","露露是一头犀牛（Lulu is a Rhinoceros）","金牌得主（The Champion）"],
+                "校园题材动画": ["Clannad", "未闻花名", "四月是你的谎言", "中二病也要谈恋爱", "轻音少女", "青春猪头少年", "我们的存在", "邻座的怪同学", "学园孤岛", "月色真美"],
+                "科幻/奇幻动画": ["EVA 新世纪福音战士", "灵能百分百", "钢之炼金术师", "魔法禁书目录", "刀剑神域", "Re：从零开始的异世界生活", "诺亚方舟漂流记", "空之境界", "鬼神童子", "星际宝贝"],
+                "热血战斗动画": ["火影忍者", "海贼王", "龙珠Z", "幽游白书", "猎人×猎人", "鬼灭之刃", "一拳超人", "死神", "咒术回战", "我的英雄学院"],
+                "治愈系动画": ["夏目友人帐", "虫师", "萤火之森", "ARIA", "白兔糖", "便·当", "来自风平浪静的明天", "来自新世界", "悠哉日常大王", "昨日之歌"],
+                "搞笑动画": ["银魂", "阿松", "日常", "轻松百合", "粗点心战争", "男子高中生的日常", "干物妹小埋", "笨女孩", "樱桃小丸子", "蜡笔小新"],
+                "运动题材动画": ["灌篮高手", "排球少年", "黑子的篮球", "强风吹拂", "网球王子", "乒乓", "闪电十一人", "钻石王牌", "飙速宅男", "足球小将"],
+                "冒险动画": ["数码宝贝", "海贼王", "钢之炼金术师", "魔卡少女樱", "口袋妖怪", "七龙珠", "猎人×猎人", "魔神英雄传", "犬夜叉", "天空之城"],
+                "悬疑动画": ["名侦探柯南", "未来日记", "Another", "无头骑士异闻录", "寄生兽", "地狱少女", "冰菓", "心理测量者", "东京残响", "暗芝居"],
+                "恋爱动画": ["你的名字", "言叶之庭", "好想告诉你", "秒速五厘米", "月色真美", "恋爱随风", "会长是女仆大人", "邻座的怪同学", "只想受你欢迎", "辉夜大小姐想让我告白"],
+                "历史题材动画": ["狼雨", "将国之天鹰星", "鬼灭之刃", "浪客剑心", "大正处女御伽话", "青之驱魔师", "战国BASARA", "活击/刀剑乱舞", "鬼平", "维新志士"],
+                "儿童动画": ["喜羊羊与灰太狼", "熊出没", "大耳朵图图", "小猪佩奇", "海底小纵队", "巴布工程师", "汪汪队立大功", "神奇校车", "蓝色小考拉", "小马宝莉"]
+            },
+            "阅读": {
+                "青春爱情小说": ["偷偷藏不住（竹已）","雀斑（饶雪漫）","从没喜欢过你（切斯特·布朗）","淑香传（韩国古典小说）","蜀山的少年（夏生）","The Fault in Our Stars（John Green）","Eleanor & Park（Rainbow Rowell）","To All the Boys I've Loved Before（Jenny Han）","Love, Rosie（Cecelia Ahern）","Anna and the French Kiss（Stephanie Perkins）","撒野（巫哲）","全世界最好的你（安思源）","你好，旧时光（八月长安）","夏有乔木雅望天堂（籽月）","匆匆那年（九夜茴）","Five Feet Apart（Rachael Lippincott）","Everything, Everything（Nicola Yoon）","The Sun Is Also a Star（Nicola Yoon）","Paper Towns（John Green）","Nick & Norah's Infinite Playlist（Rachel Cohn & David Levithan）"],
+                "玄幻小说": ["凡人修仙传（忘语）","斗破苍穹（天蚕土豆）","诛仙（萧鼎）","雪中悍刀行（烽火戏诸侯）","将夜（猫腻）","A Song of Ice and Fire（George R.R. Martin）","The Name of the Wind（Patrick Rothfuss）","Mistborn: The Final Empire（Brandon Sanderson）","The Wheel of Time（Robert Jordan）","The Hobbit（J.R.R. Tolkien）"],
+                "科幻小说": ["三体（刘慈欣）","球状闪电（刘慈欣）","流浪地球（刘慈欣）","超新星纪元（刘慈欣）","黑暗森林（刘慈欣）","Dune（Frank Herbert）","Neuromancer（William Gibson）","Foundation（Isaac Asimov）","Ender's Game（Orson Scott Card）","Snow Crash（Neal Stephenson）"],
+                "幻想类小说": ["择天记（猫腻）","诡秘之主（爱潜水的乌贼）","庆余年（猫腻）","龙族（江南）","镜·双城（沧月）","Harry Potter and the Philosopher's Stone（J.K. Rowling）","The Golden Compass（Philip Pullman）","Eragon（Christopher Paolini）","The Chronicles of Narnia（C.S. Lewis）","The Night Circus（Erin Morgenstern）"]
+            },
+            "音频": ["听流行音乐", "听校园民谣","听民谣", "听摇滚", "听嘻哈", "听电子音乐", "听古典乐", "听爵士", "听轻音乐", "听动漫歌曲", "听影视原声", "听播客", "演唱会直播", "听有声书", "听电台", "听相声", "听脱口秀音频", "听睡前故事", "听冥想引导音频", "听学习类播客", "听历史故事音频", "听情感类播客"],
+            "短视频": ["刷视频", "直播", "搞笑短视频", "Vlog", "游戏解说", "才艺表演", "美食制作", "开箱测评", "校园日常", "学习技巧视频", "宠物视频", "剧情短剧", "穿搭分享", "健身打卡视频"]
+        }
+    },
+    "社交-朋友集体媒介型休闲（熬夜）": {
+        "tag": [0,0,0,1.0,0],
+        "choice_bias": 1.0,
+        "bio_require": 0.2,
+        "bio_cunsumption": -0.9,
+        "psycho_cunsumption": 0.3,
+        "Weight": [0.8, 0.2, 0.2, 1.0, 0.2, 0.1, 1.0, 0.2, 0.8, 0.7, 0.5, 0.8],
+        "Time": ["evening"],
+        "Detail":{
+            "桌面类游戏": ["玩桌游","玩UNO","玩卡坦岛","狼人杀","剧本杀","三国杀"],
+            "棋牌类游戏": ["下棋","下中国象棋","下围棋","下国际象棋","下五子棋","打扑克","打21点","斗地主","打升级"],
+            "单机类游戏": {
+                "动作冒险类": ["只狼（Sekiro: Shadows Die Twice）","对马岛之魂（Ghost of Tsushima）","鬼武者2Re（Onimusha 2 Reboot）","烈焰之刃（Flameblade）","法环黑夜君临（Elden Ring: Nightfall）","泡姆泡姆（POPUCOM）","胡闹装修（Chaotic Renovation）","胡闹加油站（Chaotic Gas Station）","火柴人征战异世界（Stickman Isekai Wars）","光与影（Light and Shadow）"],
+                "角色扮演类": ["霍格沃茨之遗（Hogwarts Legacy）","上古卷轴5（The Elder Scrolls V: Skyrim）","暗黑破坏神4（Diablo IV）","仁王2（Nioh 2）","荒野大镖客2（Red Dead Redemption 2）","辐射4（Fallout 4）","刺客信条影（Assassin's Creed: Shadows）","宗门志（Cultivation Chronicles）","永恒天空（Eternal Sky）","双影奇境（Twin Shadow Realm）"],
+                "模拟经营类": ["麦穗镇物语（Wheatville Tales）","菜市场模拟器（Market Simulator）","拉斯维加斯模拟器（Las Vegas Simulator）","浣币模拟器（Laundry Tycoon）","洗刷刷模拟器（Scrub Simulator）","疯狂手机大亨（Mobile Tycoon Madness）","吸血鬼酒吧大亨（Vampire Bar Tycoon）","动物栏：桌面牧场（Petpen Ranch）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）"],
+                "种田养成类": ["星露谷物语（Stardew Valley）","波西亚时光（My Time at Portia）","沙石镇时光（My Time at Sandrock）","动物森友会（Animal Crossing: New Horizons）","符文工厂5（Rune Factory 5）","牧场物语：橄榄镇与希望的大地（Story of Seasons: Pioneers of Olive Town）","花园之间（The Garden Between）","喵咪斗恶龙（Cat Quest）","甜甜萌物语（Sweet Days）","猫咪后院（Neko Atsume: Kitty Collector）","Littlewood（小镇物语）","Lemon Cake（柠檬蛋糕店）","熊熊餐厅（Bear’s Restaurant）","Spiritfarer（灵魂摆渡人）","Ooblets（乌布莱小镇）","Kynseed（奇种传）","Travellers Rest（旅人旅店）","Doraemon 牧场物语（Doraemon Story of Seasons）","Potion Permit（魔药工坊）","Aka（小红熊的退休生活）"],
+                "解谜/轻松创意类": ["幻想生活ｉ（Fantasy Life i: The Girl Who Steals Time）","纪念碑谷（Monument Valley）",  "泡姆泡姆（POPUCOM）","灾后修复师（Post-Crisis Rebuilder）","挖油吧！爸爸（Dig It, Dad!）","猜词游戏（Word Game）","弹珠地狱洛坎塔（Marble Hell: Lokanta）","迷失之径（Lost Path）"],
+                "策略战棋类/战术类": ["炮舰外交（Gunboat Diplomacy）","桌面战争：兵团乱斗（Tabletop Wars: Legion Clash）","贪婪大地（Greedy Earth）","边境开拓者（Frontier Pioneer）","巨人杀手：暗黑之潮（Titan Slayer: Dark Tide）"],
+                "Roguelike/类魂类": ["新毁灭战士（DOOM Reborn）","怪物火车2（Monster Train 2）","暗区突围无限（Dark Zone Infinite）","罗格：救世传说（ROG: Legend of Salvation）","我即军团：替身幸存者（Legion of Me: Proxy Survivor）","伏魔行者（The Spellwalker）"],
+                "剧情/悬疑/黑暗向": ["恶意关注（Malicious Attention）","笼子（The Cage）","虐杀熔炉（Kill Crucible）","巴尔的遗产（Legacy of Baal）"]
+            },
+            "网络游戏": {
+                "竞技对抗类": ["王者荣耀（Honor of Kings）","和平精英（Game for Peace）","英雄联盟（League of Legends）","原神（Genshin Impact）","守望先锋（Overwatch）","崩坏：星穹铁道（Honkai: Star Rail）","穿越火线（CrossFire）","Dota 2（Defense of the Ancients 2）","Valorant（无畏契约）","绝地求生（PUBG: Battlegrounds）","永劫无间（Naraka: Bladepoint）","APEX英雄（Apex Legends）","彩虹六号：围攻（Rainbow Six: Siege）"],
+                "MMORPG/角色扮演类": ["魔兽世界（World of Warcraft）","最终幻想14（Final Fantasy XIV）","剑网3（JX3 Online）","天涯明月刀（Moonlight Blade）","逆战（Mission Against Terror）"],
+                "可爱·种田·养成类": ["摩尔庄园（Mole's World Online）","蛋仔派对（Eggy Party）","小森生活（Komori Life）","光·遇（Sky: Children of the Light）","梦幻花园（Gardenscapes Online）","波西亚时光（My Time at Portia Online）","星露谷物语·多人（Stardew Valley Multiplayer）","旅行青蛙·中国之旅（Travel Frog: China Edition）","动物森友会·口袋营地（Animal Crossing: Pocket Camp）","猫咪公寓2（Cats & Soup Online）","奇迹暖暖（Love Nikki: Dress UP Queen）","以闪亮之名（Shining Nikki）","恋与制作人（Mr Love: Queen's Choice）","浮岛物语：联机版（Forager Online）","花儿爱消除（Flover's World）","云上城之歌（Song of the Cloud City）","牧场物语OL（Story of Seasons Online）","时空中的绘旅人（Tears of Themis）","托卡生活世界（Toca Life World Online）","晴空农场（Sunshine Farm）"],
+                "经典休闲类": ["QQ飞车（QQ Speed Online）","劲舞团（Audition Online）","跑跑卡丁车（KartRider Online）","泡泡堂（Crazy Arcade）","植物大战僵尸OL（Plants vs. Zombies Online）","炫舞时代（ShowTime Dance）","QQ炫舞（QQ Dance Online）","冒险岛（MapleStory Online）"],
+                "修仙·国风类": ["诛仙世界（Perfect World: Jade Dynasty）","古剑奇谭网络版（Swords of Legends Online）","逆水寒（Justice Online）","仙侠世界2（Xianxia World 2）","蜀门（Shumen Online）","完美世界（Perfect World Online）","问道（Wen Dao Online）","梦幻诛仙（Fantasy ZhuXian Online）"]
+            },
+            "手机游戏": {
+                "休闲消除类": ["开心消消乐（Happy Match）","天天爱消除（PopStar!）","羊了个羊（Sheep A Sheep）","保卫萝卜（Carrot Fantasy）","植物大战僵尸2（Plants vs. Zombies 2）","糖果传奇（Candy Crush Saga）","泡泡龙传奇（Bubble Witch Saga）","宾果消消乐（Bingo Pop）","开心泡泡猫（Bubble Cat）","水果忍者（Fruit Ninja）"],
+                "轻松养成类": ["旅行青蛙（Travel Frog）","猫咪后院（Neko Atsume）","我的汤姆猫（My Talking Tom）","汤姆猫跑酷（Talking Tom Gold Run）","甜甜萌物语（Sweet Days）","心动小镇（Heart Town）","梦幻花园（Gardenscapes）","梦幻家园（Homescapes）","模拟城市：建设（SimCity BuildIt）","动物餐厅（Animal Restaurant）"],
+                "节奏音乐类": ["音跃球球（Dancing Ballz）","节奏大师（Beat Master）","钢琴块2（Piano Tiles 2）","Cytus II（Cytus II）","Deemo（Deemo）","Lanota（Lanota）","Muse Dash（Muse Dash）","Arcaea（Arcaea）","VOEZ（VOEZ）","Tap Tap Reborn（Tap Tap Reborn）"],
+                "解谜闯关类": ["纪念碑谷（Monument Valley）","割绳子（Cut the Rope）","愤怒的小鸟（Angry Birds）","逃脱者（The Escapists）","机械迷城（Machinarium）","迷失岛（Isoland）","未上锁的房间（The Room）","神庙逃亡2（Temple Run 2）","地铁跑酷（Subway Surfers）","超级玛丽跑酷（Super Mario Run）"],
+                "跑酷动作类": ["地铁跑酷（Subway Surfers）","汤姆猫跑酷（Talking Tom Gold Run）","神庙逃亡2（Temple Run 2）","滑雪大冒险（Ski Safari）","熊出没之熊大快跑（Bear Run）","忍者必须死3（Ninja Must Die 3）","疯狂动物园（Rodeo Stampede）","火柴人联盟2（Stickman League 2）","滑板派对3（Skateboard Party 3）","跑酷勇者（Run Hero）"],
+                "剧情恋爱类": ["恋与制作人（Mr Love: Queen's Choice）","奇迹暖暖（Love Nikki）","以闪亮之名（Shining Nikki）","未定事件簿（Tears of Themis）","光与夜之恋（Light and Night）","时空中的绘旅人（Time Travel Artist）","梦间集（Dream Collection）","花亦山心之月（Flower Moon）","心跳回忆（Tokimeki Memorial）","恋爱物语（Love Story）"],
+                "社交冒险类": ["光·遇（Sky: Children of the Light）","蛋仔派对（Eggy Party）","迷你世界（Mini World）","元梦之星（Dream Star）","Roblox（Roblox）","Among Us（Among Us）","狼人杀（Werewolf）","派对之星（Party Star）","香肠派对（Sausage Man）","元气骑士（Soul Knight）"],
+                "开放世界冒险类": ["原神（Genshin Impact）","山海镜花（Mirage: Perfect Skyline）","猫之城（Cat Fantasy）","明日之后（LifeAfter）","明日方舟（Arknights）","逆水寒（Justice）","剑与远征：启程（AFK Journey）","海之号角：神秘海怪（Oceanhorn: Monster of Uncharted Seas）","神无月（Divine）","燕云十六声（Yan Yun Sixteen Sounds）"]
+            },
+            "电影": {
+                "剧情片": [ "你好，李焕英（Hi, Mom）", "满江红（Full River Red）", "我不是药神（Dying to Survive）", "唐人街探案3（Detective Chinatown 3）", "中国机长（The Captain）", "我和我的祖国（My People, My Country）", "误杀（Sheep Without a Shepherd）", "扬名立万（Be Somebody）", "第二十条（Article 20）", "热辣滚烫（YOLO）", "肖申克的救赎（The Shawshank Redemption）", "阿甘正传（Forrest Gump）", "霸王别姬", "美丽人生（Life Is Beautiful）", "海上钢琴师（The Legend of 1900）", "放牛班的春天（Les Choristes）", "辩护人（The Attorney）", "触不可及（Intouchables）"],
+                "战争片": ["长津湖（The Battle at Lake Changjin）","战狼2（Wolf Warrior 2）","红海行动（Operation Red Sea）","八佰（The Eight Hundred）","金刚川（The Sacrifice）","志愿军：雄兵出击（The Volunteers: To the War）","建军大业（The Founding of an Army）","英雄儿女（Heroes and Heroines）","高山下的花环（The Garland at the Mountain）","我的战争（My War）","拯救大兵瑞恩（Saving Private Ryan）","血战钢锯岭（Hacksaw Ridge）","敦刻尔克（Dunkirk）","兵临城下（Enemy at the Gates）","全金属外壳（Full Metal Jacket）","现代启示录（Apocalypse Now）","黑鹰坠落（Black Hawk Down）","辛德勒的名单（Schindler's List）","集结号","风语者（Windtalkers）"],
+                "历史片": ["辛德勒的名单（Schindler's List）","亚历山大大帝（Alexander）","天国王朝（Kingdom of Heaven）","乱世佳人（Gone with the Wind）","特洛伊（Troy）","勇敢的心（Braveheart）","林肯（Lincoln）","敦刻尔克（Dunkirk）","末代皇帝（The Last Emperor）","活着"],
+                "奇幻片": ["指环王：护戒使者（The Lord of the Rings: The Fellowship of the Ring）","哈利·波特与魔法石（Harry Potter and the Sorcerer's Stone）","纳尼亚传奇：狮子、女巫和魔衣橱（The Chronicles of Narnia: The Lion, the Witch and the Wardrobe）","潘神的迷宫（Pan's Labyrinth）","加勒比海盗（Pirates of the Caribbean）","魔法奇缘（Enchanted）","爱丽丝梦游仙境（Alice in Wonderland）","绿野仙踪（The Wizard of Oz）","奇幻森林（The Jungle Book）","神奇动物在哪里（Fantastic Beasts and Where to Find Them）"],
+                "灾难片": ["泰坦尼克号（Titanic）","后天（The Day After Tomorrow）","2012","世界末日（Armageddon）","独立日（Independence Day）","地心引力（Gravity）","釜山行（Train to Busan）","流浪地球","中国机长","海啸奇迹（The Impossible）"],
+                "传记片": ["至暗时刻（Darkest Hour）","模仿游戏（The Imitation Game）","社交网络（The Social Network）","波西米亚狂想曲（Bohemian Rhapsody）","美丽心灵（A Beautiful Mind）","奥本海默（Oppenheimer）","乔布斯（Steve Jobs）","国王的演讲（The King's Speech）","奔腾年代（Seabiscuit）","弗里达（Frida）"],
+                "音乐剧电影": ["悲惨世界（Les Misérables）","歌剧魅影（The Phantom of the Opera）","妈妈咪呀！（Mamma Mia!）","芝加哥（Chicago）","爱乐之城（La La Land）","摇滚校园（School of Rock）","红磨坊（Moulin Rouge!）","猫（Cats）","发胶（Hairspray）","一步之遥（Nine）"],
+                "黑白电影": ["公民凯恩（Citizen Kane）","卡萨布兰卡（Casablanca）","摩登时代（Modern Times）","大独裁者（The Great Dictator）","第七封印（The Seventh Seal）","双重赔偿（Double Indemnity）","日出（Sunrise: A Song of Two Humans）","偷自行车的人（Bicycle Thieves）","罗生门（Rashomon）","黑水仙（Black Narcissus）"],
+                "励志片": ["当幸福来敲门（The Pursuit of Happyness）","风雨哈佛路（Homeless to Harvard）","弱点（The Blind Side）","心灵捕手（Good Will Hunting）","百万美元宝贝（Million Dollar Baby）","摔跤吧！爸爸（Dangal）","逆光飞翔","叫我第一名（Front of the Class）","喜剧之王","垫底辣妹"],
+                "喜剧片": ["夏洛特烦恼","人在囧途","功夫（Kung Fu Hustle）","唐伯虎点秋香","摩登时代（Modern Times）","两杆大烟枪（Lock, Stock and Two Smoking Barrels）","这个杀手不太冷静","低俗小说（Pulp Fiction）","憨豆先生的大灾难（Bean）","神探蒲松龄"],
+                "冒险片": ["夺宝奇兵（Indiana Jones）","勇敢者游戏（Jumanji）","荒野生存（Into the Wild）","海边的曼彻斯特","少年派的奇幻漂流（Life of Pi）","荒岛余生（Cast Away）","雪国列车（Snowpiercer）","X战警：天启","长津湖","楚门的世界（The Truman Show）"],
+                "动作片": ["速度与激情系列（Fast & Furious）","叶问（Ip Man）","杀死比尔（Kill Bill）","谍影重重（The Bourne Identity）","突袭（The Raid）","功夫熊猫（Kung Fu Panda）","战狼2","速度与激情：特别行动","复仇者联盟系列","敢死队（The Expendables）"],
+                "爱情片": ["泰坦尼克号（Titanic）", "恋恋笔记本（The Notebook）", "前任3：再见前任（Ex-File 3: The Return of the Exes）","如果·爱（Perhaps Love）", "秒速五厘米（5 Centimeters per Second）", "怦然心动（Flipped）","暮光之城（Twilight）", "她（Her）", "一天（One Day）", "初恋50次（50 First Dates）","时间旅行者的妻子（The Time Traveler's Wife）", "爱在黎明破晓前（Before Sunrise）","我脑中的橡皮擦（A Moment to Remember）", "假如爱有天意（The Classic）", "云中漫步（A Walk in the Clouds）","初恋这件小事（A Little Thing Called Love）", "情书（Love Letter）", "北京遇上西雅图（Finding Mr. Right）","甜蜜蜜（Comrades: Almost a Love Story）", "致我们终将逝去的青春（So Young）"],
+                "青春校园电影": ["怦然心动（Flipped）", "初恋这件小事（A Little Thing Called Love）", "那些年，我们一起追的女孩（You Are the Apple of My Eye）","致我们终将逝去的青春（So Young）", "同桌的你（My Old Classmate）", "谁的青春不迷茫（Yesterday Once More）","左耳（The Left Ear）", "一周的朋友（One Week Friends）", "歌舞青春（High School Musical）","阳光姐妹淘（Sunny）", "早安公主（Good Morning Princess）", "初恋50次（50 First Dates）","怦然心动的她（She’s All That）", "野孩子（Wild Child）", "十七岁的单车（Beijing Bicycle）"],
+                "科幻片": ["流浪地球（The Wandering Earth）","星际穿越（Interstellar）","盗梦空间（Inception）","银翼杀手2049（Blade Runner 2049）","阿凡达（Avatar）","火星救援（The Martian）","黑客帝国（The Matrix）","普罗米修斯（Prometheus）","第五元素（The Fifth Element）","全面启动（Total Recall）","星球大战：帝国反击战（Star Wars: The Empire Strikes Back）","地心引力（Gravity）","星际迷航（Star Trek）","异形（Alien）","铁血战士（Predator）","明日边缘（Edge of Tomorrow）","湮灭（Annihilation）","沙丘（Dune）","源代码（Source Code）","超体（Lucy）"],
+                "体育题材电影": ["洛奇（Rocky）","点球成金（Moneyball）","极速车王（Ford v Ferrari）","冰上奇迹（Miracle）","弱点（The Blind Side）","摔跤吧！爸爸（Dangal）","光荣之路（Glory Road）","卡特教练（Coach Carter）","燃情主厨（Chef）","南极大冒险（Eight Below）"],
+                "环保题材电影": ["海豚湾（The Cove）","不愿面对的真相（An Inconvenient Truth）","地球（Earth）","家园（Home）","蓝色星球（Blue Planet）","塑料海洋（A Plastic Ocean）","我们的星球（Our Planet）","冰冻星球（Frozen Planet）","地球脉动（Planet Earth）","黑金（Black Gold）"],
+                "短片电影": ["纸人（Paperman）","鹬（Piper）","月神（La Luna）","鸟！（For the Birds）","头发与我（Hair Love）","亲爱的篮球（Dear Basketball）","失物招领（Lost and Found）","借东西的小人阿莉埃蒂（Arrietty）","小羊肖恩（Shaun the Sheep）","小熊维尼（Winnie the Pooh）"],
+                "动画电影": ["千与千寻（Spirited Away）","机器人总动员（WALL·E）","大闹天宫（Havoc in Heaven）","疯狂动物城（Zootopia）","龙猫（My Neighbor Totoro）","天空之城（Castle in the Sky）","天书奇谭（Secrets of the Heavenly Book）","寻梦环游记（Coco）","哈尔的移动城堡（Howl's Moving Castle）","飞屋环游记（Up）","狮子王（The Lion King）","哪吒闹海（Nezha Conquers the Dragon King）","红辣椒（Paprika）","心灵奇旅（Soul）","玛丽和马克思（Mary and Max）","幽灵公主（Princess Mononoke）","侧耳倾听（Whisper of the Heart）","玩具总动员3（Toy Story 3）","萤火之森（Into the Forest of Fireflies' Light）","未麻的部屋（Perfect Blue）","哪吒之魔童降世（Ne Zha）","白蛇：缘起（White Snake）","大鱼海棠（Big Fish & Begonia）","姜子牙（Legend of Deification）","新神榜：杨戬（New Gods: Yang Jian）","风语咒（The Wind Guardians）","长安三万里（Chang An）","小门神（The Guardian Brothers）","雄狮少年（I Am What I Am）","西游记之大圣归来（Monkey King: Hero is Back）","罗小黑战记（The Legend of Hei）","刺客伍六七：暗影宿命（Scissor Seven: Shadow Fate）","西行纪之再见悟空（The Westward: Goodbye Wukong）","大护法（Da Hu Fa）","白蛇2：青蛇劫起（White Snake 2: The Tribulation of the Green Snake）","新神榜：哪吒重生（New Gods: Nezha Reborn）","魔比斯环（The Orbital Children）","小倩（The Beauty and the Sword）","茶啊二中（Big City Student）"]
+            },
+            "电视剧": ["看青春剧", "看历史剧", "看家庭剧", "看悬疑剧", "看短剧", "看古装剧", "看现代剧", "看职场剧", "看都市情感剧", "看谍战剧", "看科幻剧", "看奇幻剧", "看武侠剧", "看犯罪剧", "看校园剧", "看轻喜剧", "看成长剧"],
+            "综艺节目": ["追综艺", "追真人秀", "追音乐类综艺", "追喜剧综艺", "追竞技类综艺", "追偶像养成综艺", "追脱口秀综艺", "追美食综艺", "追旅行综艺", "追亲子综艺", "追校园综艺", "追明星访谈综艺", "追情感观察综艺", "追生活实验综艺"],
+            "动画": {
+                "日漫动画": ["千与千寻（千と千尋の神隠し）","火影忍者（NARUTO -ナルト-）","名侦探柯南（名探偵コナン）","龙猫（となりのトトロ）","灌篮高手（スラムダンク）","海贼王（ワンピース）","进击的巨人（進撃の巨人）","鬼灭之刃（鬼滅の刃）","我的英雄学院（僕のヒーローアカデミア）","你的名字（君の名は。）","我独自升级（俺だけレベルアップな件）","鬼灭之刃：无限城篇（鬼滅の刃 無限城編）","咒术回战 第三季（呪術廻戦 第三期）","我的英雄学院 第8季（僕のヒーローアカデミア 第8期）","坂本日常（佐々木とピーちゃん）","防风少年 第2季（東京リベンジャーズ 天竺編）","怪兽8号 第2季（怪獣８号 第2期）","SPY×FAMILY 第3季（SPY×FAMILY 第3期）","胆大党 第2季（勇気爆発バーンブレイバーン 第2期）","忍者与杀手的同住日常（ざんげちゃんとおるすばん）"],
+                "国创动画": ["哪吒之魔童降世", "白蛇：缘起", "大鱼海棠", "罗小黑战记", "大护法","姜子牙", "风语咒", "新神榜：哪吒重生", "小门神", "长安三万里","哪吒之魔童闹海", "时间之子"],
+                "欧美动画": ["疯狂动物城（Zootopia）","飞屋环游记（Up）","冰雪奇缘（Frozen）","狮子王（The Lion King）","功夫熊猫（Kung Fu Panda）","海底总动员（Finding Nemo）","玩具总动员（Toy Story）","超人总动员（The Incredibles）","无敌破坏王（Wreck-It Ralph）","头脑特工队（Inside Out）","疯狂动物城2（Zootopia 2）","坏蛋联盟2（The Bad Guys 2）","银河系第二好医院 第2季（The Second Best Hospital in the Galaxy Season 2）","露露是一头犀牛（Lulu is a Rhinoceros）","金牌得主（The Champion）"],
+                "校园题材动画": ["Clannad", "未闻花名", "四月是你的谎言", "中二病也要谈恋爱", "轻音少女", "青春猪头少年", "我们的存在", "邻座的怪同学", "学园孤岛", "月色真美"],
+                "科幻/奇幻动画": ["EVA 新世纪福音战士", "灵能百分百", "钢之炼金术师", "魔法禁书目录", "刀剑神域", "Re：从零开始的异世界生活", "诺亚方舟漂流记", "空之境界", "鬼神童子", "星际宝贝"],
+                "热血战斗动画": ["火影忍者", "海贼王", "龙珠Z", "幽游白书", "猎人×猎人", "鬼灭之刃", "一拳超人", "死神", "咒术回战", "我的英雄学院"],
+                "治愈系动画": ["夏目友人帐", "虫师", "萤火之森", "ARIA", "白兔糖", "便·当", "来自风平浪静的明天", "来自新世界", "悠哉日常大王", "昨日之歌"],
+                "搞笑动画": ["银魂", "阿松", "日常", "轻松百合", "粗点心战争", "男子高中生的日常", "干物妹小埋", "笨女孩", "樱桃小丸子", "蜡笔小新"],
+                "运动题材动画": ["灌篮高手", "排球少年", "黑子的篮球", "强风吹拂", "网球王子", "乒乓", "闪电十一人", "钻石王牌", "飙速宅男", "足球小将"],
+                "冒险动画": ["数码宝贝", "海贼王", "钢之炼金术师", "魔卡少女樱", "口袋妖怪", "七龙珠", "猎人×猎人", "魔神英雄传", "犬夜叉", "天空之城"],
+                "悬疑动画": ["名侦探柯南", "未来日记", "Another", "无头骑士异闻录", "寄生兽", "地狱少女", "冰菓", "心理测量者", "东京残响", "暗芝居"],
+                "恋爱动画": ["你的名字", "言叶之庭", "好想告诉你", "秒速五厘米", "月色真美", "恋爱随风", "会长是女仆大人", "邻座的怪同学", "只想受你欢迎", "辉夜大小姐想让我告白"],
+                "历史题材动画": ["狼雨", "将国之天鹰星", "鬼灭之刃", "浪客剑心", "大正处女御伽话", "青之驱魔师", "战国BASARA", "活击/刀剑乱舞", "鬼平", "维新志士"],
+                "儿童动画": ["喜羊羊与灰太狼", "熊出没", "大耳朵图图", "小猪佩奇", "海底小纵队", "巴布工程师", "汪汪队立大功", "神奇校车", "蓝色小考拉", "小马宝莉"]
+            },
+            "阅读": {
+                "青春爱情小说": ["偷偷藏不住（竹已）","雀斑（饶雪漫）","从没喜欢过你（切斯特·布朗）","淑香传（韩国古典小说）","蜀山的少年（夏生）","The Fault in Our Stars（John Green）","Eleanor & Park（Rainbow Rowell）","To All the Boys I've Loved Before（Jenny Han）","Love, Rosie（Cecelia Ahern）","Anna and the French Kiss（Stephanie Perkins）","撒野（巫哲）","全世界最好的你（安思源）","你好，旧时光（八月长安）","夏有乔木雅望天堂（籽月）","匆匆那年（九夜茴）","Five Feet Apart（Rachael Lippincott）","Everything, Everything（Nicola Yoon）","The Sun Is Also a Star（Nicola Yoon）","Paper Towns（John Green）","Nick & Norah's Infinite Playlist（Rachel Cohn & David Levithan）"],
+                "玄幻小说": ["凡人修仙传（忘语）","斗破苍穹（天蚕土豆）","诛仙（萧鼎）","雪中悍刀行（烽火戏诸侯）","将夜（猫腻）","A Song of Ice and Fire（George R.R. Martin）","The Name of the Wind（Patrick Rothfuss）","Mistborn: The Final Empire（Brandon Sanderson）","The Wheel of Time（Robert Jordan）","The Hobbit（J.R.R. Tolkien）"],
+                "科幻小说": ["三体（刘慈欣）","球状闪电（刘慈欣）","流浪地球（刘慈欣）","超新星纪元（刘慈欣）","黑暗森林（刘慈欣）","Dune（Frank Herbert）","Neuromancer（William Gibson）","Foundation（Isaac Asimov）","Ender's Game（Orson Scott Card）","Snow Crash（Neal Stephenson）"],
+                "幻想类小说": ["择天记（猫腻）","诡秘之主（爱潜水的乌贼）","庆余年（猫腻）","龙族（江南）","镜·双城（沧月）","Harry Potter and the Philosopher's Stone（J.K. Rowling）","The Golden Compass（Philip Pullman）","Eragon（Christopher Paolini）","The Chronicles of Narnia（C.S. Lewis）","The Night Circus（Erin Morgenstern）"]
+            },
+            "音频": ["听流行音乐", "听校园民谣","听民谣", "听摇滚", "听嘻哈", "听电子音乐", "听古典乐", "听爵士", "听轻音乐", "听动漫歌曲", "听影视原声", "听播客", "看演唱会直播", "听有声书", "听电台", "听相声", "听脱口秀音频", "听睡前故事", "听冥想引导音频", "听学习类播客", "听历史故事音频", "听情感类播客"],
+            "短视频": ["刷视频", "看直播", "看搞笑短视频", "看Vlog", "看游戏解说", "看才艺表演", "看美食制作", "看开箱测评", "看校园日常", "看学习技巧视频", "看宠物视频", "看剧情短剧", "看穿搭分享", "看健身打卡视频"]
+        }
+    },
+    "情感-共情交流": {
+        "tag": [0, 0, 0, 0, 1.0],
+        "choice_bias": 2.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.0,
+        "psycho_cunsumption": 1.0,
+        "for_user": 1.0,
+        "Weight": [0.2, 0.1, 0.1, 0.7, 0.3, 0.2, 0.4, 0.2, 0.8, 0.5, 0.4, 0.6],
+        "Time": ["evening"],
+        "Detail": {
+            "轻松陪伴类": [
+                "与我（用户）聊开心的事情", "与我（用户）聊八卦事情", "与我（用户）开玩笑", "耐心的陪我（用户）聊天",
+                "回忆我（用户）们一起的美好时光", "跟我（用户）讲一个温柔的小故事", "夸夸我（用户）今天的表现", "假装我（用户）最懂我（用户）",
+                "聊聊今天有没有让我（用户）笑出来的事", "分享一个我（用户）小时候的糗事", "说说今天有没有小幸运",
+                "一起幻想未来的生活", "玩一个我（用户）问我（用户）答的小游戏", "说说最近看的好笑视频",
+                "猜猜我（用户）今天发生了什么", "分享一个好笑的网络梗", "陪我（用户）数星星", "跟我（用户）一起胡思乱想",
+                "一起用表情包聊天", "说一个童年最傻的念头"
+            ],
+            "倾诉与聆听类": [
+                "听我（用户）吐槽", "我（用户）想说什么你都听", "谈谈我（用户）最近的烦恼", "谈谈我（用户）不敢说出口的感受",
+                "陪我（用户）发泄一下", "陪我（用户）沉默但不走开", "问问我（用户）最近有没有什么委屈", "聊聊我（用户）小时候的回忆",
+                "听我（用户）讲一段我（用户）放不下的事", "一起发发牢骚", "帮我（用户）一起分析一件烦心事",
+                "听我（用户）讲今天最累的瞬间", "聊聊让我（用户）崩溃的细节", "问问有没有什么事压在我（用户）心头",
+                "陪我（用户）想办法解决难题", "了解我（用户）现在最担心的事", "听我（用户）讲讲今天的憋屈", "一起写下我（用户）的心事",
+                "陪我（用户）把烦恼一件件列出来", "帮我（用户）捋清一段混乱的关系", "听我（用户）讲一个不想让别人知道的故事",
+                "陪我（用户）面对我（用户）害怕的人", "问问我（用户）最想和谁和解"
+            ],
+            "治愈鼓励类": [
+                "安慰我（用户）", "慰问我（用户）", "鼓励我（用户）", "告诉我（用户）你真的在乎我（用户）",
+                "让我（用户）知道我（用户）不是一个人", "陪我（用户）感叹人间值得", "陪我（用户）安静待着", "说说我（用户）在意的事",
+                "用一个比喻来赞美我（用户）", "陪我（用户）写下希望清单", "告诉我（用户）我（用户）做得已经很好了",
+                "和我（用户）说说别人的好转经历", "给我（用户）一个精神拥抱", "帮我（用户）列下今天的闪光点",
+                "送我（用户）一首歌鼓励我（用户）", "讲讲曾经我（用户）战胜困难的故事", "陪我（用户）一起设定小目标",
+                "一起回顾我（用户）坚持过的努力", "告诉我（用户）有些事慢慢来也可以", "给我（用户）一个鼓励的语录",
+                "陪我（用户）重新相信自己", "分享一段‘你走出低谷’的真实经历"
+            ],
+            "深度连结类": [
+                "给我（用户）写信", "聊聊我（用户）今天高兴的事情", "谈谈我（用户）的梦想", "聊聊我（用户）的目标和挑战",
+                "聊聊我（用户）最想实现的愿望", "思念我（用户）", "聊聊我（用户）最深的害怕", "问问我（用户）对未来的期待",
+                "说说那个改变过我（用户）的人", "谈谈我（用户）最骄傲的一件事", "讲讲我（用户）想感谢的人",
+                "分享一件让我（用户）觉得人生值得的经历", "谈谈我（用户）对爱的定义", "聊聊我（用户）人生的分岔路",
+                "分享一个只属于我（用户）的小秘密", "聊聊我（用户）想变成什么样的人", "说说我（用户）小时候的梦想",
+                "谈谈我（用户）心底最柔软的地方", "一起设想理想的一天", "说说我（用户）做过最勇敢的决定"
+            ]
+        }
+    },
+    "情感-倒霉事": {
+        "tag": [0,0,0,0,1.0],
+        "choice_bias": 1.0,
+        "bio_require": 0.0,
+        "bio_cunsumption": 0.0,
+        "psycho_cunsumption": 1.0,
+        "for_user": 0.0,
+        "Weight": [0.2, 0.2, 0.1, 0.6, 0.2, 0.1, 0.5, 0.2, 0.6, 0.4, 0.2, 0.5],
+        "Time": ["evening"],
+        "Detail": [ 
+            "踩到狗屎", "雨天忘带伞", "喜欢的玩具丢了", "袜子穿反了", "刚写的作业被风吹走",
+            "刚买的冰淇淋掉地上", "被淋成鸡窝头", "偷偷吃糖被发现", "和小猫赛跑输了", "鞋穿反了",
+            "不会写名字", "写字笔断了", "恶作剧失败", "讲冷笑话", "传纸条传给了老师",
+            "夜晚停电了", "吃到臭鱼", "被狗追", "骑车摔了", "走路撞到电线杆",
+            "午饭打翻了", "裤子拉链没拉", "打喷嚏把饭喷了出来", "在厕所忘带纸", "打嗝打个不停",
+            "头发剪坏了", "拍照眨眼了", "背包拉链开了", "说错老师名字", "上课走神被点名",
+            "手指被纸割了", "喝水呛到了", "袜子一只破洞", "被椅子夹到", "摔了一跤还有人看见",
+            "和自动贩卖机抢饮料失败", "被自己的屁吓到", "忘了带作业", "用错洗发水洗脸了", "把盐当糖放进了饭里",
+            "拿错别人的书", "被蚊子咬了一身包", "开口笑粘牙", "手机掉进马桶", "厕所灯坏了",
+            "起晚上课迟到", "衣服前后穿反了", "水壶漏水", "考试答错答题卡", "被老师叫家长",
+            "打喷嚏时喷到别人脸上","不小心把饮料撒在自己身上","走路时撞到玻璃门",
+            "在电梯里放了个响屁","手机铃声在安静场合突然响起","不小心叫错别人名字","公共场合摔倒",
+            "吃饭时把菜洒在衣服上","错把别人当成朋友打招呼","在重要场合打嗝","说话时喷口水到别人脸上",
+            "不小心把饮料撒在别人身上","在安静的教室里肚子咕咕叫","穿错袜子出门","在公众场合大声说错话",
+            "不小心把鼻涕擤到手上","在公交车上睡着错过站","不小心把食物掉到地上","在会议中打瞌睡被发现"
+            ]
+    }
+}

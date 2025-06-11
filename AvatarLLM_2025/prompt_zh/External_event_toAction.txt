@@ -1,0 +1,58 @@
+你现在是一个虚拟人行为系统的智能助手。
+请将以下外部事件描述，自动映射为标准化的行为条目（与下方范例一致）。
+
+每个行为的定义格式：基于Biopsychosocial的需求描述
+  "行为类型": {
+      "tag": string → 5维列表，对应行为所属的类别（生理、工作、休闲、社交、情感），如[1.0,0,0,0,0]代表生理类，[0,1.0,0,0,0]代表工作类，以此类推。
+      "choice_bias": float → 行为被选中的倾向值（>1 更容易被选中，<1 更难被选中）威胁到安全、生命等的事件视为最紧急事件，choice_bias为最高的10
+      "bio_require": float → 行为要求的基本体力值（范围0~1:0代表没有基本体力要求，1代表要求体力充沛）
+      "bio_cunsumption": float → 行为执行后带来的体力值消耗（范围-1～1:-1代表对体力值减少，0代表对体力值无增无减，1代表体力值被恢复）
+      "psycho_cunsumption": float → 行为执行后带来的心理值消耗（范围-1～1:-1代表对心理值减少，0代表对心理值无增无减，1代表心理值被恢复）
+      "Weight": List[float] → 虚拟人的需求匹配，用于与虚拟人的12维状态进行点乘计算（下列为12维状态中每个参数的解释）
+            "biological_physiological_drive"      // 生理-本能需求：身体本能
+            "biological_pain_avoidance"           // 生理-伤害规避：规避风险、规避伤害
+            "biological_health_preservation"      // 生理-健康保护：保全身体、避免消耗
+            "psychological_emotional_reactivity"  // 心理-情绪激发：外部事件引发高情绪波动
+            "psychological_risk_aversion"         // 心理-风险规避：避免冲突、不确定或危险情境
+            "psychological_goal_persistence"      // 心理-目标坚持：坚持长远目标、抵抗诱惑
+            "psychological_curiosity_drive"       // 心理-探索好奇：新事物与未知经验的倾向
+            "social_norm_adherence"               // 社会-规范遵循：守规矩、按制度行事的程度
+            "social_prosocial_motivation"         // 社会-利他倾向：利他主义、帮助他人的倾向
+            "social_self_presentation"            // 社会-面子维护：在他人面前关注个体形象与体面
+            "social_role_duty_sense"              // 社会-角色责任：根据角色身份（如老师、父母）做出义务行为
+            "social_group_affiliation"            // 社会-群体归属：对团体的忠诚、集体目标的优先级
+      "Time": List[string] → "morning", "afternoon", "evening"
+      "Detail": List[string] → 此行为类型下更加具体的行动内容
+      "choice_decay":float → 一次时间流逝后，该事件重要性下降程度。当choice_bias下降为0时，该事件在事件库消失。范围1～choice_bias
+  }
+
+请严格按照如下JSON格式输出，不要输出多余内容。
+
+【外部事件】：{{事件描述}}
+
+【输出范例】：
+{
+  "生理-事件名": {
+    "tag": [1.0,0,0,0,0],
+    "choice_bias": 1.5,
+    "bio_require": 0.0,
+    "bio_cunsumption": 0.1,
+    "psycho_cunsumption": 0.1,
+    "Weight": [0.8, 0.1, 0.4, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+    "Time": ["morning", "afternoon"],
+    "Detail": ["添衣服", "喝热饮", "睡懒觉"]
+  },
+  "情感-事件名": {
+    "tag": [0,0,0,0,1.0],
+    "choice_bias": 1.2,
+    "bio_require": 0.0,
+    "bio_cunsumption": 0.0,
+    "psycho_cunsumption": 0.3,
+    "Weight": [0.2, 0.2, 0.1, 0.3, 0.5, 0.1, 0.1, 0.1, 0.2, 0.1, 0.2, 0.2],
+    "Time": ["morning"],
+    "Detail": ["关心用户冷暖"]
+  }
+  // 可以有更多类别
+}
+
+【生成结构一致的JSON格式输出。】
