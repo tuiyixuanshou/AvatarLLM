@@ -1,130 +1,12 @@
 import random
 import re
-
 import numpy as np
 
-class EmotionState:
-    def __init__(self, personality_vector, emotional_vector):
-        self.valence = emotional_vector[0]  # 当前的情绪效价（范围 -1.0 ~ 1.0), -1 表示极端负面情绪（如沮丧、愤怒）+1 表示极端正面情绪（如愉悦、兴奋）
-
-        self.arousal = 0.5 # 情绪唤醒值，（范围 0.0 ~ 1.0)
-
-        self.valence_baseline = emotional_vector[1]  # 情绪效价的个体基准线（个性倾向），可用于表示一个人天生偏悲观或乐观（例如 -0.2 表示略偏负面）
-
-        self.valence_decay_rate = emotional_vector[2]  # 情绪回归中性状态的衰减速率，每一次 decay 调用时，valence 会以此比例向 baseline 回落
-        
-        self.valence_sensitivity = emotional_vector[3]  # 个体对事件刺激的情绪反应强度（放大倍数），值越大 → 对行为结果更敏感，情绪波动更剧烈
-
-        self.personality = personality_vector
-
-        # 从人格中提取目标坚持度，用于调节：行为成败是否强烈影响情绪
-        self.goal_sensitivity = personality_vector[5] # psychological_goal_persistence
-
-        # 从人格中提取情绪反应性，用于调节：情绪对刺激的放大程度（包括正面与负面）
-        self.emotional_reactivity = personality_vector[3] # psychological_emotional_reactivity
-
-        # 从人格中提取风险规避度，反向计算失败容忍度
-        # 越害怕风险，越不能接受失败（所以 1 - 风险规避 = 容忍失败的能力）
-        self.failure_tolerance = 1 - personality_vector[4] # psychological_risk_aversion
-
-        # 从人格中提取“社会评价敏感度”，用于调节行为是否涉及形象/面子时的情绪影响
-        self.social_feedback_sensitivity = personality_vector[9] # social_self_presentation
-
-        # 从人格中提取探索好奇驱动，用于调节失败后的恢复力
-        # 高探索欲的人面对失败容易重建积极情绪，看到失败为“经验”
-        self.exploratory_resilience = personality_vector[6] # psychological_curiosity_drive
-        
-        self.frustration_level = 0.0 # 挫折状态
-        self.mood_history = []
-
-    def _estimate_valence_delta(self, behavior, psycho_cunsumption, success_value):
-        # 融合估算：行为与人格的匹配 + 成败影响
-        weight = np.array(behavior["Weight"])
-
-        # 匹配得分：划分索引
-        DIRECT_IDX = [3, 4, 5, 9, 10]
-        INDIRECT_IDX = [6, 8, 11]
-
-        direct_match = np.dot(weight[DIRECT_IDX], self.personality[DIRECT_IDX])
-        indirect_match = np.dot(weight[INDIRECT_IDX], self.personality[INDIRECT_IDX])
-
-        if success_value > 0.0:
-            valence = (
-                psycho_cunsumption +
-                direct_match * 0.05 +
-                indirect_match * 0.02
-            )
-        else:
-            valence = (
-                psycho_cunsumption -
-                direct_match * 0.07 -
-                indirect_match * 0.02
-            )
-
-        return valence
-
-    def process_behavior(self, bio_energy, behavior, psycho_cunsumption, success_value):
-        # 估算行为的valence影响，并更新当前状态
-        valence_delta = self._estimate_valence_delta(behavior, psycho_cunsumption, success_value)
-        modulator = self.valence_sensitivity * self.emotional_reactivity * 4.0
-
-        if success_value < 0.0:
-            tolerance = np.clip(self.failure_tolerance + self.exploratory_resilience * 0.5, 0.0, 1.0)
-            modulator *= (1.0 - tolerance*0.2)
-    
-        adjustment = valence_delta * modulator
-        self.valence += adjustment
-        self.valence = np.clip(self.valence,-1.0,1.0)
-        self.arousal = np.clip(0.6 * bio_energy + self.emotional_reactivity * self.valence_sensitivity * 0.2, 0.0, 1.0)
-
-        if self.valence < -0.3:
-            self.frustration_level += abs(self.valence) * 0.1
-        else:
-            self.frustration_level *= 0.9
-
-        self.mood_history.append(self.valence)
-        if len(self.mood_history)>5:
-            self.mood_history.pop(0)
-
-        #print("psycho_cunsumption:" + str(psycho_cunsumption))
-        #print("valence_delta:" + str(valence_delta))
-        #print("adjustment:" + str(adjustment))
-        return 0
-
-    def decay(self):
-        self.valence = np.clip(self.valence * (1.0-self.valence_decay_rate) - self.valence_baseline * self.valence_decay_rate,-1.0,1.0)
-
-    def current_mood_valence(self):
-        v = self.valence
-        if v > 0.6:
-            return f"喜悦({v:.2f})"       # 高效价：明显幸福与兴奋
-        elif v > 0.4:
-            return f"满足({v:.2f})"       # 稍低于喜悦，更沉稳的正面情绪
-        elif v > 0.2:
-            return f"轻松({v:.2f})"       # 心情良好但非强烈积极
-        elif v > -0.1:
-            return f"平和({v:.2f})"       # 略偏正，安静平稳
-        elif v > -0.2:
-            return f"低落({v:.2f})"       # 稍微偏负，尚能调节
-        elif v > -0.4:
-            return f"消沉({v:.2f})"       # 显著负面，但未失控
-        elif v > -0.6:
-            return f"烦闷({v:.2f})"       # 情绪压抑，易爆发或内耗
-        else:
-            return f"沮丧({v:.2f})"       # 极度负面，接近抑郁或崩溃
-        
-    def current_mood_arousal(self):
-        v = self.arousal
-        if v > 0.8:
-            return f"很强({v:.2f})"       # 极度激活状态，可能是兴奋、紧张、狂喜、焦躁
-        elif v > 0.6:
-            return f"较强({v:.2f})"       # 精神集中、充满动力，准备行动
-        elif v > 0.4:
-            return f"正常({v:.2f})"       # 中等唤醒，心情平衡、淡定从容
-        elif v > 0.2:
-            return f"较弱({v:.2f})"       # 有些困倦，精力低但未完全失控
-        else:
-            return f"很弱({v:.2f})"       # 极低激活，身心俱疲、难以应对
+import Emotion
+import Dialog
+import Memory
+import Calendar
+import World_Plan
 
 class VirtualAgent:
     def __init__(self, personality, emotional_vector, behavior_library):
@@ -139,26 +21,38 @@ class VirtualAgent:
         self.bio_energy = 1.0 # 体力
         self.bps_state_vector = personality # BPS需求向量
         self.behavior_fatigue = {}  # 记录每个行为的倦怠值 ∈ [0, 1]
-        self.emotion = EmotionState(personality,emotional_vector) # 添加情绪系统
-        self.memory = []
+        
+        self.emotion_module = Emotion.EmotionState(personality,emotional_vector) # 添加情绪模块
+        self.dialogue_module = Dialog.DialogModule(self) # 添加对话模块
+        self.memory_module = Memory.MemoryModule(self,20) # 添加记忆模块
+        self.calendar_module = Calendar.Calendar(self) # 添加日历模块
+        self.external_event_manager = World_Plan.ExternalEventManager("M_file/External_Event.json")
 
     def reset_state(self):
         self.bio_energy = 1.0 # 体力
-        self.emotion.valence = self.emotion.valence_baseline  # 让情绪回到偏向值
-        self.emotion.arousal = 0.5
-        self.emotion.frustration_level = 0.0
-        self.emotion.mood_history = []
+        self.emotion_module.valence = self.emotion_module.valence_baseline  # 让情绪回到偏向值
+        self.emotion_module.arousal = 0.5
+        self.emotion_module.frustration_level = 0.0
+        self.emotion_module.mood_history = []
         self.behavior_fatigue = {}
 
-    def apply_memory(self, date, type, time_slot, task, task_detail):
-        self.memory.append(
-            # date 时间
-            # type = myself, user_id ,用于区分自我和不同的用户
-            # time_slot morning/afternoon/evening
-            # task 事件整体描述
-            # task_detail 事件细节（LLM生成的）
-            [date, type, time_slot, task, task_detail]
-        )
+    def gen_calender(self):
+        print(f"\n🎯 每日计划生成开始-------------------------------------------------")
+        for day in range(3):
+            print(f"\n📅 Day {day}: {self.calendar_module.calendar[day]['date']} {self.calendar_module.calendar[day]['weekday']} -------------------------------------------------")
+            for Time_slot in ["morning", "afternoon", "evening"]:
+                self.calendar_module.prepare_calendar(day,Time_slot)
+            self.daily_update()
+        
+        print(f"\n🎯 每日计划生成结束，Avatar开始生成执行细节-------------------------------------------------")
+        self.reset_state() #重置虚拟人状态
+        self.external_event_manager.save_External_event_init() #重置外部事件库
+        for day in range(3):
+            print(f"\n📅 Day {day}: {self.calendar_module.calendar[day]['date']} {self.calendar_module.calendar[day]['weekday']} -------------------------------------------------")
+            for Time_slot in ["morning", "afternoon", "evening"]:
+                self.calendar_module.play_calendar(day,Time_slot)
+            self.daily_update()
+        print(f"\n🎯 计划生成结束。开始进行对话-------------------------------------------------")
 
     def apply_behavior_feedback(self, behavior_name, success_value):
         behavior = self.behavior_library[behavior_name]
@@ -218,14 +112,14 @@ class VirtualAgent:
         self.behavior_fatigue[behavior_name] = min(1.0, self.behavior_fatigue.get(behavior_name, 0) + 0.2 * (1.0 - repeat_tolerance_score))
 
         # 情绪反馈：调用情绪状态更新
-        self.emotion.process_behavior(self.bio_energy, behavior, psycho_cunsumption * dot_psycho_social_weight, success_value)
+        self.emotion_module.process_behavior(self.bio_energy, behavior, psycho_cunsumption * dot_psycho_social_weight, success_value)
 
 
     def daily_update(self):
         # 生理值/心理值/情绪 每天恢复
         self.bio_energy = np.clip(self.bio_energy * 0.8 + 0.2, 0.0, 2.0)
-        self.emotion.valence = np.clip(self.emotion.valence * 0.2 + self.emotion.valence_baseline * 0.8, -1, 1.0)
-        self.emotion.arousal = np.clip(self.emotion.arousal * 0.2 + 0.5 * 0.8, 0.0, 1.0)
+        self.emotion_module.valence = np.clip(self.emotion_module.valence * 0.2 + self.emotion_module.valence_baseline * 0.8, -1, 1.0)
+        self.emotion_module.arousal = np.clip(self.emotion_module.arousal * 0.2 + 0.5 * 0.8, 0.0, 1.0)
 
         # 行动的倦怠值每日衰减
         for name in self.behavior_fatigue:
@@ -240,7 +134,7 @@ class VirtualAgent:
     def _select_behavior(self, current_Time_slot="morning",life_style_weight = None):
         scores = {}
         dynamic_choice_bias = 1.0
-        self.emotion.decay()
+        self.emotion_module.decay()
         for name, content in self.behavior_library.items():
             if "Time" in content and current_Time_slot not in content["Time"]:
                 continue
@@ -284,12 +178,12 @@ class VirtualAgent:
             fatigue_factor = pow(max(0.0, min(1.0, 1.0 - fatigue)), 0.25)
 
             # ==== 添加情绪影响 ====
-            emotion_modifier = 1.0 + 0.25 * self.emotion.valence + 0.25 * (self.emotion.arousal - 0.5)
+            emotion_modifier = 1.0 + 0.25 * self.emotion_module.valence + 0.25 * (self.emotion_module.arousal - 0.5)
             emotion_modifier = np.clip(emotion_modifier, 0.75, 1.25)
 
             # ==== 抗拒因子（含情绪）====
             physical_resistance = pow(np.clip(self.bio_energy + bio_motivation * 0.5, 0.0, 1.0), 0.5) * emotion_modifier
-            mental_resistance = pow(np.clip((self.emotion.valence*0.5+0.5) + psycho_motivation * 0.5, 0.0, 1.0), 0.5) * emotion_modifier
+            mental_resistance = pow(np.clip((self.emotion_module.valence*0.5+0.5) + psycho_motivation * 0.5, 0.0, 1.0), 0.5) * emotion_modifier
 
             # ==== 行为最终得分 ====
             if life_style_weight is not None:
@@ -412,8 +306,8 @@ class VirtualAgent:
 
     def print_state(self):
         print("🔋 体力值: " + str(self.bio_energy))
-        print("🔋 情绪效价:" + self.emotion.current_mood_valence())
-        print("🔋 情绪唤醒:" + self.emotion.current_mood_arousal())
+        print("🔋 情绪效价:" + self.emotion_module.current_mood_valence())
+        print("🔋 情绪唤醒:" + self.emotion_module.current_mood_arousal())
         dim_names = [
             "生理健康需求", "疼痛规避需求", "健康保护需求", "情绪反应需求",
             "风险规避需求", "目标坚持需求", "好奇探索需求", "规范遵循需求",
@@ -550,23 +444,3 @@ emotional2 = np.array([
     0.5, # 情绪恢复速度（范围 0.0 ~ 1.0），
     0.5 # 个体对事件刺激的情绪反应强度（放大倍数），值越大 → 对行为结果更敏感，情绪波动更剧烈（范围 0.0 ~ 1.0），
 ])
-# import json
-
-# with open("M_file\\Event_pool.json", "r", encoding="utf-8") as f:
-#     behavior_library = json.load(f)
-# agent = VirtualAgent(personality5, emotional1, behavior_library)
-
-# # 模拟 7 天：早中晚各一行为
-# for day in range(30):
-#     print(f"\n📅 Day {day}-------------------------------------------------")
-#     agent.print_state()
-#     for Time_slot in ["morning", "afternoon", "evening"]:
-#         result = agent.select_best_behavior(top_k=2, current_Time_slot=Time_slot)
-#         if result[0]:
-#             best_behavior, score = result[0]
-#             print(f"🕒 {Time_slot.upper()}: {best_behavior}")
-#         else:
-#             print("⚠️ 当前时段无可选行为")
-#         agent.print_state()
-#     print()
-#     agent.daily_update()

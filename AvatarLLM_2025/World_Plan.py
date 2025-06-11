@@ -70,6 +70,9 @@ class ExternalEventManager:
         self.External_Planner = ExternalEventPlanner()
 
 
+    def get_matching_social_phases_macro(self,day_date: str, weekday: str):
+        return self.External_Planner.get_matching_social_phases_macro(day_date, weekday)
+    
     """读取外部事件库"""
     def load_External_event(self) -> Dict[str, Dict[str, Any]]:
         try:

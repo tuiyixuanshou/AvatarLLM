@@ -2,8 +2,9 @@ import os
 import json
 from datetime import datetime
 
-class Memory:
-    def __init__(self,max_short_memory = 20, max_recent_events = 5):
+class MemoryModule:
+    def __init__(self, Agent, max_short_memory = 20, max_recent_events = 5):
+        self.agent = Agent
         self.dialogue_persona = ""
         self.dialogue_stratagy = ""
         self.max_short_memory = max_short_memory

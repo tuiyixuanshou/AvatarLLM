@@ -1,6 +1,6 @@
 [
   {
-    "date": "2025-05-30",
+    "date": "2025-06-06",
     "location": "北京",
     "weekday": "星期五",
     "morning": {
@@ -44,14 +44,14 @@
     }
   },
   {
-    "date": "2025-05-31",
+    "date": "2025-06-07",
     "location": "北京",
     "weekday": "星期六",
     "morning": {
       "status": "",
       "world_plan": "",
       "weather": "天气:阴天;气温:21.4℃;风速:6.0 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月初五)",
+      "holiday": "休息日",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -64,7 +64,7 @@
       "status": "",
       "world_plan": "",
       "weather": "天气:阴天;气温:26.1℃;风速:8.0 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月初五)",
+      "holiday": "休息日",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -77,7 +77,7 @@
       "status": "",
       "world_plan": "",
       "weather": "天气:阴天;气温:23.0℃;风速:6.9 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月初五)",
+      "holiday": "休息日",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -88,14 +88,14 @@
     }
   },
   {
-    "date": "2025-06-01",
+    "date": "2025-06-08",
     "location": "北京",
     "weekday": "星期日",
     "morning": {
       "status": "",
       "world_plan": "",
       "weather": "天气:阴天;气温:22.5℃;风速:5.5 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月6号)",
+      "holiday": "休息日",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -108,7 +108,7 @@
       "status": "",
       "world_plan": "",
       "weather": "天气:轻微毛毛雨;气温:27.8℃;风速:7.0 km/h;空气湿度体感:干爽",
-      "holiday": "Dragon Boat Festival(农历5月6号)",
+      "holiday": "休息日",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -121,7 +121,7 @@
       "status": "",
       "world_plan": "",
       "weather": "天气:阴天;气温:24.5℃;风速:6.0 km/h;空气湿度体感:干爽",
-      "holiday": "Dragon Boat Festival(农历5月6号)",
+      "holiday": "休息日",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -132,14 +132,14 @@
     }
   },
   {
-    "date": "2025-06-02",
+    "date": "2025-06-09",
     "location": "北京",
     "weekday": "星期一",
     "morning": {
       "status": "",
       "world_plan": "",
       "weather": "天气:晴;气温:20.6℃;风速:3.1 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月7号)",
+      "holiday": "无",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -152,7 +152,7 @@
       "status": "",
       "world_plan": "",
       "weather": "天气:阴天;气温:23.1℃;风速:3.9 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月7号)",
+      "holiday": "无",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -165,7 +165,7 @@
       "status": "",
       "world_plan": "",
       "weather": "天气:晴;气温:22.3℃;风速:4.5 km/h;空气湿度体感:舒适",
-      "holiday": "Dragon Boat Festival(农历5月7号)",
+      "holiday": "无",
       "life_style_weight": [1.0, 1.0, 1.0, 1.0, 1.0],
       "task_planning": "",
       "task_planning_score": 0.0,
@@ -176,7 +176,7 @@
     }
   },
   {
-    "date": "2025-06-03",
+    "date": "2025-06-10",
     "location": "北京",
     "weekday": "星期二",
     "morning": {
@@ -220,7 +220,7 @@
     }
   },
   {
-    "date": "2025-06-04",
+    "date": "2025-06-11",
     "location": "北京",
     "weekday": "星期三",
     "morning": {
@@ -264,7 +264,7 @@
     }
   },
   {
-    "date": "2025-06-06",
+    "date": "2025-06-12",
     "location": "北京",
     "weekday": "星期四",
     "morning": {

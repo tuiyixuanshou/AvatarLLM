@@ -11,21 +11,14 @@ from lunarcalendar import Converter, Solar, Lunar
 from datetime import datetime, timedelta, time
 from openai import OpenAI
 
-import Avatar
-import World_Plan
-import respond_generation
-
-class AvatarCalendar:
-    def __init__(self, agent:Avatar.VirtualAgent, External_Event:World_Plan.ExternalEventManager, days=7, path="M_file/Avatar_calendar.json"):
+class Calendar:
+    def __init__(self, agent, days=7, path="M_file/Avatar_calendar.json"):
         self.agent = agent
         self.days = days
         self.path = path
         self.weekday_map = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']
         self.calendar = []
-        self.Len_calendar = 0
-        self. _init_calendar()
-
-        self.External_Event = External_Event #外部事件管理类
+        self._init_calendar()
 
     def _empty_period(self):
         #日历数据结构
@@ -224,7 +217,6 @@ class AvatarCalendar:
         # 文件存在，读取它
             with open(self.path, "r", encoding="utf-8") as f:
                 self.calendar = json.load(f)
-                self.Len_calendar = min(len(self.calendar), 7)
             print(f"📖 已读取已有日历: {self.path}")
         else:
             today = datetime.today()
@@ -240,7 +232,6 @@ class AvatarCalendar:
                     "afternoon": self._fill_period(location,day,"afternoon"),
                     "evening": self._fill_period(location,day,"evening"),
                 })
-            self.Len_calendar = min(len(self.calendar), 7)
             self.save_calendar(self.calendar)
             print(f"🆕 新建基础日历: {self.path}")
 
@@ -308,16 +299,9 @@ class AvatarCalendar:
         )
         return response.choices[0].message.content.replace('\n', '').replace('\r', '')
     
-    def fill_task_details(self, calendar, day_index, time_slot, prompt_file, task_planning = None, task_planning_score = 0.5, task_future = None, task_future_score = 0.5, task_actual = None, holidayInfo = True, weatherInfo = True, friends = []):
+    def fill_task_details(self, calendar, day_index, time_slot, prompt_file, task_planning = None, gender = "男", bio_energy = 1.0, task_planning_score = 0.5, task_future = None, task_future_score = 0.5, task_actual = None, holidayInfo = True, weatherInfo = True, friends = []):
         client = OpenAI(api_key="sk-0e5049d058f64e2aa17946507519ac53", base_url="https://api.deepseek.com")
-        dim_names = [
-            "生理健康需求", "疼痛规避需求", "健康保护需求", "情绪反应需求",
-            "风险规避需求", "目标坚持需求", "好奇探索需求", "规范遵循需求",
-            "亲社会性需求", "社会形象需求", "角色责任需求", "群体归属需求"
-        ]
-        if len(agent.bps_state_vector) != len(dim_names):
-            print(f"⚠️ 状态向量维度数（{len(agent.bps_state_vector)}）与名称数量不匹配（{len(dim_names)}）")
-            return
+
         message = [{"role": "user", "content": self.load_prompt(prompt_file)}]
         task_info = ""
         task_info += f"外部事件：{calendar[day_index][time_slot].get('world_plan', '')}\n"
@@ -337,11 +321,11 @@ class AvatarCalendar:
         future_task_expect = ""
         if task_future_score < 0.7:
             future_task_expect = "(一般期待这件事)"
-        elif task_future_score < 0.8:
+        elif task_future_score < 1.0:
             future_task_expect = "(比较期待这件事)"
-        elif task_future_score < 0.9:
+        elif task_future_score < 1.3:
             future_task_expect = "(很期待这件事)"
-        elif task_future_score < 1.1:
+        elif task_future_score < 1.6:
             future_task_expect = "(非常期待这件事)"
         else:
             future_task_expect = "(超级期待这件事)"
@@ -367,8 +351,7 @@ class AvatarCalendar:
         
         msg = (f"现在时间：生成 {calendar[day_index]['date']} ({calendar[day_index]['weekday']}) [{time_slot}(生成的内容在逻辑上要符合时间特点)]"
                 + task_info
-                + f"人物状态：性别---{agent.gender},体力--{str(agent.bio_energy)}"#,情绪效价--{agent.emotion.current_mood_valence()},情绪唤醒--{agent.emotion.current_mood_arousal()}"
-                #+ f"人物bps特质：{', '.join(f'{name}: {round(val, 3)}' for name, val in zip(dim_names, agent.bps_state_vector))}"
+                + f"人物状态：性别---{gender},体力--{str(bio_energy)}"
                 + "只返回task_detail文字内容即可")
         message.append({
             "role": "system",
@@ -401,7 +384,7 @@ class AvatarCalendar:
         status = self.calendar[day_index][time_slot]["status"]
 
         # ==== life_style_weight权重生成 ====#
-        matched_ranges = self.External_Event.External_Planner.get_matching_social_phases_macro(self.calendar[day_index]["date"],self.calendar[day_index]["weekday"])
+        matched_ranges = self.agent.external_event_manager.get_matching_social_phases_macro(self.calendar[day_index]["date"],self.calendar[day_index]["weekday"])
         keys = ["生理", "工作", "休闲", "社交", "情感"]
         life_style_weight = [1.0,1.0,1.0,1.0,1.0]
         for idx, influence_range in enumerate(matched_ranges):
@@ -411,7 +394,7 @@ class AvatarCalendar:
                 life_style_weight[i] += delta
         self.calendar[day_index][time_slot]["life_style_weight"] = [round(w, 3) for w in life_style_weight]
 
-        print(f"🚩{self.calendar[day_index]["date"]}{time_slot}的life_style_weights:生理🍔 {self.calendar[day_index][time_slot]["life_style_weight"][0]},工作✍  {self.calendar[day_index][time_slot]["life_style_weight"][1]},休闲⚽ {self.calendar[day_index][time_slot]["life_style_weight"][2]},社交🗯  {self.calendar[day_index][time_slot]["life_style_weight"][3]},情感💕 {self.calendar[day_index][time_slot]["life_style_weight"][4]}")
+        print(f"🚩{self.calendar[day_index]['date']}{time_slot}的life_style_weights:生理🍔 {self.calendar[day_index][time_slot]['life_style_weight'][0]},工作✍  {self.calendar[day_index][time_slot]['life_style_weight'][1]},休闲⚽ {self.calendar[day_index][time_slot]['life_style_weight'][2]},社交🗯  {self.calendar[day_index][time_slot]['life_style_weight'][3]},情感💕 {self.calendar[day_index][time_slot]['life_style_weight'][4]}")
 
 
         # ==== 外部事件响应 ====#
@@ -421,11 +404,11 @@ class AvatarCalendar:
                 #print("外部事件进入事件池")
                 world_plan = self.calendar[day_index][time_slot]["world_plan"]
                 print(world_plan)
-                self.External_Event.External_event_to_Action(world_plan) #对外部事件进行动作映射
+                self.agent.external_event_manager.External_event_to_Action(world_plan) #对外部事件进行动作映射
 
             # ========== 随机活动选择 ========== #
-            if self.calendar[day_index][time_slot]["task_planning"] == "":
-                life_style_weight = self.calendar[day_index][time_slot]["life_style_weight"] # 日程活动倾向影响
+            if self.calendar[day_index][time_slot]['task_planning'] == "":
+                life_style_weight = self.calendar[day_index][time_slot]['life_style_weight'] # 日程活动倾向影响
                 result = self.agent.select_best_behavior(top_k=2, current_Time_slot=time_slot,life_style_weight = life_style_weight)
                 if result[0]:
                     behavior_info = result[0]
@@ -436,27 +419,9 @@ class AvatarCalendar:
                     print(f"⚠️ {time_slot.upper()} 当前时段无可选行为")
             else:
                 pass
-        
-        #elif status == "role_play":#角色扮演
-        #    task = self.calendar[day_index][time_slot]["task"]
-        #    if task == "":
-        #        print(f"⚠️角色扮演不能没有任务")
-        #    else:
-                #holidayInfo = False
-                #weatherInfo = False
-                #===========生成具体活动细节===========
-                #if self.calendar[day_index][time_slot]["task_details"] == "":
-                #    if random.random()<0.5:#Prompt里有外貌信息
-                #        task_detail = self.fill_task_details(self.calendar,day_index,time_slot,"Fill_Task_Detail_Roleplay_1.txt",holidayInfo,weatherInfo)
-                #    else:#Prompt里无外貌信息
-                #        task_detail = self.fill_task_details(self.calendar,day_index,time_slot,"Fill_Task_Detail_Roleplay_2.txt",holidayInfo,weatherInfo)
-                #else:
-                #    task_detail = self.calendar[day_index][time_slot]["task_details"]
-        #print("💬 详细内容：" + task_detail)
-        #agent.print_state()
         print("\n")
         #外部事件库根据时间流逝更新
-        self.External_Event.Updata_External_Event()
+        self.agent.external_event_manager.Updata_External_Event()
 
     def play_calendar(self,day_index, time_slot):
         """第二遍遍历calendar，生成真实活动"""
@@ -539,7 +504,7 @@ class AvatarCalendar:
             if not self.calendar[day_index][time_slot]["world_plan"] == "":
                 world_plan = self.calendar[day_index][time_slot]["world_plan"]
                 print("外部事件："+world_plan)
-                self.External_Event.External_event_to_Action(world_plan) # 对外部事件进行动作映射
+                self.agent.external_event_manager.External_event_to_Action(world_plan) # 对外部事件进行动作映射
 
             # =========== 随机活动选择 =========== #
             if self.calendar[day_index][time_slot]["task_actual"] == "":
@@ -563,7 +528,7 @@ class AvatarCalendar:
                     print(f"⚠️ {time_slot.upper()} 当前时段无可选行为")
         else:
             # =========== 执行当前规划 =========== #
-            task_planning,task_result = agent._apply_behavior(self.calendar[day_index][time_slot]['task_planning'],0.5)
+            task_planning,task_result = self.agent._apply_behavior(self.calendar[day_index][time_slot]['task_planning'],0.5)
             task_planning = task_planning + "(结果:" + task_result + ")"
             if "状况堪忧" in task_result or "惨遭失败" in task_result:
                 task_future_planning = None # 如果执行失败，则不再憧憬未来
@@ -602,6 +567,8 @@ class AvatarCalendar:
         task_detail = self.fill_task_details(
             self.calendar, day_index, time_slot, 
             task_prompt_file, 
+            gender = self.agent.gender,
+            bio_energy = self.agent.bio_energy,
             task_planning = task_planning, task_planning_score = task_planning_score, 
             task_future = None, task_future_score = 0.0, 
             task_actual = task_actual, 
@@ -658,11 +625,7 @@ class AvatarCalendar:
                     )
             print("💬 心理描写：" + task_expression)
 
-        agent.apply_memory(self.calendar[day_index]['date'], "myself", time_slot_index[time_slot], self.calendar[day_index][time_slot]['task_planning'], {0:task_detail, 1:task_future_detail, 2:task_prompt, 3:task_expression})
-        
-        
-        
-        agent.print_state()
+        self.agent.print_state()
         print("\n")
 
     def show(self, day_index=None):
@@ -681,120 +644,3 @@ class AvatarCalendar:
             print(f"{filename}读取失败")
             system_prompt = ""
         return system_prompt
-
-
-if __name__ == "__main__":
-    with open("M_file/Event_pool.json", "r", encoding="utf-8") as f:
-        behavior_library = json.load(f)
-    agent = Avatar.VirtualAgent(Avatar.personality2, Avatar.emotional1, behavior_library)
-    externalManager = World_Plan.ExternalEventManager("M_file/External_Event.json")
-    externalPlanner = World_Plan.ExternalEventPlanner()
-
-    cal = AvatarCalendar(agent,externalManager)
-    agent.print_state()
-
-    print(f"\n🎯 每日计划生成开始-------------------------------------------------")
-    for day in range(3):
-        print(f"\n📅 Day {day}: {cal.calendar[day]['date']} {cal.calendar[day]['weekday']} -------------------------------------------------")
-        
-        for Time_slot in ["morning", "afternoon", "evening"]:
-            cal.prepare_calendar(day,Time_slot)
-        agent.daily_update()
-    
-    # print(f"\n🎯 每日计划生成结束，Avatar开始实际执行-------------------------------------------------")
-    # agent.reset_state() #重置虚拟人状态
-    # externalManager.save_External_event_init() #重置外部事件库
-    # for day in range(3):
-    #     print(f"\n📅 Day {day}: {cal.calendar[day]['date']} {cal.calendar[day]['weekday']} -------------------------------------------------")
-    #     for Time_slot in ["morning", "afternoon", "evening"]:
-    #         cal.play_calendar(day,Time_slot)
-    #     agent.daily_update()
-
-    print(f"\n🎯 计划生成结束。开始进行对话-------------------------------------------------")
-    dialogue = respond_generation.respond_module()
-    time_index_container = [0,0]
-    sent_slots = set()
-
-    reverse_time_slot = ["morning", "afternoon", "evening"]
-    
-    # ==== 主动消息自动触发 ==== #
-    custom_time_slots = {
-        "morning": time(hour=8, minute=0),
-        "afternoon": time(hour=16, minute=26),
-        "evening": time(hour=19, minute=0),
-    }
-
-    def timed_proactive_check(day_index_container):
-            sent_slots = set()
-            while True:
-                now = datetime.now()
-                
-                today = datetime.now().date().isoformat()
-                for idx, item in enumerate(cal.calendar):
-                    if item['date'] == today:
-                        time_index_container[0] = idx
-                        break
-                # 从容器中获取当前day_index
-                current_day_index = day_index_container[0]
-                conbine_today = now.date()
-                for slot_name, slot_time in custom_time_slots.items():
-                    trigger_key = (today, slot_name)
-                    slot_datetime = datetime.combine(today, slot_time)
-                
-                    if abs((now - slot_datetime).total_seconds()) < 60 and trigger_key not in sent_slots:
-                        try:
-                            proactive_system = f"时间：{cal.calendar[current_day_index]['date']},时段：{slot_name},事件整体描述:{cal.calendar[current_day_index][slot_name]['task_planning']}，主动和用户分享的具体事件描述："
-                            proactive_message = cal.calendar[current_day_index][slot_name]['task_details']
-                            dialogue.implement_proactive_message(proactive_system, proactive_message)
-                            dialogue.memory_module.store_Proactive_Event(cal.calendar[current_day_index]['date'],slot_name,proactive_system + proactive_message)
-                            sent_slots.add(trigger_key)
-                        
-                            if slot_name == "evening":
-                                # 更新容器中的值
-                                day_index_container[0] = current_day_index + 1
-                                day_index_container[1] = 2
-                            elif slot_name == "afternoon":
-                                day_index_container[1] = 1
-                            else:
-                                day_index_container[1] = 0
-                        except Exception as e:
-                            print(f"[定时主动行为失败]：{e}")
-            
-                time_module.sleep(60)  # 每60秒检查一次
-
-    # 启动线程时传入可变容器
-    threading.Thread(target=timed_proactive_check, 
-                    args=(time_index_container,),  # 注意这里的逗号确保是元组
-                    daemon=True).start()
-
-    while True:
-        user_input = input("\nYou: ")
-        if user_input.lower() == 'exit':
-            print("Exiting the Dialogue Module. Goodbye!")
-            break
-        # ==== 主动消息手动触发 ==== #
-        if user_input.lower() == 'test':
-            # 获取当前时间
-            current_hour = datetime.now().hour
-            today = datetime.now().date().isoformat()
-            for idx, item in enumerate(cal.calendar):
-                if item['date'] == today:
-                    time_index_container[0] = idx
-                    break
-            # 判断当前时间属于哪个时段
-            if 5 <= current_hour < 11:
-                time_slot = 0  # 早上
-            elif 11 <= current_hour < 17:
-                time_slot = 1  # 中午
-            else:
-                time_slot = 2  # 晚上
-                
-            day_index = time_index_container[0]
-            proactive_system = f"时间：{cal.calendar[day_index]['date']},时段：{reverse_time_slot[time_slot]},事件整体描述:{cal.calendar[day_index][reverse_time_slot[time_slot]]['task_planning']}，主动和用户分享的具体事件描述："
-            proactive_message = cal.calendar[day_index][reverse_time_slot[time_slot]]['task_details']
-            dialogue.implement_proactive_message(proactive_system,proactive_message)
-            dialogue.memory_module.store_Proactive_Event(cal.calendar[day_index]['date'],reverse_time_slot[time_slot],proactive_system + proactive_message)
-            
-        else:
-            dialogue.llm_reply(user_input,"Dialogue_Persona.txt")
-    

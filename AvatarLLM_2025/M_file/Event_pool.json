@@ -573,7 +573,7 @@
     },
     "情感-共情交流": {
         "tag": [0, 0, 0, 0, 1.0],
-        "choice_bias": 2.0,
+        "choice_bias": 1.0,
         "bio_require": 0.0,
         "bio_cunsumption": 0.0,
         "psycho_cunsumption": 1.0,
